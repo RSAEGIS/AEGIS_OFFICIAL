@@ -1,0 +1,1219 @@
+/* =========================================
+   GUIDES PAGE
+========================================= */
+.g-green { color: #5cff00; }
+
+.guide-section {
+    background: #000;
+    padding: 90px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.guide-dark { background: #040404; }
+
+.guide-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(92,255,0,0.012) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(92,255,0,0.012) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+}
+
+.gs-label-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gs-line { flex: 1; height: 1px; background: #111; }
+
+.gs-tag {
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #5cff00;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.gs-header {
+    text-align: center;
+    margin-bottom: 44px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gs-title {
+    font-size: clamp(28px, 4.5vw, 52px);
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.gs-desc {
+    font-size: 13px;
+    color: #444;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   HERO
+========================================= */
+.guides-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.gh-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 30%, rgba(92,255,0,0.06) 0%, transparent 55%);
+}
+
+.gh-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, #000 100%);
+    pointer-events: none;
+}
+
+.gh-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(92,255,0,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(92,255,0,0.025) 1px, transparent 1px);
+    background-size: 55px 55px;
+    animation: heroGridPan 22s linear infinite;
+}
+
+@keyframes heroGridPan {
+    0%   { background-position: 0 0; }
+    100% { background-position: 55px 55px; }
+}
+
+.gh-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 1000px;
+    animation: heroIn 0.8s ease forwards;
+}
+
+.gh-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.gh-line { display: inline-block; width: 40px; height: 1px; background: #5cff00; }
+
+.gh-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #5cff00;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.gh-title {
+    font-size: clamp(60px, 11vw, 140px);
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: #fff;
+    line-height: 0.9;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+}
+
+.gh-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 560px;
+    margin: 0 auto 36px;
+    letter-spacing: 0.5px;
+}
+
+/* Quick nav */
+.gh-quick-nav {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+
+.gqn-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 14px 20px;
+    background: #050505;
+    border: 1px solid #111;
+    text-decoration: none;
+    transition: all 0.2s;
+    min-width: 120px;
+}
+
+.gqn-item:hover {
+    background: #080808;
+    border-color: #5cff00;
+    transform: translateY(-2px);
+}
+
+.gqn-num {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #5cff00;
+}
+
+.gqn-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #444;
+    text-transform: uppercase;
+}
+
+.gqn-item:hover .gqn-label { color: #fff; }
+
+/* HUD */
+.gh-hud {
+    position: absolute;
+    inset: 24px;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.ghh {
+    position: absolute;
+    width: 20px; height: 20px;
+    border: 1px solid rgba(92,255,0,0.2);
+}
+
+.ghh.tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+.ghh.tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+.ghh.bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+.ghh.br { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+.ghh-tl {
+    position: absolute; top: -18px; left: 0;
+    font-size: 9px; letter-spacing: 2px;
+    color: rgba(92,255,0,0.25); font-weight: 700; text-transform: uppercase;
+}
+
+.ghh-br {
+    position: absolute; bottom: -18px; right: 0;
+    font-size: 9px; letter-spacing: 2px;
+    color: rgba(92,255,0,0.3); font-weight: 700; text-transform: uppercase;
+}
+
+/* Scroll */
+.gh-scroll {
+    position: absolute; bottom: 28px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center;
+    z-index: 20; cursor: pointer;
+}
+
+.gh-scroll-text {
+    font-size: 9px; letter-spacing: 5px;
+    color: rgba(255,255,255,0.2);
+    font-weight: 700; text-transform: uppercase;
+    margin-bottom: 10px;
+    animation: scrollTextFade 2.5s ease-in-out infinite;
+}
+
+.gh-scroll-line {
+    width: 1px; height: 42px;
+    background: linear-gradient(to bottom, transparent, rgba(92,255,0,0.3));
+    margin-bottom: 6px; position: relative; overflow: hidden;
+}
+
+.gh-scroll-fill {
+    position: absolute; top: -100%; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, transparent, #5cff00);
+    animation: scrollLineDrop 1.8s ease-in-out infinite;
+}
+
+.gh-scroll-chevs { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+
+.gh-chev {
+    width: 10px; height: 10px;
+    border-right: 1.5px solid #5cff00;
+    border-bottom: 1.5px solid #5cff00;
+    transform: rotate(45deg);
+}
+
+.gh-chev:nth-child(1) { animation: chevronDrop 1.8s ease-in-out infinite 0s; }
+.gh-chev:nth-child(2) { animation: chevronDrop 1.8s ease-in-out infinite 0.22s; }
+.gh-chev:nth-child(3) { animation: chevronDrop 1.8s ease-in-out infinite 0.44s; }
+
+/* =========================================
+   GETTING STARTED
+========================================= */
+.lifecycle-steps {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    align-items: start;
+}
+
+.lc-step {
+    background: #050505;
+    border: 1px solid #111;
+    border-top: 2px solid #5cff00;
+    padding: 28px 22px;
+    transition: background 0.2s;
+}
+
+.lc-step:hover { background: #080808; }
+
+.lcs-num {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #5cff00;
+    margin-bottom: 10px;
+}
+
+.lcs-icon {
+    font-size: 24px;
+    margin-bottom: 12px;
+    display: block;
+    filter: grayscale(0.3);
+}
+
+.lcs-title {
+    font-size: clamp(13px, 1.5vw, 17px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.lcs-desc {
+    font-size: 12px;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 14px;
+}
+
+.lcs-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: rgba(92,255,0,0.04);
+    border-left: 2px solid rgba(92,255,0,0.3);
+    padding: 8px 10px;
+    font-size: 10px;
+    color: #3a3a3a;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.lct-icon { flex-shrink: 0; }
+
+.lc-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: rgba(92,255,0,0.3);
+    padding: 0 8px;
+    margin-top: 60px;
+}
+
+/* Difficulty bar */
+.difficulty-bar {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #111;
+}
+
+.db-item {
+    flex: 1;
+    padding: 18px 20px;
+    border-right: 1px solid #111;
+    background: #050505;
+    transition: background 0.2s;
+}
+
+.db-item:last-child { border-right: none; }
+.db-item:hover { background: #080808; }
+
+.db-label {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.beginner     .db-label { color: #5cff00; }
+.intermediate .db-label { color: #ff8c00; }
+.advanced     .db-label { color: #ff2222; }
+.elite        .db-label { color: #4da6ff; }
+
+.db-modes {
+    font-size: 9px;
+    color: #2a2a2a;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.db-arrow {
+    font-size: 14px;
+    color: rgba(92,255,0,0.2);
+    padding: 0 8px;
+    flex-shrink: 0;
+}
+
+/* =========================================
+   MOVEMENT
+========================================= */
+.movement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    max-width: 1200px;
+    margin: 0 auto 4px;
+}
+
+.mv-card {
+    background: #050505;
+    border: 1px solid #111;
+    padding: 28px 24px;
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.mv-card:hover { background: #080808; }
+
+.mv-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 2px; height: 0;
+    background: #5cff00;
+    transition: height 0.3s;
+}
+
+.mv-card:hover::before { height: 100%; }
+
+.mv-icon {
+    font-size: 26px;
+    margin-bottom: 12px;
+    display: block;
+    filter: grayscale(0.5);
+    transition: filter 0.2s;
+}
+
+.mv-card:hover .mv-icon { filter: none; }
+
+.mv-title {
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.mv-desc {
+    font-size: 12px;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 14px;
+}
+
+.mv-tip {
+    font-size: 10px;
+    padding: 8px 10px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    border-left: 2px solid;
+}
+
+.good-tip  { background: rgba(92,255,0,0.04); border-color: rgba(92,255,0,0.3); color: #3a3a3a; }
+.warn-tip  { background: rgba(255,140,0,0.04); border-color: rgba(255,140,0,0.3); color: #3a3a3a; }
+
+/* Movement tips bar */
+.movement-tips-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #050505;
+    border: 1px solid #111;
+    border-top: 2px solid rgba(92,255,0,0.3);
+    padding: 22px 26px;
+}
+
+.mtb-title {
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #5cff00;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.mtb-list { display: flex; flex-direction: column; gap: 10px; }
+
+.mtb-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 12px;
+    color: #444;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+}
+
+.mtb-dot {
+    width: 5px; height: 5px;
+    background: #5cff00;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+
+/* =========================================
+   SHOOTING
+========================================= */
+.shooting-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 3px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sh-card {
+    background: #050505;
+    border: 1px solid #111;
+    padding: 32px 28px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sh-large { grid-row: span 2; }
+
+.sh-card-label {
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #5cff00;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.sh-card-title {
+    font-size: clamp(15px, 1.8vw, 22px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.sh-card-desc {
+    font-size: 12px;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Recoil diagram */
+.recoil-diagram {
+    background: #030303;
+    border: 1px solid #111;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.rd-label {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #222;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.rd-visual {
+    position: relative;
+    height: 140px;
+    background: rgba(92,255,0,0.02);
+    border: 1px solid #0e0e0e;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.rd-dot {
+    position: absolute;
+    width: 5px; height: 5px;
+    background: #5cff00;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 4px rgba(92,255,0,0.5);
+}
+
+.rd-crosshair {
+    position: absolute;
+    top: 90%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255,255,255,0.2);
+    font-size: 16px;
+}
+
+.rd-tip {
+    font-size: 9px;
+    color: #333;
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+.sh-tips { display: flex; flex-direction: column; gap: 8px; }
+
+.sh-tip {
+    font-size: 10px;
+    padding: 7px 10px;
+    border-left: 2px solid;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+/* Hit zones */
+.hitzone-list { display: flex; flex-direction: column; gap: 12px; }
+
+.hz-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 40px;
+    gap: 10px;
+    align-items: center;
+}
+
+.hz-zone {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    text-align: center;
+}
+
+.head-zone    { background: rgba(255,34,34,0.15); color: #ff2222; border: 1px solid rgba(255,34,34,0.2); }
+.chest-zone   { background: rgba(255,140,0,0.1); color: #ff8c00; border: 1px solid rgba(255,140,0,0.15); }
+.stomach-zone { background: rgba(255,140,0,0.08); color: #ff8c00; border: 1px solid rgba(255,140,0,0.1); }
+.legs-zone    { background: rgba(77,166,255,0.08); color: #4da6ff; border: 1px solid rgba(77,166,255,0.1); }
+
+.hz-bar-wrap { height: 4px; background: #111; }
+.hz-bar { height: 100%; transition: width 1.2s ease; }
+
+.hz-mult {
+    font-size: 11px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+.hz-note {
+    font-size: 8px;
+    color: #222;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    grid-column: 1 / -1;
+    margin-top: -6px;
+}
+
+/* Bullet physics */
+.bp-split { display: flex; flex-direction: column; gap: 3px; }
+
+.bps-item {
+    padding: 16px;
+    border: 1px solid #111;
+}
+
+.hitscan   { background: rgba(92,255,0,0.03); }
+.projectile { background: rgba(255,140,0,0.03); }
+
+.bps-type {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.hitscan .bps-type { color: #5cff00; }
+.projectile .bps-type { color: #ff8c00; }
+
+.bps-weapons {
+    font-size: 9px;
+    color: #333;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.bps-desc {
+    font-size: 11px;
+    color: #3a3a3a;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.bps-tag {
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    display: inline-block;
+}
+
+.bps-tag.good { color: #000; background: #5cff00; }
+.bps-tag.warn { color: #000; background: #ff8c00; }
+
+/* Penetration */
+.pen-list { display: flex; flex-direction: column; gap: 8px; }
+
+.pen-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: #030303;
+    border: 1px solid #080808;
+}
+
+.pen-icon {
+    width: 22px; height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.pen-yes      .pen-icon { color: #5cff00; }
+.pen-partial  .pen-icon { color: #ff8c00; }
+.pen-no       .pen-icon { color: #ff2222; }
+
+.pen-mat {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    min-width: 90px;
+}
+
+.pen-note {
+    font-size: 10px;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+/* =========================================
+   WEAPONS GUIDE
+========================================= */
+.weapons-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    max-width: 1200px;
+    margin: 0 auto 4px;
+}
+
+.wg-card {
+    background: #050505;
+    border: 1px solid #111;
+    padding: 28px 22px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+}
+
+.wg-card:hover { background: #080808; }
+
+.wg-class-tag {
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.ar-tag     { background: #5cff00; color: #000; }
+.smg-tag    { background: #ff8c00; color: #000; }
+.sniper-tag { background: #4da6ff; color: #000; }
+.shotgun-tag { background: #ff2222; color: #fff; }
+
+.wg-icon {
+    font-size: 24px;
+    margin-bottom: 12px;
+    display: block;
+    filter: grayscale(0.5);
+    transition: filter 0.2s;
+}
+
+.wg-card:hover .wg-icon { filter: none; }
+
+.wg-title {
+    font-size: clamp(13px, 1.5vw, 17px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.wg-desc {
+    font-size: 11px;
+    color: #3a3a3a;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.wg-pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.wgpc-label {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #222;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.wgpc-item {
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding-left: 12px;
+    position: relative;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.wgpc-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 5px; height: 5px;
+    border-radius: 50%;
+}
+
+.wgpc-item.good { color: #3a3a3a; }
+.wgpc-item.good::before { background: #5cff00; }
+.wgpc-item.bad  { color: #2a2a2a; }
+.wgpc-item.bad::before  { background: #ff2222; }
+
+.wg-best-for {
+    font-size: 9px;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.wg-recommended {
+    font-size: 9px;
+    color: #5cff00;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+/* Weapon tips bar */
+.weapon-tips-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #050505;
+    border: 1px solid #111;
+    border-top: 2px solid rgba(92,255,0,0.3);
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.wtb-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 18px 16px;
+    border-right: 1px solid #0e0e0e;
+    font-size: 11px;
+    color: #3a3a3a;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+}
+
+.wtb-item:last-child { border-right: none; }
+
+.wtb-num {
+    font-size: 9px;
+    font-weight: 800;
+    color: #5cff00;
+    letter-spacing: 2px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* =========================================
+   RANKED TIPS
+========================================= */
+.ranked-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rt-card {
+    background: #050505;
+    border: 1px solid #111;
+    padding: 28px 22px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+}
+
+.rt-card:hover { background: #080808; }
+
+.rank-gold::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #5cff00; }
+.rank-blue::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #4da6ff; }
+
+.rtc-num {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #5cff00;
+    margin-bottom: 10px;
+}
+
+.rank-blue .rtc-num { color: #4da6ff; }
+
+.rtc-title {
+    font-size: clamp(12px, 1.4vw, 16px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.rtc-desc {
+    font-size: 12px;
+    line-height: 1.75;
+    color: #3a3a3a;
+}
+
+/* =========================================
+   MAP GUIDE
+========================================= */
+.maps-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    max-width: 1200px;
+    margin: 0 auto 4px;
+}
+
+.mg-card {
+    background: #050505;
+    border: 1px solid #111;
+    padding: 32px 28px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+}
+
+.mg-card:hover { background: #080808; }
+
+.mg-color-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--mg-color, #5cff00);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.mg-card:hover .mg-color-bar { transform: scaleX(1); }
+
+.mg-header { margin-bottom: 12px; }
+
+.mg-op-code {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--mg-color, #5cff00);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    opacity: 0.7;
+}
+
+.mg-name {
+    font-size: clamp(18px, 2.2vw, 28px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.mg-biome {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--mg-color, #5cff00);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mg-style {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 18px;
+}
+
+.mg-style-tag {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #2a2a2a;
+    border: 1px solid #111;
+    padding: 3px 8px;
+    text-transform: uppercase;
+}
+
+.mg-tip {
+    font-size: 12px;
+    color: #3a3a3a;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    padding-left: 12px;
+    border-left: 2px solid #111;
+}
+
+.mg-tip strong { color: #5cff00; font-size: 11px; letter-spacing: 1px; }
+
+/* Universal map tips */
+.map-universal-tips {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #050505;
+    border: 1px solid #111;
+    padding: 28px 28px;
+}
+
+.mut-title {
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #5cff00;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.mut-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 24px;
+}
+
+.mut-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 12px;
+    color: #3a3a3a;
+    line-height: 1.6;
+}
+
+.mut-num {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #5cff00;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* =========================================
+   A.R.H.S GUIDE
+========================================= */
+.arhs-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+
+.ag-card {
+    background: #050505;
+    border: 1px solid #111;
+    border-top: 2px solid rgba(92,255,0,0.4);
+    padding: 28px 22px;
+    transition: background 0.2s;
+}
+
+.ag-card:hover { background: #080808; }
+
+.ag-icon {
+    font-size: 26px;
+    margin-bottom: 14px;
+    display: block;
+    filter: grayscale(0.4);
+    transition: filter 0.2s;
+}
+
+.ag-card:hover .ag-icon { filter: none; }
+
+.ag-title {
+    font-size: clamp(12px, 1.4vw, 16px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.ag-desc {
+    font-size: 12px;
+    color: #3a3a3a;
+    line-height: 1.75;
+}
+
+/* CTA bar */
+.arhs-cta-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(92,255,0,0.05);
+    border: 1px solid rgba(92,255,0,0.15);
+    border-left: 3px solid #5cff00;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.acb-title {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #5cff00;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.acb-sub {
+    font-size: 11px;
+    color: #444;
+    letter-spacing: 0.5px;
+}
+
+.acb-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #5cff00;
+    color: #000;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.acb-btn:hover { background: #fff; }
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 1024px) {
+    .lifecycle-steps { grid-template-columns: 1fr; }
+    .lc-arrow { display: none; }
+    .movement-grid { grid-template-columns: repeat(2, 1fr); }
+    .shooting-grid { grid-template-columns: 1fr; }
+    .sh-large { grid-row: auto; }
+    .weapons-guide-grid { grid-template-columns: repeat(2, 1fr); }
+    .ranked-tips-grid { grid-template-columns: repeat(2, 1fr); }
+    .maps-guide-grid { grid-template-columns: 1fr; }
+    .arhs-guide-grid { grid-template-columns: repeat(2, 1fr); }
+    .weapon-tips-bar { grid-template-columns: repeat(2, 1fr); }
+    .mut-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .guide-section { padding: 60px 16px; }
+    .guides-hero { height: auto; min-height: 80vh; padding: 100px 16px 50px; }
+    .gh-quick-nav { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .movement-grid { grid-template-columns: 1fr; }
+    .weapons-guide-grid { grid-template-columns: 1fr; }
+    .ranked-tips-grid { grid-template-columns: 1fr; }
+    .arhs-guide-grid { grid-template-columns: 1fr; }
+    .weapon-tips-bar { grid-template-columns: 1fr; }
+    .difficulty-bar { flex-direction: column; }
+    .db-arrow { display: none; }
+    .db-item { border-right: none; border-bottom: 1px solid #111; }
+    .db-item:last-child { border-bottom: none; }
+    .arhs-cta-bar { flex-direction: column; }
+}

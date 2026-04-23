@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, minimum-scale=0.1, maximum-scale=5.0">
+
+    <!-- SEO -->
+    <title>AEGIS | Official Website — Tactical FPS</title>
+    <meta name="description" content="AEGIS — The most powerful tactical FPS ever built. Realistic combat, AI-driven highlights, and a self-growing content ecosystem. Play Free Now.">
+    <meta name="keywords" content="AEGIS, tactical FPS, first person shooter, REY GAMES, battle pass, competitive FPS, ARHS, bodycam FPS">
+    <meta name="author" content="REY GAMES">
+    <meta name="theme-color" content="#5cff00">
+
+    <!-- Open Graph (Facebook, Discord, WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AEGIS — Tactical Combat Redefined">
+    <meta property="og:description" content="The first FPS that turns every player into a content creator automatically. Play Free. Record Everything.">
+    <meta property="og:image" content="assets/image/image.png">
+    <meta property="og:url" content="https://aegis.reygames.com">
+    <meta property="og:site_name" content="AEGIS — REY GAMES">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AEGIS — Tactical Combat Redefined">
+    <meta name="twitter:description" content="The first FPS that turns every player into a content creator automatically. Play Free Now.">
+    <meta name="twitter:image" content="assets/image/image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/image/image.png">
+    <link rel="apple-touch-icon" href="assets/image/image.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-navbar">
+        <div class="brand-section">
+            <img src="assets/image/image.png" alt="AEGIS Logo" class="brand-logo">
+            <span class="divider"></span>
+            <h1 class="brand-name">AEGIS</h1>
+        </div>
+
+        <nav class="nav-links">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="about.html">ABOUT <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>GAME INFO</h3>
+                            <a href="#section-operations">World of AEGIS</a>
+                            <a href="#">Operations & Maps</a>
+                            <a href="#section-arsenal">The Arsenal</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>FACTIONS</h3>
+                            <a href="#section-factions">VOX — Vanguard Ops</a>
+                            <a href="#section-factions">BFS — Black Falcon</a>
+                            <a href="#section-factions">ILF — Iron Legion</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="news.html">NEWS AND<br>COMMUNITY <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>LATEST</h3>
+                            <a href="#">Patch Notes</a>
+                            <a href="#">Dev Updates</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>SOCIAL</h3>
+                            <a href="#">Discord</a>
+                            <a href="#">Twitter / X</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="season.html">SEASON</a></li>
+                <li><a href="battlepass.html">BATTLE PASS</a></li>
+
+                <li class="has-dropdown">
+                    <a href="portal.html">PORTAL <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>CUSTOM GAMES</h3>
+                            <a href="#">Server Browser</a>
+                            <a href="#">Create Experience</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>HIGHLIGHTS</h3>
+                            <a href="#section-arhs">A.R.H.S Center</a>
+                            <a href="#">Clip Archive</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="guides.html">GUIDES</a></li>
+                <li><a href="playerstats.html">PLAYER STATS</a></li>
+            </ul>
+        </nav>
+
+        <div class="action-section">
+            <button class="buy-btn">
+                <span class="btn-text">FREE<br><span style="padding-left: 16px;">NOW</span></span>
+                <span class="btn-arrow">❯</span>
+            </button>
+        </div>
+
+        <!-- Hamburger Button (Mobile) -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+        <nav class="drawer-nav">
+            <div class="drawer-header">
+                <span class="drawer-brand">AEGIS</span>
+                <button class="drawer-close" id="drawerClose">✕</button>
+            </div>
+            <ul class="drawer-links">
+                <li class="drawer-section-label">GAME</li>
+                <li><a href="#section-pillars">Key Pillars</a></li>
+                <li><a href="#section-modes">Game Modes</a></li>
+                <li><a href="#section-operations">Operations & Maps</a></li>
+                <li><a href="#section-arsenal">The Arsenal</a></li>
+                <li><a href="#section-factions">Factions</a></li>
+                <li class="drawer-section-label">CONTENT</li>
+                <li><a href="#section-arhs">A.R.H.S System</a></li>
+                <li><a href="#section-esports">Esports</a></li>
+                <li><a href="#section-battlepass">Battle Pass</a></li>
+                <li class="drawer-section-label">COMMUNITY</li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">Twitter / X</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+            <a href="#" class="drawer-play-btn">PLAY FREE NOW ❯</a>
+        </nav>
+    </div>
+
+    <section class="aegis-hero-viewport" id="section-hero">
+
+        <div class="video-container">
+            <div class="video-fallback-bg"></div>
+            <div class="video-overlay-tint"></div>
+            <!-- ضع رابط الفيديو الحقيقي هنا بدل المسار الوهمي -->
+            <video autoplay muted loop playsinline id="heroVideo" class="hero-video">
+                <source src="assets/video/AEGIS - TRAILLER.mp4" type="video/mp4">
+            </video>
+            <!-- خلفية Fallback تظهر إذا لم يُوجد الفيديو -->
+            
+        </div>
+
+        <div class="camera-hud-frame">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+            <div class="hud-live-rec">
+                <span class="rec-dot"></span>
+                <span class="label-rec">REC</span>
+                <span id="liveClock">00:00:00:00</span>
+            </div>
+            <div class="hud-data-right">SIGNAL: ENCRYPTED // 60FPS</div>
+        </div>
+
+        <button id="videoControl" class="os-control-btn top-right-fixed">
+            <div id="controlIcon" class="icon-wrapper pause-mode">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </button>
+
+        <!-- زر الصوت — يظهر بجانب زر الـ pause -->
+        <button id="muteControl" class="os-control-btn mute-btn-pos" title="Toggle Sound">
+            <div id="muteIcon" class="mute-icon is-muted">
+                <span class="mute-line"></span>
+            </div>
+        </button>
+
+        <div class="hero-content-wrapper">
+            <h3 class="subtitle-top">NEXT-GENERATION TACTICAL FPS</h3>
+            <h1 class="main-logo-title">A E G I S</h1>
+            <h2 class="subtitle-bottom">TACTICAL COMBAT REDEFINED</h2>
+            <p class="hero-description">
+                Experience the most powerful tactical FPS ever built. Realistic combat,
+                AI-driven highlights, and a self-growing content ecosystem.
+            </p>
+            <div class="coming-soon-badge">
+                <span class="cs-line"></span>
+                <span class="cs-text">COMING SOON</span>
+                <span class="cs-line"></span>
+            </div>
+        </div>
+
+        <div class="scroll-indicator-vertical" onclick="document.getElementById('section-pillars').scrollIntoView({behavior:'smooth'})">
+            <span class="scroll-text">SCROLL</span>
+            <div class="scroll-line-track">
+                <div class="scroll-line-fill"></div>
+            </div>
+            <div class="scroll-chevrons">
+                <span class="scroll-chevron"></span>
+                <span class="scroll-chevron"></span>
+                <span class="scroll-chevron"></span>
+            </div>
+        </div>
+
+    </section>
+    <!-- =============================================
+         KEY PILLARS SECTION
+    ============================================= -->
+    <section class="key-pillars-section" id="section-pillars">
+
+        <div class="kp-header">
+            <div class="kp-header-line">
+                <span class="kp-line-accent"></span>
+                <span class="kp-label-top">CORE FOUNDATION</span>
+                <span class="kp-line-accent"></span>
+            </div>
+            <h2 class="kp-title">KEY PILLARS</h2>
+            <p class="kp-subtitle">Four foundational systems that make AEGIS the next evolution of tactical FPS</p>
+        </div>
+
+        <div class="kp-grid">
+
+            <!-- Pillar 01 -->
+            <div class="kp-card">
+                <div class="kp-card-num">01</div>
+                <div class="kp-card-tag">CINEMATIC GAMEPLAY</div>
+                <h3 class="kp-card-title">REALISTIC COMBAT</h3>
+                <p class="kp-card-desc">Every weapon feels powerful. True recoil behavior, cinematic sound design, and full bodycam recording create the most immersive tactical combat experience.</p>
+                <ul class="kp-feature-list">
+                    <li>DYNAMIC RECOIL PATTERNS</li>
+                    <li>MATERIAL PENETRATION SYSTEM</li>
+                    <li>FULL BODYCAM RECORDING</li>
+                    <li>AAA ANIMATION QUALITY</li>
+                </ul>
+                <div class="kp-card-bg-num">01</div>
+            </div>
+
+            <!-- Pillar 02 -->
+            <div class="kp-card">
+                <div class="kp-card-num">02</div>
+                <div class="kp-card-tag">COMPETITIVE WARFARE</div>
+                <h3 class="kp-card-title">MULTIPLAYER ECOSYSTEM</h3>
+                <p class="kp-card-desc">Ranked 50-player battles, 4v4 Clash Squad, Mixed AI+Player modes, and fully customizable private lobbies. A complete competitive framework.</p>
+                <ul class="kp-feature-list">
+                    <li>50-PLAYER RANKED MATCHES</li>
+                    <li>4v4 CLASH SQUAD</li>
+                    <li>ADAPTIVE AI BOTS</li>
+                    <li>CUSTOM TOURNAMENT ROOMS</li>
+                </ul>
+                <div class="kp-card-bg-num">02</div>
+            </div>
+
+            <!-- Pillar 03 -->
+            <div class="kp-card">
+                <div class="kp-card-num">03</div>
+                <div class="kp-card-tag">AI-DRIVEN CORE</div>
+                <h3 class="kp-card-title">INTELLIGENT SYSTEMS</h3>
+                <p class="kp-card-desc">Adaptive AI bots that learn from your playstyle, real-time anti-cheat monitoring, and automated highlight generation through the A.R.H.S engine.</p>
+                <ul class="kp-feature-list">
+                    <li>ADAPTIVE AI BEHAVIOR</li>
+                    <li>HYPERSECURE ANTI-CHEAT</li>
+                    <li>AUTO HIGHLIGHT GENERATION</li>
+                    <li>VIRAL CLIP ENGINE</li>
+                </ul>
+                <div class="kp-card-bg-num">03</div>
+            </div>
+
+            <!-- Pillar 04 -->
+            <div class="kp-card">
+                <div class="kp-card-num">04</div>
+                <div class="kp-card-tag">ALWAYS EVOLVING</div>
+                <h3 class="kp-card-title">ENDLESS CONTENT</h3>
+                <p class="kp-card-desc">Every match produces new content. Seasonal Operations, Battle Pass rewards, and an auto-growing ecosystem that keeps the battlefield fresh.</p>
+                <ul class="kp-feature-list">
+                    <li>SEASONAL OPERATIONS</li>
+                    <li>BATTLE PASS SYSTEM</li>
+                    <li>AUTO SOCIAL PUBLISHING</li>
+                    <li>COMMUNITY GROWTH ENGINE</li>
+                </ul>
+                <div class="kp-card-bg-num">04</div>
+            </div>
+
+        </div>
+
+        <div class="kp-bottom-bar">
+            <span class="kp-dot active"></span>
+            <span class="kp-dot"></span>
+            <span class="kp-dot"></span>
+            <span class="kp-dot"></span>
+        </div>
+
+    </section>
+
+    <!-- =============================================
+         GAME MODES SECTION
+    ============================================= -->
+    <section class="game-modes-section" id="section-modes">
+
+        <div class="gm-header">
+            <div class="gm-header-line">
+                <span class="gm-line-accent"></span>
+                <span class="gm-label-top">COMBAT PROTOCOLS</span>
+                <span class="gm-line-accent"></span>
+            </div>
+            <h2 class="gm-title">GAME MODES</h2>
+            <div class="gm-title-underline"></div>
+        </div>
+
+        <div class="gm-tabs" id="gmTabs">
+            <button class="gm-tab active" data-mode="ranked">RANKED</button>
+            <button class="gm-tab" data-mode="mixed">MIXED</button>
+            <button class="gm-tab" data-mode="clash">CLASH</button>
+            <button class="gm-tab" data-mode="training">TRAINING</button>
+            <button class="gm-tab" data-mode="custom">CUSTOM</button>
+            <button class="gm-tab" data-mode="classic">CLASSIC</button>
+        </div>
+
+        <div class="gm-panel-wrapper">
+            <div class="gm-info-card">
+                <div class="gm-op-code" id="gmOpCode">OPERATION CODE: ALPHA-1</div>
+                <h3 class="gm-mode-title" id="gmModeTitle">RANKED MODE</h3>
+                <div class="gm-mode-sub" id="gmModeSub">50 PLAYERS — DOMINATION</div>
+                <p class="gm-mode-desc" id="gmModeDesc">Battle against 50 real opponents in strategic team-based warfare. Every bullet counts. Ranked progression, real rewards, and a reputation built match by match.</p>
+                <div class="gm-tags" id="gmTags">
+                    <span class="gm-tag">50 PLAYERS</span>
+                    <span class="gm-tag">TEAM-BASED</span>
+                    <span class="gm-tag">COMPETITIVE</span>
+                </div>
+            </div>
+            <div class="gm-visual-card">
+                <div class="gm-vc-corner tl"></div>
+                <div class="gm-vc-corner tr"></div>
+                <div class="gm-vc-corner bl"></div>
+                <div class="gm-vc-corner br"></div>
+                <div class="gm-vc-inner">
+                    <div class="gm-vc-number" id="gmVcNumber">50<span class="gm-vs">v</span>50</div>
+                    <div class="gm-vc-bg-icon" id="gmVcBgIcon">&#10005;</div>
+                    <div class="gm-vc-label" id="gmVcLabel">RANKED MODE</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gm-icon-bar">
+            <div class="gm-icon-item active" data-mode="ranked">
+                <div class="gm-icon-sym">&#10005;</div>
+                <span>RANKED</span>
+            </div>
+            <div class="gm-icon-item" data-mode="mixed">
+                <div class="gm-icon-sym">&#10022;</div>
+                <span>MIXED</span>
+            </div>
+            <div class="gm-icon-item" data-mode="clash">
+                <div class="gm-icon-sym">&#9670;</div>
+                <span>CLASH</span>
+            </div>
+            <div class="gm-icon-item" data-mode="training">
+                <div class="gm-icon-sym">&#9889;</div>
+                <span>TRAINING</span>
+            </div>
+            <div class="gm-icon-item" data-mode="custom">
+                <div class="gm-icon-sym">&#9881;</div>
+                <span>CUSTOM</span>
+            </div>
+            <div class="gm-icon-item" data-mode="classic">
+                <div class="gm-icon-sym">&#9632;</div>
+                <span>CLASSIC</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- =============================================
+         OPERATIONS SECTION
+    ============================================= -->
+    <section class="ops-section" id="section-operations">
+
+        <div class="ops-header">
+            <div class="ops-header-line">
+                <span class="ops-line-accent"></span>
+                <span class="ops-label-top">DEPLOYMENT ZONES</span>
+                <span class="ops-line-accent"></span>
+            </div>
+            <h2 class="ops-title">OPERATIONS</h2>
+            <p class="ops-subtitle">Five unique battlefields, each with its own identity, atmosphere, and tactical challenges</p>
+        </div>
+
+        <div class="ops-tabs" id="opsTabs">
+            <button class="ops-tab active" data-op="frostline">FROSTLINE</button>
+            <button class="ops-tab" data-op="black">BLACK</button>
+            <button class="ops-tab" data-op="iron">IRON</button>
+            <button class="ops-tab" data-op="ember">EMBER</button>
+            <button class="ops-tab" data-op="sandstrike">SANDSTRIKE</button>
+            <button class="ops-tab" data-op="crimson">CRIMSON</button>
+        </div>
+
+        <div class="ops-panel-wrapper">
+
+            <!-- Info Card -->
+            <div class="ops-info-card">
+                <div class="ops-info-top-line" id="opsInfoTopLine"></div>
+                <div class="ops-op-code" id="opsOpCode">OP-FL-01</div>
+                <h3 class="ops-op-title" id="opsOpTitle">OPERATION FROSTLINE</h3>
+                <div class="ops-op-sub" id="opsOpSub">
+                    <span class="ops-biome" id="opsBiome">SNOW BATTLEFIELD</span>
+                    <span class="ops-divider-dot">|</span>
+                    <span class="ops-colors" id="opsColors">Blue / White</span>
+                </div>
+                <p class="ops-op-desc" id="opsOpDesc">Frozen forests and abandoned military facilities buried beneath ice. Combat shifts across snowdrifts and frozen lakes under the northern lights.</p>
+                <div class="ops-features-grid" id="opsFeaturesGrid">
+                    <ul class="ops-feat-col">
+                        <li>FROZEN LAKES</li>
+                        <li>SNOW TRENCHES</li>
+                    </ul>
+                    <ul class="ops-feat-col">
+                        <li>MILITARY BUNKERS</li>
+                        <li>AURORA BOREALIS</li>
+                    </ul>
+                </div>
+                <div class="ops-card-nav">
+                    <button class="ops-nav-btn" id="opsPrev">&#10094;</button>
+                    <button class="ops-nav-btn" id="opsNext">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Visual Card -->
+            <div class="ops-visual-card">
+                <div class="ops-vc-corner tl"></div>
+                <div class="ops-vc-corner tr"></div>
+                <div class="ops-vc-corner bl"></div>
+                <div class="ops-vc-corner br"></div>
+                <div class="ops-vc-inner">
+                    <div class="ops-vc-number" id="opsVcNumber">01</div>
+                    <div class="ops-vc-bottom">
+                        <div class="ops-vc-biome" id="opsVcBiome">SNOW BATTLEFIELD</div>
+                        <div class="ops-vc-name" id="opsVcName">OPERATION FROSTLINE</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="ops-stats-bar">
+            <div class="ops-stat-item">
+                <span class="ops-stat-num">6</span>
+                <span class="ops-stat-label">OPERATIONS</span>
+            </div>
+            <div class="ops-stat-item">
+                <span class="ops-stat-num">20+</span>
+                <span class="ops-stat-label">UNIQUE ZONES</span>
+            </div>
+            <div class="ops-stat-item">
+                <span class="ops-stat-num">4</span>
+                <span class="ops-stat-label">WEATHER SYSTEMS</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- =============================================
+         FACTIONS SECTION
+    ============================================= -->
+    <section class="factions-section" id="section-factions">
+
+        <div class="fac-header">
+            <div class="fac-header-line">
+                <span class="fac-line-accent"></span>
+                <span class="fac-label-top">CHOOSE YOUR SIDE</span>
+                <span class="fac-line-accent"></span>
+            </div>
+            <h2 class="fac-title">FACTIONS</h2>
+            <p class="fac-subtitle">Four military entities, each with distinct identity, fighting for dominance in a world at war</p>
+        </div>
+
+        <!-- Top Selector -->
+        <div class="fac-selector" id="facSelector">
+            <div class="fac-sel-item active" data-fac="vox">
+                <span class="fac-sel-abbr">VOX</span>
+                <span class="fac-sel-name">VANGUARD OPS</span>
+            </div>
+            <div class="fac-sel-item" data-fac="bfs">
+                <span class="fac-sel-abbr">BFS</span>
+                <span class="fac-sel-name">BLACK FALCON</span>
+            </div>
+            <div class="fac-sel-item" data-fac="ilf">
+                <span class="fac-sel-abbr">ILF</span>
+                <span class="fac-sel-name">IRON LEGION</span>
+            </div>
+            <div class="fac-sel-item" data-fac="prn">
+                <span class="fac-sel-abbr">PRN</span>
+                <span class="fac-sel-name">PHANTOM RECON</span>
+            </div>
+        </div>
+
+        <!-- Main Panel -->
+        <div class="fac-panel">
+
+            <!-- Left: Logo Visual -->
+            <div class="fac-visual">
+                <div class="fac-vc-corner tl"></div>
+                <div class="fac-vc-corner br"></div>
+                <div class="fac-logo-text" id="facLogoText">VOX</div>
+            </div>
+
+            <!-- Right: Info -->
+            <div class="fac-info">
+                <div class="fac-info-topline" id="facInfoTopline"></div>
+                <div class="fac-info-tag">
+                    <span class="fac-tag-abbr" id="facTagAbbr">VOX</span>
+                    <span class="fac-tag-sep">——</span>
+                    <span class="fac-tag-role" id="facTagRole">TACTICAL ASSAULT</span>
+                </div>
+                <h3 class="fac-info-title" id="facInfoTitle">VANGUARD OPERATIONS UNIT</h3>
+                <div class="fac-info-sub" id="facInfoSub">VANGUARD OPS</div>
+                <p class="fac-info-desc" id="facInfoDesc">Modern elite special forces. Heavily trained, tactical precision, and clean operational design. VOX represents the pinnacle of military professionalism and cutting-edge warfare technology.</p>
+                <div class="fac-features-grid" id="facFeaturesGrid">
+                    <ul class="fac-feat-col">
+                        <li>ELITE TRAINING</li>
+                        <li>STEALTH INSERTION</li>
+                    </ul>
+                    <ul class="fac-feat-col">
+                        <li>ADVANCED TECH</li>
+                        <li>RAPID RESPONSE</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="fac-bottom-bar" id="facBottomBar">
+            <div class="fac-bar-item active" data-fac="vox">
+                <span class="fac-bar-abbr">VOX</span>
+                <span class="fac-bar-role">TACTICAL ASSAULT</span>
+            </div>
+            <div class="fac-bar-item" data-fac="bfs">
+                <span class="fac-bar-abbr">BFS</span>
+                <span class="fac-bar-role">COVERT OPERATIONS</span>
+            </div>
+            <div class="fac-bar-item" data-fac="ilf">
+                <span class="fac-bar-abbr">ILF</span>
+                <span class="fac-bar-role">HEAVY WARFARE</span>
+            </div>
+            <div class="fac-bar-item" data-fac="prn">
+                <span class="fac-bar-abbr">PRN</span>
+                <span class="fac-bar-role">STEALTH / RECON</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- =============================================
+         THE ARSENAL SECTION
+    ============================================= -->
+    <section class="arsenal-section" id="section-arsenal">
+
+        <div class="arsenal-header">
+            <div class="arsenal-header-line">
+                <span class="arsenal-line-accent"></span>
+                <span class="arsenal-label-top">WEAPONS & GEAR</span>
+                <span class="arsenal-line-accent"></span>
+            </div>
+            <h2 class="arsenal-title">THE ARSENAL</h2>
+            <p class="arsenal-subtitle">20 precision-engineered weapons at launch. Every gun feels different. Every shot has weight.</p>
+        </div>
+
+        <div class="arsenal-categories">
+            <button class="arsenal-cat active" data-cat="all">ALL</button>
+            <button class="arsenal-cat" data-cat="ar">ASSAULT RIFLES</button>
+            <button class="arsenal-cat" data-cat="smg">SMG</button>
+            <button class="arsenal-cat" data-cat="sniper">SNIPER</button>
+            <button class="arsenal-cat" data-cat="shotgun">SHOTGUN</button>
+            <button class="arsenal-cat" data-cat="pistol">PISTOL</button>
+        </div>
+
+        <div class="arsenal-grid" id="arsenalGrid">
+            <!-- Assault Rifles -->
+            <div class="arsenal-card" data-cat="ar">
+                <div class="arsenal-card-tag">AR</div>
+                <div class="arsenal-card-name">AX-7 PHANTOM</div>
+                <div class="arsenal-card-sub">ASSAULT RIFLE</div>
+                <div class="arsenal-card-stats">
+                    <div class="astat"><span class="astat-label">DMG</span><div class="astat-bar"><div class="astat-fill" style="width:72%"></div></div></div>
+                    <div class="astat"><span class="astat-label">RANGE</span><div class="astat-bar"><div class="astat-fill" style="width:65%"></div></div></div>
+                    <div class="astat"><span class="astat-label">FIRE RATE</span><div class="astat-bar"><div class="astat-fill" style="width:80%"></div></div></div>
+                </div>
+            </div>
+            <div class="arsenal-card" data-cat="ar">
+                <div class="arsenal-card-tag">AR</div>
+                <div class="arsenal-card-name">M4-VANGUARD</div>
+                <div class="arsenal-card-sub">ASSAULT RIFLE</div>
+                <div class="arsenal-card-stats">
+                    <div class="astat"><span class="astat-label">DMG</span><div class="astat-bar"><div class="astat-fill" style="width:68%"></div></div></div>
+                    <div class="astat"><span class="astat-label">RANGE</span><div class="astat-bar"><div class="astat-fill" style="width:70%"></div></div></div>
+                    <div class="astat"><span class="astat-label">FIRE RATE</span><div class="astat-bar"><div class="astat-fill" style="width:85%"></div></div></div>
+                </div>
+            </div>
+            <div class="arsenal-card" data-cat="ar">
+                <div class="arsenal-card-tag">AR</div>
+                <div class="arsenal-card-name">RK-12 IRON</div>
+                <div class="arsenal-card-sub">ASSAULT RIFLE</div>
+                <div class="arsenal-card-stats">
+                    <div class="astat"><span class="astat-label">DMG</span><div class="astat-bar"><div class="astat-fill" style="width:78%"></div></div></div>
+                    <div class="astat"><span class="astat-label">RANGE</span><div class="astat-bar"><div class="astat-fill" style="width:60%"></div></div></div>
+                    <div class="astat"><span class="astat-label">FIRE RATE</span><div class="astat-bar"><div class="astat-fill" style="width:75%"></div></div></div>
+                </div>
+            </div>
+            <!-- SMG -->
+            <div class="arsenal-card" data-cat="smg">
+                <div class="arsenal-card-tag">SMG</div>
+                <div class="arsenal-card-name">VX-9 SPECTER</div>
+                <div class="arsenal-card-sub">SUBMACHINE GUN</div>
+                <div class="arsenal-card-stats">
+                    <div class="astat"><span class="astat-label">DMG</span><div class="astat-bar"><div class="astat-fill" style="width:50%"></div></div></div>
+                    <div class="astat"><span class="astat-label">RANGE</span><div class="astat-bar"><div class="astat-fill" style="width:40%"></div></div></div>
+                    <div class="astat"><span class="astat-label">FIRE RATE</span><div class="astat-bar"><div class="astat-fill" style="width:95%"></div></div></div>
+                </div>
+            </div>
+            <div class="arsenal-card" data-cat="smg">
+                <div class="arsenal-card-tag">SMG</div>
+                <div class="arsenal-card-name">MP-REAPER</div>
+                <div class="arsenal-card-sub">SUBMACHINE GUN</div>
+                <div class="arsenal-card-stats">
+                    <div class="astat"><span class="astat-label">DMG</span><div class="astat-bar"><div class="astat-fill" style="width:55%"></div></div></div>
+                    <div class="astat"><span class="astat-label">RANGE</span><div class="astat-bar"><div class="astat-fill" style="width:35%"></div></div></div>
+                    <div class="astat"><span class="astat-label">FIRE RATE</span><div class="astat-bar"><div class="astat-fill" style="width:90%"></div></div></div>
+                </div>
+            </div>
+            <!-- Sniper -->
+            <div class="arsenal-card" data-cat="sniper">
+                <div class="arsenal-card-tag">SNP</div>
+                <div class="arsenal-card-name">SR-GHOST</div>
+                <div class="arsenal-card-sub">SNIPER RIFLE</div>
+                <div class="arsenal-card-stats">
+                    <div class="astat"><span class="astat-label">DMG</span><div class="astat-bar"><div class="astat-fill" style="width:98%"></div></div></div>
+                    <div class="astat"><span class="astat-label">RANGE</span><div class="astat-bar"><div class="astat-fill" style="width:95%"></div></div></div>
+                    <div class="astat"><span class="astat-label">FIRE RATE</span><div class="astat-bar"><div class="astat-fill" style="width:18%"></div></div></div>
+                </div>
+            </div>
+            <div class="arsenal-card" data-cat="sniper">
+                <div class="arsenal-card-tag">SNP</div>
+                <div class="arsenal-card-name">DM-FALCON</div>
+                <div class="arsenal-card-sub">MARKSMAN RIFLE</div>
+                <div class="arsenal-card-stats">
+                    <div class="astat"><span class="astat-label">DMG</span><div class="astat-bar"><div class="astat-fill" style="width:85%"></div></div></div>
+                    <div class="astat"><span class="astat-label">RANGE</span><div class="astat-bar"><div class="astat-fill" style="width:88%"></div></div></div>
+                    <div class="astat"><span class="astat-label">FIRE RATE</span><div class="astat-bar"><div class="astat-fill" style="width:35%"></div></div></div>
+                </div>
+            </div>
+            <!-- Shotgun -->
+            <div class="arsenal-card" data-cat="shotgun">
+                <div class="arsenal-card-tag">SHG</div>
+                <div class="arsenal-card-name">SG-BREACHER</div>
+                <div class="arsenal-card-sub">SHOTGUN</div>
+                <div class="arsenal-card-stats">
+                    <div class="astat"><span class="astat-label">DMG</span><div class="astat-bar"><div class="astat-fill" style="width:92%"></div></div></div>
+                    <div class="astat"><span class="astat-label">RANGE</span><div class="astat-bar"><div class="astat-fill" style="width:25%"></div></div></div>
+                    <div class="astat"><span class="astat-label">FIRE RATE</span><div class="astat-bar"><div class="astat-fill" style="width:30%"></div></div></div>
+                </div>
+            </div>
+            <!-- Pistol -->
+            <div class="arsenal-card" data-cat="pistol">
+                <div class="arsenal-card-tag">PST</div>
+                <div class="arsenal-card-name">P9-STRIKER</div>
+                <div class="arsenal-card-sub">PISTOL</div>
+                <div class="arsenal-card-stats">
+                    <div class="astat"><span class="astat-label">DMG</span><div class="astat-bar"><div class="astat-fill" style="width:45%"></div></div></div>
+                    <div class="astat"><span class="astat-label">RANGE</span><div class="astat-bar"><div class="astat-fill" style="width:38%"></div></div></div>
+                    <div class="astat"><span class="astat-label">FIRE RATE</span><div class="astat-bar"><div class="astat-fill" style="width:62%"></div></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arsenal-footer-bar">
+            <span class="arsenal-count-label">20 WEAPONS AT LAUNCH</span>
+            <span class="arsenal-divider-dot">◆</span>
+            <span class="arsenal-feat">DYNAMIC RECOIL</span>
+            <span class="arsenal-divider-dot">◆</span>
+            <span class="arsenal-feat">MATERIAL PENETRATION</span>
+            <span class="arsenal-divider-dot">◆</span>
+            <span class="arsenal-feat">40+ SKINS</span>
+        </div>
+
+    </section>
+
+    <!-- =============================================
+         A.R.H.S SECTION
+    ============================================= -->
+    <section class="arhs-section" id="section-arhs">
+
+        <div class="arhs-header">
+            <div class="arhs-header-line">
+                <span class="arhs-line-accent"></span>
+                <span class="arhs-label-top">REVOLUTIONARY TECHNOLOGY</span>
+                <span class="arhs-line-accent"></span>
+            </div>
+            <h2 class="arhs-main-title">A.R.H.S</h2>
+            <p class="arhs-full-name">AUTOMATED REPLAY &amp; HIGHLIGHTS SYSTEM</p>
+            <p class="arhs-subtitle">The first FPS game that turns every player into a content creator automatically.</p>
+        </div>
+
+        <div class="arhs-how-label">HOW IT WORKS</div>
+
+        <!-- 4 Step Cards -->
+        <div class="arhs-steps-grid">
+
+            <div class="arhs-step-card">
+                <div class="arhs-step-top">
+                    <span class="arhs-step-num-small">01 —</span>
+                    <span class="arhs-step-num-bg">01</span>
+                </div>
+                <h3 class="arhs-step-title">RECORD</h3>
+                <p class="arhs-step-desc">Every player and bot is recorded through Bodycam-style POV continuously throughout the match.</p>
+            </div>
+
+            <div class="arhs-step-card">
+                <div class="arhs-step-top">
+                    <span class="arhs-step-num-small">02 —</span>
+                    <span class="arhs-step-num-bg">02</span>
+                </div>
+                <h3 class="arhs-step-title">ANALYZE</h3>
+                <p class="arhs-step-desc">AI identifies key moments — kills, clutches, streaks, and cinematic sequences automatically.</p>
+            </div>
+
+            <div class="arhs-step-card">
+                <div class="arhs-step-top">
+                    <span class="arhs-step-num-small">03 —</span>
+                    <span class="arhs-step-num-bg">03</span>
+                </div>
+                <h3 class="arhs-step-title">GENERATE</h3>
+                <p class="arhs-step-desc">The system edits highlight reels, creates viral short clips, and produces cinematic montages.</p>
+            </div>
+
+            <div class="arhs-step-card">
+                <div class="arhs-step-top">
+                    <span class="arhs-step-num-small">04 —</span>
+                    <span class="arhs-step-num-bg">04</span>
+                </div>
+                <h3 class="arhs-step-title">DISTRIBUTE</h3>
+                <p class="arhs-step-desc">Content uploads automatically to YouTube, TikTok, Instagram, X, and the AEGIS website.</p>
+            </div>
+
+        </div>
+
+        <!-- Specs Box -->
+        <div class="arhs-specs-box">
+            <div class="arhs-specs-top-line"></div>
+            <div class="arhs-specs-label">SYSTEM SPECIFICATIONS</div>
+            <div class="arhs-specs-grid">
+                <div class="arhs-spec-item">
+                    <span class="arhs-spec-val">1080p / 60FPS</span>
+                    <span class="arhs-spec-sub">BODYCAM POV</span>
+                </div>
+                <div class="arhs-spec-item">
+                    <span class="arhs-spec-val">AI-POWERED</span>
+                    <span class="arhs-spec-sub">AUTO EDITING</span>
+                </div>
+                <div class="arhs-spec-item">
+                    <span class="arhs-spec-val">5 PLATFORMS</span>
+                    <span class="arhs-spec-sub">DISTRIBUTION</span>
+                </div>
+                <div class="arhs-spec-item">
+                    <span class="arhs-spec-val">&lt; 5 MINUTES</span>
+                    <span class="arhs-spec-sub">GENERATION TIME</span>
+                </div>
+            </div>
+            <div class="arhs-specs-bottom-line"></div>
+            <div class="arhs-specs-tagline">ALWAYS RECORDING — ALWAYS CREATING</div>
+        </div>
+
+        <!-- Quote -->
+        <p class="arhs-quote">"Every match becomes a highlight reel. Every player becomes a content creator. Even beginners produce clips worth sharing."</p>
+
+    </section>
+
+    <!-- =============================================
+         ESPORTS SECTION
+    ============================================= -->
+    <section class="esports-section" id="section-esports">
+
+        <div class="esports-header">
+            <div class="esports-header-line">
+                <span class="esports-line-accent"></span>
+                <span class="esports-label-top">COMPETITIVE ECOSYSTEM</span>
+                <span class="esports-line-accent"></span>
+            </div>
+            <h2 class="esports-title">ESPORTS</h2>
+            <p class="esports-subtitle">Built from day one for competitive play. Ranked leagues, clan wars, and a global championship on the horizon.</p>
+        </div>
+
+        <div class="esports-grid">
+
+            <div class="esports-card esports-card-large">
+                <div class="esports-card-num">01</div>
+                <div class="esports-card-icon">🏆</div>
+                <h3 class="esports-card-title">RANKED LEAGUES</h3>
+                <p class="esports-card-desc">Seasonal ranking system with Bronze to Apex tiers. Climb the ladder, earn exclusive rewards, and prove your skill against the world's best operators.</p>
+                <ul class="esports-feat-list">
+                    <li>SEASONAL RANKED RESETS</li>
+                    <li>TIER-BASED MATCHMAKING</li>
+                    <li>EXCLUSIVE RANK REWARDS</li>
+                </ul>
+            </div>
+
+            <div class="esports-card">
+                <div class="esports-card-num">02</div>
+                <div class="esports-card-icon">⚔️</div>
+                <h3 class="esports-card-title">CLAN WARS</h3>
+                <p class="esports-card-desc">Form squads, compete in organized clan battles, and dominate faction leaderboards across every Operation.</p>
+                <ul class="esports-feat-list">
+                    <li>CLAN LEADERBOARDS</li>
+                    <li>FACTION RIVALRY</li>
+                    <li>CLAN TOURNAMENTS</li>
+                </ul>
+            </div>
+
+            <div class="esports-card">
+                <div class="esports-card-num">03</div>
+                <div class="esports-card-icon">📡</div>
+                <h3 class="esports-card-title">SPECTATOR MODE</h3>
+                <p class="esports-card-desc">Full broadcast-ready spectator tools. Observer cameras, input visualization, and live commentary support for professional events.</p>
+                <ul class="esports-feat-list">
+                    <li>OBSERVER CAMERAS</li>
+                    <li>INPUT VISUALIZATION</li>
+                    <li>REPLAY ANALYSIS</li>
+                </ul>
+            </div>
+
+            <div class="esports-card esports-card-coming">
+                <div class="esports-card-num">04</div>
+                <div class="esports-card-icon">🌍</div>
+                <h3 class="esports-card-title">AEGIS CHAMPIONSHIP</h3>
+                <p class="esports-card-desc">The AEGIS Esports Championship League — a global tournament built for the next generation of FPS competitors.</p>
+                <div class="esports-coming-badge">COMING SOON</div>
+            </div>
+
+        </div>
+
+        <div class="esports-bottom-bar">
+            <div class="esports-stat">
+                <span class="esports-stat-val">HYPERSECURE</span>
+                <span class="esports-stat-sub">ANTI-CHEAT</span>
+            </div>
+            <div class="esports-stat">
+                <span class="esports-stat-val">50v50</span>
+                <span class="esports-stat-sub">MAX LOBBY SIZE</span>
+            </div>
+            <div class="esports-stat">
+                <span class="esports-stat-val">60FPS</span>
+                <span class="esports-stat-sub">COMPETITIVE TARGET</span>
+            </div>
+            <div class="esports-stat">
+                <span class="esports-stat-val">SERVER-SIDE</span>
+                <span class="esports-stat-sub">HIT DETECTION</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- =============================================
+         BATTLE PASS SECTION
+    ============================================= -->
+    <section class="bp-section" id="section-battlepass">
+
+        <div class="bp-header">
+            <div class="bp-header-line">
+                <span class="bp-line-accent"></span>
+                <span class="bp-label-top">SEASONAL PROGRESSION</span>
+                <span class="bp-line-accent"></span>
+            </div>
+            <h2 class="bp-title">BATTLE PASS</h2>
+            <p class="bp-subtitle">Level 1–100 seasonal progression with free and premium reward tracks</p>
+        </div>
+
+        <!-- Season Tabs -->
+        <div class="bp-tabs">
+            <button class="bp-tab active" data-season="s1">SEASON 1</button>
+            <button class="bp-tab bp-tab-locked" disabled title="Coming Soon">SEASON 2 <span class="bp-lock-icon">🔒</span></button>
+            <button class="bp-tab bp-tab-locked" disabled title="Coming Soon">SEASON 3 <span class="bp-lock-icon">🔒</span></button>
+        </div>
+
+        <!-- Panel -->
+        <div class="bp-panel">
+
+            <!-- Visual Card -->
+            <div class="bp-visual-card">
+                <div class="bp-vc-corner tl"></div>
+                <div class="bp-vc-corner tr"></div>
+                <div class="bp-vc-corner bl"></div>
+                <div class="bp-vc-corner br"></div>
+                <div class="bp-vc-bg-icon" id="bpVcBgIcon">❄</div>
+                <div class="bp-vc-bottom">
+                    <div class="bp-vc-theme" id="bpVcTheme">ICE / SNOW</div>
+                    <div class="bp-vc-name" id="bpVcName">OPERATION FROSTLINE</div>
+                </div>
+            </div>
+
+            <!-- Info Card -->
+            <div class="bp-info-card">
+                <div class="bp-info-top-line" id="bpInfoTopLine"></div>
+                <div class="bp-info-season-tag">
+                    <span class="bp-season-label" id="bpSeasonLabel">SEASON 1</span>
+                    <span class="bp-season-sep">——</span>
+                </div>
+                <h3 class="bp-info-title" id="bpInfoTitle">OPERATION FROSTLINE</h3>
+                <p class="bp-info-desc" id="bpInfoDesc">Ice-themed camo, snow gear outfits, and blue glowing weapons.</p>
+
+                <div class="bp-rewards-label">FEATURED REWARDS</div>
+                <div class="bp-rewards-grid" id="bpRewardsGrid">
+                    <ul class="bp-reward-col">
+                        <li>ICE CAMO</li>
+                        <li>BLUE FX</li>
+                    </ul>
+                    <ul class="bp-reward-col">
+                        <li>SNOW GEAR</li>
+                        <li>WINTER BADGE</li>
+                    </ul>
+                </div>
+
+                <div class="bp-progression-row">
+                    <span class="bp-prog-label">PROGRESSION</span>
+                    <span class="bp-prog-val" id="bpProgVal">LEVEL 1 — 100</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="bp-stats-bar">
+            <div class="bp-stat-item">
+                <span class="bp-stat-num">50+</span>
+                <span class="bp-stat-label">WEAPON SKINS</span>
+            </div>
+            <div class="bp-stat-item">
+                <span class="bp-stat-num">20+</span>
+                <span class="bp-stat-label">CHARACTER OUTFITS</span>
+            </div>
+            <div class="bp-stat-item">
+                <span class="bp-stat-num">30+</span>
+                <span class="bp-stat-label">EMOTES</span>
+            </div>
+            <div class="bp-stat-item">
+                <span class="bp-stat-num">40+</span>
+                <span class="bp-stat-label">BADGES</span>
+            </div>
+        </div>
+
+        <!-- Track Info -->
+        <div class="bp-tracks">
+            <span><span class="bp-track-free">FREE TRACK</span> — Basic skins, coins, emotes, and XP boosts available to all players</span>
+            <span class="bp-track-sep">|</span>
+            <span><span class="bp-track-premium">PREMIUM TRACK</span> — Legendary skins, operator outfits, animated cosmetics, and exclusive effects</span>
+        </div>
+
+    </section>
+
+    <!-- =============================================
+         CTA — JOIN THE BATTLE
+    ============================================= -->
+    <section class="cta-section">
+
+        <div class="cta-inner">
+            <div class="cta-header-line">
+                <span class="cta-line-accent"></span>
+                <span class="cta-label-top">JOIN THE BATTLE</span>
+                <span class="cta-line-accent"></span>
+            </div>
+
+            <h2 class="cta-headline">
+                <span class="cta-white">THE FUTURE OF<br>FPS</span><br>
+                <span class="cta-green">STARTS NOW</span>
+            </h2>
+
+            <p class="cta-desc">Be part of the next evolution of tactical shooters. Realistic combat, AI-driven highlights,<br>and a self-growing content ecosystem await.</p>
+
+            <div class="cta-buttons">
+                <a href="#" class="cta-btn-primary">PLAY FREE NOW <span class="cta-btn-arrow">❯</span></a>
+                <a href="#" class="cta-btn-secondary">WATCH TRAILER <span class="cta-btn-arrow">►</span></a>
+            </div>
+
+            <div class="cta-platforms">
+                <span>PC (PRIMARY)</span>
+                <span class="cta-dot">◆</span>
+                <span>CONSOLES (COMING)</span>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="aegis-footer-main">
+        <div class="footer-side-accent"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+
+                <!-- Brand Column -->
+                <div class="footer-col brand-col">
+                    <div class="footer-brand-row">
+                        <div class="footer-brand-icon"><img src="assets/image/image.png" alt="AEG"class="footer-brand-icon"></div>
+                        <h2 class="footer-logo">AEGIS</h2>
+                    </div>
+                    <p class="footer-brand-desc">
+                        The most powerful tactical FPS ever built. Realistic
+                        combat, AI-driven highlights, and a self-growing
+                        content ecosystem. Built for the next generation of
+                        warfare.
+                    </p>
+                    <span class="footer-tagline">A.R.H.S — ALWAYS RECORDING</span>
+                </div>
+
+                <!-- GAME Column -->
+                <div class="footer-col">
+                    <h3>GAME</h3>
+                    <ul>
+                        <li><a href="#"style="margin-left: 12px;">World of AEGIS</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Operations &amp; Maps</a></li>
+                        <li><a href="#"style="margin-left: 12px;">The Arsenal</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Factions</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Battle Pass</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Season Pass</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMMUNITY Column -->
+                <div class="footer-col">
+                    <h3>COMMUNITY</h3>
+                    <ul>
+                        <li><a href="#" style="margin-left: 12px;">Patch Notes</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Dev Updates</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Discord Server</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Twitter / X</a></li>
+                        <li><a href="#"style="margin-left: 12px;">YouTube</a></li>
+                        <li><a href="#"style="margin-left: 12px;">A.R.H.S Archive</a></li>
+                    </ul>
+                </div>
+
+                <!-- SUPPORT Column -->
+                <div class="footer-col">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#"style="margin-left: 12px;">Player Guide</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Player Stats</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Server Browser</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Report a Bug</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Contact Us</a></li>
+                        <li><a href="#"style="margin-left: 12px;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 REY GAMES — AEGIS. ALL RIGHTS RESERVED.</p>
+                <span class="footer-sys-status">A.R.H.S SYSTEM ONLINE</span>
+                <span class="footer-classified">CLASSIFIED INTEL // CLEARANCE REQUIRED</span>
+            </div>
+        </div>
+    </footer>
+    <!-- FIXED: script at end of body so DOM is ready when JS runs -->
+    <script src="script.js"></script>
+</body>
+</html>

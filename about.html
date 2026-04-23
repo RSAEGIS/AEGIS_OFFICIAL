@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, minimum-scale=0.1, maximum-scale=5.0">
+
+    <!-- SEO -->
+    <title>ABOUT | AEGIS — World, Lore & Factions</title>
+    <meta name="description" content="Discover the world of AEGIS — a modern tactical battlefield universe combining cinematic intensity with competitive FPS. Learn about the lore, factions, and operations.">
+    <meta name="author" content="REY GAMES">
+    <meta name="theme-color" content="#5cff00">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AEGIS — World of AEGIS">
+    <meta property="og:description" content="A modern global conflict. Four factions. Six operations. One battlefield universe.">
+    <meta property="og:image" content="assets/image/image.png">
+    <meta property="og:url" content="https://aegis.reygames.com/about">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AEGIS — World of AEGIS">
+    <meta name="twitter:description" content="A modern global conflict. Four factions. Six operations. One battlefield universe.">
+    <meta name="twitter:image" content="assets/image/image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/image/image.png">
+    <link rel="apple-touch-icon" href="assets/image/image.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR (same as index) ========== -->
+    <header class="main-navbar">
+        <div class="brand-section">
+            <img src="assets/image/image.png" alt="AEGIS Logo" class="brand-logo">
+            <span class="divider"></span>
+            <h1 class="brand-name">AEGIS</h1>
+        </div>
+
+        <nav class="nav-links">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="about.html">ABOUT <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>GAME INFO</h3>
+                            <a href="#section-operations">World of AEGIS</a>
+                            <a href="#">Operations & Maps</a>
+                            <a href="#section-arsenal">The Arsenal</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>FACTIONS</h3>
+                            <a href="#section-factions">VOX — Vanguard Ops</a>
+                            <a href="#section-factions">BFS — Black Falcon</a>
+                            <a href="#section-factions">ILF — Iron Legion</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="news.html">NEWS AND<br>COMMUNITY <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>LATEST</h3>
+                            <a href="#">Patch Notes</a>
+                            <a href="#">Dev Updates</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>SOCIAL</h3>
+                            <a href="#">Discord</a>
+                            <a href="#">Twitter / X</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="season.html">SEASON</a></li>
+                <li><a href="battlepass.html">BATTLE PASS</a></li>
+
+                <li class="has-dropdown">
+                    <a href="portal.html">PORTAL <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>CUSTOM GAMES</h3>
+                            <a href="#">Server Browser</a>
+                            <a href="#">Create Experience</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>HIGHLIGHTS</h3>
+                            <a href="#section-arhs">A.R.H.S Center</a>
+                            <a href="#">Clip Archive</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="guides.html">GUIDES</a></li>
+                <li><a href="playerstats.html">PLAYER STATS</a></li>
+            </ul>
+        </nav>
+
+        <div class="action-section">
+            <button class="buy-btn">
+                <span class="btn-text">FREE<br><span style="padding-left: 16px;">NOW</span></span>
+                <span class="btn-arrow">❯</span>
+            </button>
+        </div>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+        <nav class="drawer-nav">
+            <div class="drawer-header">
+                <span class="drawer-brand">AEGIS</span>
+                <button class="drawer-close" id="drawerClose">✕</button>
+            </div>
+            <ul class="drawer-links">
+                <li class="drawer-section-label">ABOUT</li>
+                <li><a href="#world">World of AEGIS</a></li>
+                <li><a href="#lore">Lore & Story</a></li>
+                <li><a href="#factions">Factions</a></li>
+                <li><a href="#operations">Operations</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li class="drawer-section-label">NAVIGATE</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">Twitter / X</a></li>
+            </ul>
+            <a href="index.html" class="drawer-play-btn">PLAY FREE NOW ❯</a>
+        </nav>
+    </div>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="about-hero">
+        <div class="about-hero-bg"></div>
+        <div class="about-hero-overlay"></div>
+        <div class="about-hero-grid"></div>
+
+        <div class="about-hero-content">
+            <div class="about-hero-label">
+                <span class="ahl-line"></span>
+                <span class="ahl-text">WORLD INTEL — CLASSIFIED</span>
+                <span class="ahl-line"></span>
+            </div>
+            <h1 class="about-hero-title">WORLD OF<br><span class="about-hero-title-green">AEGIS</span></h1>
+            <p class="about-hero-desc">A modern global conflict. Four factions. Six operations.<br>One battlefield universe built for the next generation of tactical warfare.</p>
+            <div class="about-hero-badges">
+                <span class="ahb">MODERN WARFARE</span>
+                <span class="ahb-sep">◆</span>
+                <span class="ahb">CINEMATIC INTENSITY</span>
+                <span class="ahb-sep">◆</span>
+                <span class="ahb">EXPANDING UNIVERSE</span>
+            </div>
+        </div>
+
+        <div class="about-hero-scroll" onclick="document.getElementById('world').scrollIntoView({behavior:'smooth'})">
+            <span class="ahs-text">SCROLL</span>
+            <div class="ahs-line"><div class="ahs-fill"></div></div>
+            <div class="ahs-chevrons">
+                <span class="ahs-chev"></span>
+                <span class="ahs-chev"></span>
+                <span class="ahs-chev"></span>
+            </div>
+        </div>
+
+        <!-- Corner HUD -->
+        <div class="about-hud-corners">
+            <div class="ahc tl"></div>
+            <div class="ahc tr"></div>
+            <div class="ahc bl"></div>
+            <div class="ahc br"></div>
+            <div class="ahc-label-tl">AEGIS // WORLD DATABASE</div>
+            <div class="ahc-label-br">CLEARANCE: OPERATOR</div>
+        </div>
+    </section>
+
+    <!-- ========== WORLD OVERVIEW ========== -->
+    <section class="about-section" id="world">
+
+        <div class="as-label-row">
+            <span class="as-line"></span>
+            <span class="as-tag">01 — WORLD OVERVIEW</span>
+            <span class="as-line"></span>
+        </div>
+
+        <div class="world-grid">
+            <div class="world-text-col">
+                <h2 class="world-title">A MODERN<br>GLOBAL <span class="green">CONFLICT</span></h2>
+                <p class="world-desc">The world of AEGIS is built around a modern global conflict scenario, combining real-world military structure with heightened cinematic intensity. It is not a sci-fi world, and not a historical setting — it is a modern tactical battlefield universe designed for competitive PvP and story-driven missions.</p>
+                <p class="world-desc">Each Operation represents a critical flashpoint in an ever-evolving global conflict. Every map tells a story. Every firefight matters.</p>
+                <div class="world-tags">
+                    <span class="wtag">COMPETITIVE PvP</span>
+                    <span class="wtag">STORY MISSIONS</span>
+                    <span class="wtag">SEASONAL EXPANSIONS</span>
+                    <span class="wtag">LIVE OPERATIONS</span>
+                </div>
+            </div>
+            <div class="world-stats-col">
+                <div class="wstat-card">
+                    <div class="wstat-num">6</div>
+                    <div class="wstat-label">OPERATION MAPS</div>
+                    <div class="wstat-desc">Each a standalone cinematic battlefield</div>
+                </div>
+                <div class="wstat-card">
+                    <div class="wstat-num">4</div>
+                    <div class="wstat-label">MILITARY FACTIONS</div>
+                    <div class="wstat-desc">Each with distinct identity & lore</div>
+                </div>
+                <div class="wstat-card">
+                    <div class="wstat-num">20+</div>
+                    <div class="wstat-label">WEAPONS AT LAUNCH</div>
+                    <div class="wstat-desc">Every gun feels different, every shot has weight</div>
+                </div>
+                <div class="wstat-card">
+                    <div class="wstat-num">∞</div>
+                    <div class="wstat-label">EXPANDING UNIVERSE</div>
+                    <div class="wstat-desc">Growing through seasonal updates & operations</div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ========== LORE FOUNDATION ========== -->
+    <section class="about-section about-section-dark" id="lore">
+
+        <div class="as-label-row">
+            <span class="as-line"></span>
+            <span class="as-tag">02 — LORE FOUNDATION</span>
+            <span class="as-line"></span>
+        </div>
+
+        <div class="lore-header">
+            <h2 class="lore-title">THE <span class="green">CONFLICT</span> BEGINS</h2>
+            <p class="lore-sub">Rising worldwide tensions between covert military organizations and private armed groups</p>
+        </div>
+
+        <div class="lore-timeline">
+
+            <div class="lt-item">
+                <div class="lt-marker">
+                    <div class="lt-dot"></div>
+                    <div class="lt-line"></div>
+                </div>
+                <div class="lt-content">
+                    <div class="lt-tag">CHAPTER 01</div>
+                    <h3 class="lt-title">THE FRACTURE</h3>
+                    <p class="lt-desc">Global military alliances collapse. Private military companies rise from the ashes of dismantled state armies. Resources, technology, and influence become the new currency of war.</p>
+                </div>
+            </div>
+
+            <div class="lt-item">
+                <div class="lt-marker">
+                    <div class="lt-dot"></div>
+                    <div class="lt-line"></div>
+                </div>
+                <div class="lt-content">
+                    <div class="lt-tag">CHAPTER 02</div>
+                    <h3 class="lt-title">FACTION EMERGENCE</h3>
+                    <p class="lt-desc">Four dominant forces emerge from the chaos — each with their own ideology, resources, and combat doctrine. The VOX, BFS, ILF, and PRN begin their covert war for dominance.</p>
+                </div>
+            </div>
+
+            <div class="lt-item">
+                <div class="lt-marker">
+                    <div class="lt-dot"></div>
+                    <div class="lt-line"></div>
+                </div>
+                <div class="lt-content">
+                    <div class="lt-tag">CHAPTER 03</div>
+                    <h3 class="lt-title">THE OPERATIONS</h3>
+                    <p class="lt-desc">Critical flashpoints erupt across the globe. From frozen northern facilities to burning desert refineries — every Operation is a battle for control that shapes the world conflict.</p>
+                </div>
+            </div>
+
+            <div class="lt-item">
+                <div class="lt-marker">
+                    <div class="lt-dot"></div>
+                    <div class="lt-line-end"></div>
+                </div>
+                <div class="lt-content">
+                    <div class="lt-tag">ONGOING</div>
+                    <h3 class="lt-title">THE WAR EXPANDS</h3>
+                    <p class="lt-desc">Seasonal updates bring new operations, new intel, and new chapters of the conflict. The lore grows through cutscenes, in-game intel, and story missions every season.</p>
+                    <div class="lt-badge">SEASON 1 — ACTIVE</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lore-tone-bar">
+            <div class="lore-tone-item">
+                <span class="lti-icon">⚡</span>
+                <span class="lti-label">CINEMATIC</span>
+            </div>
+            <div class="lore-tone-item">
+                <span class="lti-icon">🎯</span>
+                <span class="lti-label">INTENSE</span>
+            </div>
+            <div class="lore-tone-item">
+                <span class="lti-icon">🔬</span>
+                <span class="lti-label">REALISTIC</span>
+            </div>
+            <div class="lore-tone-item">
+                <span class="lti-icon">🌑</span>
+                <span class="lti-label">GRITTY</span>
+            </div>
+            <div class="lore-tone-item">
+                <span class="lti-icon">🎖️</span>
+                <span class="lti-label">MILITARILY ACCURATE</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ========== FACTIONS ========== -->
+    <section class="about-section" id="factions">
+
+        <div class="as-label-row">
+            <span class="as-line"></span>
+            <span class="as-tag">03 — MILITARY FACTIONS</span>
+            <span class="as-line"></span>
+        </div>
+
+        <div class="fac-about-header">
+            <h2 class="fac-about-title">CHOOSE YOUR <span class="green">SIDE</span></h2>
+            <p class="fac-about-sub">Four military entities, each with distinct identity, fighting for dominance in a world at war</p>
+        </div>
+
+        <div class="fac-about-grid">
+
+            <!-- VOX -->
+            <div class="fab-card fab-vox">
+                <div class="fab-top-line"></div>
+                <div class="fab-card-num">01</div>
+                <div class="fab-abbr" style="color:rgba(92,255,0,0.2)">VOX</div>
+                <div class="fab-info">
+                    <div class="fab-tag" style="color:#5cff00">TACTICAL ASSAULT</div>
+                    <h3 class="fab-title">VANGUARD OPERATIONS UNIT</h3>
+                    <p class="fab-desc">Modern elite special forces. Heavily trained, tactical precision, and clean operational design. VOX represents the pinnacle of military professionalism and cutting-edge warfare technology.</p>
+                    <div class="fab-traits">
+                        <span class="fab-trait">ELITE TRAINING</span>
+                        <span class="fab-trait">STEALTH INSERTION</span>
+                        <span class="fab-trait">ADVANCED TECH</span>
+                        <span class="fab-trait">RAPID RESPONSE</span>
+                    </div>
+                    <div class="fab-palette">
+                        <div class="fab-color" style="background:#5cff00" title="Tactical Green"></div>
+                        <div class="fab-color" style="background:#0a0a0a" title="Midnight Black"></div>
+                        <div class="fab-color" style="background:#1a2a1a" title="Ops Dark"></div>
+                        <span class="fab-palette-label">GREEN / BLACK</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BFS -->
+            <div class="fab-card fab-bfs">
+                <div class="fab-top-line" style="background:#ff2222"></div>
+                <div class="fab-card-num">02</div>
+                <div class="fab-abbr" style="color:rgba(255,34,34,0.2)">BFS</div>
+                <div class="fab-info">
+                    <div class="fab-tag" style="color:#ff2222">COVERT OPERATIONS</div>
+                    <h3 class="fab-title">BLACK FALCON SYNDICATE</h3>
+                    <p class="fab-desc">A covert Private Military Company operating in the shadows. Dark aesthetics define their identity — ruthless efficiency and unconventional tactics are their trademarks.</p>
+                    <div class="fab-traits">
+                        <span class="fab-trait">PMC NETWORK</span>
+                        <span class="fab-trait">DARK OPS</span>
+                        <span class="fab-trait">RESOURCE CONTROL</span>
+                        <span class="fab-trait">UNCONVENTIONAL</span>
+                    </div>
+                    <div class="fab-palette">
+                        <div class="fab-color" style="background:#ff2222" title="Red"></div>
+                        <div class="fab-color" style="background:#1a0000" title="Blood Dark"></div>
+                        <div class="fab-color" style="background:#2a0a0a" title="Deep Red"></div>
+                        <span class="fab-palette-label">RED / BLACK</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ILF -->
+            <div class="fab-card fab-ilf">
+                <div class="fab-top-line" style="background:#ff8c00"></div>
+                <div class="fab-card-num">03</div>
+                <div class="fab-abbr" style="color:rgba(255,140,0,0.2)">ILF</div>
+                <div class="fab-info">
+                    <div class="fab-tag" style="color:#ff8c00">HEAVY WARFARE</div>
+                    <h3 class="fab-title">IRON LEGION FRONT</h3>
+                    <p class="fab-desc">A militarized nationalist group built on heavy firepower and relentless determination. Bulky armor, desert-hardened veterans, and overwhelming force define their approach.</p>
+                    <div class="fab-traits">
+                        <span class="fab-trait">HEAVY ARMOR</span>
+                        <span class="fab-trait">FORTIFICATION</span>
+                        <span class="fab-trait">DESERT WARFARE</span>
+                        <span class="fab-trait">ARTILLERY SUPPORT</span>
+                    </div>
+                    <div class="fab-palette">
+                        <div class="fab-color" style="background:#ff8c00" title="Desert Orange"></div>
+                        <div class="fab-color" style="background:#3a2000" title="Sand Dark"></div>
+                        <div class="fab-color" style="background:#5a3a10" title="Earth Brown"></div>
+                        <span class="fab-palette-label">ORANGE / BROWN</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRN -->
+            <div class="fab-card fab-prn">
+                <div class="fab-top-line" style="background:#4477ff"></div>
+                <div class="fab-card-num">04</div>
+                <div class="fab-abbr" style="color:rgba(68,119,255,0.2)">PRN</div>
+                <div class="fab-info">
+                    <div class="fab-tag" style="color:#4477ff">STEALTH / RECON</div>
+                    <h3 class="fab-title">PHANTOM RECON NETWORK</h3>
+                    <p class="fab-desc">Stealth-focused covert operations unit. Masters of night warfare, reconnaissance, and precision elimination. They see everything before you know they exist.</p>
+                    <div class="fab-traits">
+                        <span class="fab-trait">NIGHT OPS</span>
+                        <span class="fab-trait">INTEL GATHERING</span>
+                        <span class="fab-trait">SILENT ELIMINATION</span>
+                        <span class="fab-trait">SNIPER MASTERY</span>
+                    </div>
+                    <div class="fab-palette">
+                        <div class="fab-color" style="background:#4477ff" title="Navy Blue"></div>
+                        <div class="fab-color" style="background:#000a1a" title="Night Black"></div>
+                        <div class="fab-color" style="background:#0a1030" title="Midnight Blue"></div>
+                        <span class="fab-palette-label">NAVY / BLACK</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========== OPERATIONS ========== -->
+    <section class="about-section about-section-dark" id="operations">
+
+        <div class="as-label-row">
+            <span class="as-line"></span>
+            <span class="as-tag">04 — OPERATIONS & MAPS</span>
+            <span class="as-line"></span>
+        </div>
+
+        <div class="ops-about-header">
+            <h2 class="ops-about-title">SIX <span class="green">OPERATIONS</span></h2>
+            <p class="ops-about-sub">Each map is a standalone cinematic operation — its own tone, music, lighting, and identity</p>
+        </div>
+
+        <div class="ops-about-grid">
+
+            <div class="oab-card" style="--oab-color:#4da6ff">
+                <div class="oab-num">01</div>
+                <div class="oab-header">
+                    <div class="oab-code">OP-FL-01</div>
+                    <div class="oab-name">OPERATION FROSTLINE</div>
+                </div>
+                <div class="oab-biome">SNOW BATTLEFIELD</div>
+                <p class="oab-desc">Frozen forests and abandoned military facilities buried beneath ice. Combat shifts across snowdrifts and frozen lakes under the northern lights.</p>
+                <div class="oab-details">
+                    <span>COLD ATMOSPHERE</span>
+                    <span>FROZEN LAKES</span>
+                    <span>AURORA BOREALIS</span>
+                </div>
+                <div class="oab-palette-bar">
+                    <div style="background:#4da6ff;flex:2"></div>
+                    <div style="background:#e8f4ff;flex:1"></div>
+                    <div style="background:#0a1a2a;flex:1"></div>
+                </div>
+            </div>
+
+            <div class="oab-card" style="--oab-color:#ff8c00">
+                <div class="oab-num">02</div>
+                <div class="oab-header">
+                    <div class="oab-code">OP-BD-02</div>
+                    <div class="oab-name">OPERATION BLACK DUNE</div>
+                </div>
+                <div class="oab-biome">DESERT OIL REFINERY</div>
+                <p class="oab-desc">A burning oil refinery in the deep desert. Sandstorms reduce visibility while fire creates dynamic lighting across the battlefield.</p>
+                <div class="oab-details">
+                    <span>SANDSTORM EVENTS</span>
+                    <span>OIL RIGS</span>
+                    <span>NIGHT COMBAT</span>
+                </div>
+                <div class="oab-palette-bar">
+                    <div style="background:#ff8c00;flex:2"></div>
+                    <div style="background:#5a3010;flex:1"></div>
+                    <div style="background:#1a0800;flex:1"></div>
+                </div>
+            </div>
+
+            <div class="oab-card" style="--oab-color:#5cff00">
+                <div class="oab-num">03</div>
+                <div class="oab-header">
+                    <div class="oab-code">OP-IW-03</div>
+                    <div class="oab-name">OPERATION IRON WOLF</div>
+                </div>
+                <div class="oab-biome">MOUNTAIN PASS</div>
+                <p class="oab-desc">A strategic mountain radio station shrouded in fog. Narrow pathways and elevated positions create intense sniper engagements.</p>
+                <div class="oab-details">
+                    <span>FOG SYSTEMS</span>
+                    <span>RADIO TOWER</span>
+                    <span>CAVE NETWORKS</span>
+                </div>
+                <div class="oab-palette-bar">
+                    <div style="background:#5cff00;flex:1"></div>
+                    <div style="background:#666;flex:2"></div>
+                    <div style="background:#1a1a1a;flex:1"></div>
+                </div>
+            </div>
+
+            <div class="oab-card" style="--oab-color:#ff2222">
+                <div class="oab-num">04</div>
+                <div class="oab-header">
+                    <div class="oab-code">OP-ER-04</div>
+                    <div class="oab-name">OPERATION EMBER RAIN</div>
+                </div>
+                <div class="oab-biome">BURNING CITY</div>
+                <p class="oab-desc">A city consumed by fire. Ember particles fill the sky as emergency sirens echo through streets of collapsed buildings.</p>
+                <div class="oab-details">
+                    <span>FIRE PARTICLES</span>
+                    <span>DYNAMIC SMOKE</span>
+                    <span>SUBWAY TUNNELS</span>
+                </div>
+                <div class="oab-palette-bar">
+                    <div style="background:#ff2222;flex:2"></div>
+                    <div style="background:#ff6600;flex:1"></div>
+                    <div style="background:#1a0000;flex:1"></div>
+                </div>
+            </div>
+
+            <div class="oab-card" style="--oab-color:#3355ff">
+                <div class="oab-num">05</div>
+                <div class="oab-header">
+                    <div class="oab-code">OP-SS-05</div>
+                    <div class="oab-name">OPERATION SANDSTRIKE</div>
+                </div>
+                <div class="oab-biome">COASTAL PORT</div>
+                <p class="oab-desc">A collapsing military port on the coastline. Fight through shipping containers and sinking vessels under heavy naval artillery.</p>
+                <div class="oab-details">
+                    <span>SINKING SHIPS</span>
+                    <span>HARBOR CRANES</span>
+                    <span>NAVAL GUNS</span>
+                </div>
+                <div class="oab-palette-bar">
+                    <div style="background:#3355ff;flex:2"></div>
+                    <div style="background:#1a2a4a;flex:1"></div>
+                    <div style="background:#0a0a1a;flex:1"></div>
+                </div>
+            </div>
+
+            <div class="oab-card" style="--oab-color:#cc0000">
+                <div class="oab-num">06</div>
+                <div class="oab-header">
+                    <div class="oab-code">OP-CZ-06</div>
+                    <div class="oab-name">OPERATION CRIMSON ZONE</div>
+                </div>
+                <div class="oab-biome">URBAN WARZONE</div>
+                <p class="oab-desc">A devastated urban district locked in a brutal siege. High-rise combat, underground tunnels, and crimson-smoke-filled streets define this close-quarters nightmare.</p>
+                <div class="oab-details">
+                    <span>URBAN RUINS</span>
+                    <span>HIGH-RISE CQB</span>
+                    <span>CRIMSON SMOKE</span>
+                </div>
+                <div class="oab-palette-bar">
+                    <div style="background:#cc0000;flex:2"></div>
+                    <div style="background:#4a0000;flex:1"></div>
+                    <div style="background:#1a0000;flex:1"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========== ARTISTIC IDENTITY ========== -->
+    <section class="about-section" id="philosophy">
+
+        <div class="as-label-row">
+            <span class="as-line"></span>
+            <span class="as-tag">05 — ARTISTIC IDENTITY & PHILOSOPHY</span>
+            <span class="as-line"></span>
+        </div>
+
+        <div class="art-grid">
+
+            <div class="art-text">
+                <h2 class="art-title">BUILT FOR <span class="green">IMMERSION</span></h2>
+                <p class="art-desc">The entire game adopts a modern military realism aesthetic. Every visual decision — from the metallic UI accents to the volumetric lighting on each map — serves a single purpose: making you feel like you are actually there.</p>
+                <p class="art-desc">Inspired by the visual language of the world's greatest tactical shooters, but built with its own unmistakable identity.</p>
+
+                <div class="art-inspirations">
+                    <div class="art-insp-label">UI INSPIRATIONS</div>
+                    <div class="art-insp-list">
+                        <span class="art-insp">BATTLEFIELD 4</span>
+                        <span class="art-insp">COD MODERN WARFARE</span>
+                        <span class="art-insp">RAINBOW SIX SIEGE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="art-pillars">
+
+                <div class="art-pillar">
+                    <div class="ap-icon">🎨</div>
+                    <h3 class="ap-title">COLOR PALETTE</h3>
+                    <div class="ap-colors">
+                        <div class="apc"><div class="apc-swatch" style="background:#1a2a4a"></div><span>Navy Blue</span></div>
+                        <div class="apc"><div class="apc-swatch" style="background:#555"></div><span>Steel Gray</span></div>
+                        <div class="apc"><div class="apc-swatch" style="background:#0a0a0a"></div><span>Black</span></div>
+                        <div class="apc"><div class="apc-swatch" style="background:#5cff00"></div><span>Tactical Green</span></div>
+                    </div>
+                </div>
+
+                <div class="art-pillar">
+                    <div class="ap-icon">💡</div>
+                    <h3 class="ap-title">LIGHTING STYLE</h3>
+                    <div class="ap-light-list">
+                        <div class="apll"><span class="apll-dot" style="background:#4da6ff"></span><span>Cold — Snow Operations</span></div>
+                        <div class="apll"><span class="apll-dot" style="background:#ff8c00"></span><span>Warm — Desert Operations</span></div>
+                        <div class="apll"><span class="apll-dot" style="background:#999"></span><span>Neutral — Urban Maps</span></div>
+                        <div class="apll"><span class="apll-dot" style="background:#5cff00"></span><span>HDR + Soft Volumetrics</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Philosophy Quotes -->
+        <div class="philosophy-quotes">
+            <div class="pq-item">
+                <span class="pq-mark">"</span>
+                <p>Everything feels alive.</p>
+            </div>
+            <div class="pq-item">
+                <span class="pq-mark">"</span>
+                <p>Every map feels like a real warzone.</p>
+            </div>
+            <div class="pq-item">
+                <span class="pq-mark">"</span>
+                <p>Every weapon feels powerful.</p>
+            </div>
+            <div class="pq-item">
+                <span class="pq-mark">"</span>
+                <p>Every match feels cinematic.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="about-cta">
+        <div class="about-cta-inner">
+            <div class="acta-label">
+                <span class="acta-line"></span>
+                <span class="acta-text">JOIN THE BATTLE</span>
+                <span class="acta-line"></span>
+            </div>
+            <h2 class="acta-title">READY TO ENTER<br>THE <span class="green">WARZONE?</span></h2>
+            <div class="acta-buttons">
+                <a href="index.html" class="cta-btn-primary">PLAY FREE NOW ❯</a>
+                <a href="index.html#section-operations" class="cta-btn-secondary">VIEW OPERATIONS ►</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER (same as index) ========== -->
+    <footer class="aegis-footer-main">
+        <div class="footer-side-accent"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-brand-row">
+                        <div class="footer-brand-icon"><img src="assets/image/image.png" alt="AEG" class="footer-brand-icon"></div>
+                        <h2 class="footer-logo">AEGIS</h2>
+                    </div>
+                    <p class="footer-brand-desc">The most powerful tactical FPS ever built. Realistic combat, AI-driven highlights, and a self-growing content ecosystem.</p>
+                    <span class="footer-tagline">A.R.H.S — ALWAYS RECORDING</span>
+                </div>
+                <div class="footer-col">
+                    <h3>GAME</h3>
+                    <ul>
+                        <li><a href="about.html#world" style="margin-left:12px">World of AEGIS</a></li>
+                        <li><a href="about.html#operations" style="margin-left:12px">Operations & Maps</a></li>
+                        <li><a href="index.html#section-arsenal" style="margin-left:12px">The Arsenal</a></li>
+                        <li><a href="about.html#factions" style="margin-left:12px">Factions</a></li>
+                        <li><a href="index.html#section-battlepass" style="margin-left:12px">Battle Pass</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>COMMUNITY</h3>
+                    <ul>
+                        <li><a href="#" style="margin-left:12px">Patch Notes</a></li>
+                        <li><a href="#" style="margin-left:12px">Dev Updates</a></li>
+                        <li><a href="#" style="margin-left:12px">Discord Server</a></li>
+                        <li><a href="#" style="margin-left:12px">Twitter / X</a></li>
+                        <li><a href="#" style="margin-left:12px">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#" style="margin-left:12px">Player Guide</a></li>
+                        <li><a href="#" style="margin-left:12px">Player Stats</a></li>
+                        <li><a href="#" style="margin-left:12px">Report a Bug</a></li>
+                        <li><a href="#" style="margin-left:12px">Contact Us</a></li>
+                        <li><a href="#" style="margin-left:12px">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 REY GAMES — AEGIS. ALL RIGHTS RESERVED.</p>
+                <span class="footer-sys-status">A.R.H.S SYSTEM ONLINE</span>
+                <span class="footer-classified">CLASSIFIED INTEL // CLEARANCE REQUIRED</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>

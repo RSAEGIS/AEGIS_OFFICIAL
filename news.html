@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, minimum-scale=0.1, maximum-scale=5.0">
+
+    <title>NEWS & COMMUNITY | AEGIS</title>
+    <meta name="description" content="Latest AEGIS patch notes, developer updates, and community news. Stay up to date with everything happening in the world of AEGIS.">
+    <meta name="author" content="REY GAMES">
+    <meta name="theme-color" content="#5cff00">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AEGIS — News & Community">
+    <meta property="og:description" content="Patch notes, dev updates, and community news for AEGIS tactical FPS.">
+    <meta property="og:image" content="assets/image/image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AEGIS — News & Community">
+    <meta name="twitter:image" content="assets/image/image.png">
+
+    <link rel="icon" type="image/png" href="assets/image/image.png">
+    <link rel="apple-touch-icon" href="assets/image/image.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="main-navbar">
+        <div class="brand-section">
+            <img src="assets/image/image.png" alt="AEGIS Logo" class="brand-logo">
+            <span class="divider"></span>
+            <h1 class="brand-name">AEGIS</h1>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="about.html">ABOUT <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>GAME INFO</h3>
+                            <a href="#section-operations">World of AEGIS</a>
+                            <a href="#">Operations & Maps</a>
+                            <a href="#section-arsenal">The Arsenal</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>FACTIONS</h3>
+                            <a href="#section-factions">VOX — Vanguard Ops</a>
+                            <a href="#section-factions">BFS — Black Falcon</a>
+                            <a href="#section-factions">ILF — Iron Legion</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="news.html">NEWS AND<br>COMMUNITY <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>LATEST</h3>
+                            <a href="#">Patch Notes</a>
+                            <a href="#">Dev Updates</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>SOCIAL</h3>
+                            <a href="#">Discord</a>
+                            <a href="#">Twitter / X</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="season.html">SEASON</a></li>
+                <li><a href="battlepass.html">BATTLE PASS</a></li>
+
+                <li class="has-dropdown">
+                    <a href="portal.html">PORTAL <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>CUSTOM GAMES</h3>
+                            <a href="#">Server Browser</a>
+                            <a href="#">Create Experience</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>HIGHLIGHTS</h3>
+                            <a href="#section-arhs">A.R.H.S Center</a>
+                            <a href="#">Clip Archive</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="guides.html">GUIDES</a></li>
+                <li><a href="playerstats.html">PLAYER STATS</a></li>
+            </ul>
+        </nav>
+        <div class="action-section">
+            <button class="buy-btn" onclick="window.location.href='index.html'">
+                <span class="btn-text">FREE<br><span style="padding-left:16px">NOW</span></span>
+                <span class="btn-arrow">❯</span>
+            </button>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+        <nav class="drawer-nav">
+            <div class="drawer-header">
+                <span class="drawer-brand">AEGIS</span>
+                <button class="drawer-close" id="drawerClose">✕</button>
+            </div>
+            <ul class="drawer-links">
+                <li class="drawer-section-label">NEWS</li>
+                <li><a href="#patch-notes">Patch Notes</a></li>
+                <li><a href="#dev-updates">Dev Updates</a></li>
+                <li><a href="#community">Community</a></li>
+                <li class="drawer-section-label">NAVIGATE</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">Twitter / X</a></li>
+            </ul>
+            <a href="index.html" class="drawer-play-btn">PLAY FREE NOW ❯</a>
+        </nav>
+    </div>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="news-hero">
+        <div class="news-hero-bg"></div>
+        <div class="news-hero-overlay"></div>
+        <div class="news-hero-grid-lines"></div>
+        <div class="news-hero-content">
+            <div class="news-hero-label">
+                <span class="nhl-line"></span>
+                <span class="nhl-text">INTEL BROADCAST — LIVE</span>
+                <span class="nhl-dot"></span>
+                <span class="nhl-text" id="newsLiveTime">00:00:00</span>
+                <span class="nhl-line"></span>
+            </div>
+            <h1 class="news-hero-title">NEWS &<br><span class="news-green">COMMUNITY</span></h1>
+            <p class="news-hero-desc">Patch notes, developer dispatches, and community intelligence.<br>Stay informed. Stay ahead.</p>
+            <div class="news-hero-tabs">
+                <a href="#patch-notes" class="nht active">PATCH NOTES</a>
+                <a href="#dev-updates" class="nht">DEV UPDATES</a>
+                <a href="#community" class="nht">COMMUNITY</a>
+            </div>
+        </div>
+        <div class="news-hero-ticker">
+            <span class="nht-label">LATEST //</span>
+            <div class="nht-track">
+                <span>PATCH 1.0.3 — WEAPON BALANCE UPDATE &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp; OPERATION FROSTLINE NOW LIVE &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp; SEASON 1 BATTLE PASS ACTIVE &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp; NEW MAP: CRIMSON ZONE COMING SOON &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp; A.R.H.S ENGINE UPDATE 2.1 &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp; ANTI-CHEAT HYPERSECURE V3 DEPLOYED &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp;</span>
+                <span>PATCH 1.0.3 — WEAPON BALANCE UPDATE &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp; OPERATION FROSTLINE NOW LIVE &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp; SEASON 1 BATTLE PASS ACTIVE &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp; NEW MAP: CRIMSON ZONE COMING SOON &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp; A.R.H.S ENGINE UPDATE 2.1 &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp; ANTI-CHEAT HYPERSECURE V3 DEPLOYED &nbsp;&nbsp;&nbsp; ◆ &nbsp;&nbsp;&nbsp;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED POST ========== -->
+    <section class="news-featured">
+        <div class="nf-inner">
+            <div class="nf-badge">FEATURED — LATEST UPDATE</div>
+            <div class="nf-grid">
+                <div class="nf-visual">
+                    <div class="nf-vis-bg"></div>
+                    <div class="nf-vis-corner tl"></div>
+                    <div class="nf-vis-corner br"></div>
+                    <div class="nf-vis-content">
+                        <div class="nf-vis-tag">PATCH NOTES</div>
+                        <div class="nf-vis-version">v1.0.3</div>
+                        <div class="nf-vis-date">APRIL 2026</div>
+                    </div>
+                </div>
+                <div class="nf-info">
+                    <div class="nf-meta">
+                        <span class="nf-cat patch">PATCH NOTES</span>
+                        <span class="nf-date">19 APRIL 2026</span>
+                        <span class="nf-read">5 MIN READ</span>
+                    </div>
+                    <h2 class="nf-title">PATCH 1.0.3 — WEAPON BALANCE & ANTI-CHEAT UPDATE</h2>
+                    <p class="nf-desc">Major weapon rebalancing across all categories, HyperSecure anti-cheat engine upgraded to v3.0, and critical server stability fixes deployed across all regions. This patch represents the most significant balance update since launch.</p>
+                    <div class="nf-highlights">
+                        <div class="nf-hl"><span class="nfhl-dot green"></span>AX-7 PHANTOM — Recoil reduced by 8%</div>
+                        <div class="nf-hl"><span class="nfhl-dot red"></span>SR-GHOST — Damage slightly reduced</div>
+                        <div class="nf-hl"><span class="nfhl-dot green"></span>HYPERSECURE v3.0 deployed</div>
+                        <div class="nf-hl"><span class="nfhl-dot blue"></span>Server latency improved -12ms avg</div>
+                    </div>
+                    <a href="#patch-notes" class="nf-read-btn">READ FULL NOTES ❯</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FILTER BAR ========== -->
+    <div class="news-filter-bar">
+        <div class="nfb-inner">
+            <div class="nfb-left">
+                <span class="nfb-label">FILTER BY</span>
+                <button class="nfb-btn active" data-filter="all">ALL</button>
+                <button class="nfb-btn" data-filter="patch">PATCH NOTES</button>
+                <button class="nfb-btn" data-filter="dev">DEV UPDATE</button>
+                <button class="nfb-btn" data-filter="community">COMMUNITY</button>
+                <button class="nfb-btn" data-filter="event">EVENT</button>
+            </div>
+            <div class="nfb-right">
+                <span class="nfb-count" id="postCount">12 POSTS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== PATCH NOTES ========== -->
+    <section class="news-section" id="patch-notes">
+        <div class="ns-header">
+            <div class="ns-label-row">
+                <span class="ns-line"></span>
+                <span class="ns-tag">PATCH NOTES</span>
+                <span class="ns-line"></span>
+            </div>
+        </div>
+
+        <div class="news-grid" id="newsGrid">
+
+            <!-- Patch 1.0.3 -->
+            <article class="news-card" data-cat="patch">
+                <div class="nc-top-line green-line"></div>
+                <div class="nc-meta">
+                    <span class="nc-cat patch">PATCH NOTES</span>
+                    <span class="nc-date">19 APR 2026</span>
+                </div>
+                <h3 class="nc-title">PATCH 1.0.3 — WEAPON BALANCE & ANTI-CHEAT</h3>
+                <p class="nc-desc">Major weapon rebalancing, HyperSecure anti-cheat v3.0, and server stability improvements across all regions.</p>
+                <div class="nc-tags">
+                    <span class="nctag">WEAPONS</span>
+                    <span class="nctag">ANTI-CHEAT</span>
+                    <span class="nctag">SERVERS</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-version">v1.0.3</span>
+                    <a href="#" class="nc-read">READ MORE ❯</a>
+                </div>
+            </article>
+
+            <!-- Patch 1.0.2 -->
+            <article class="news-card" data-cat="patch">
+                <div class="nc-top-line green-line"></div>
+                <div class="nc-meta">
+                    <span class="nc-cat patch">PATCH NOTES</span>
+                    <span class="nc-date">05 APR 2026</span>
+                </div>
+                <h3 class="nc-title">PATCH 1.0.2 — FROSTLINE MAP FIXES</h3>
+                <p class="nc-desc">Collision fixes on Operation Frostline, improved A.R.H.S highlight detection algorithm, and UI performance improvements.</p>
+                <div class="nc-tags">
+                    <span class="nctag">MAPS</span>
+                    <span class="nctag">A.R.H.S</span>
+                    <span class="nctag">UI</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-version">v1.0.2</span>
+                    <a href="#" class="nc-read">READ MORE ❯</a>
+                </div>
+            </article>
+
+            <!-- Patch 1.0.1 -->
+            <article class="news-card" data-cat="patch">
+                <div class="nc-top-line green-line"></div>
+                <div class="nc-meta">
+                    <span class="nc-cat patch">PATCH NOTES</span>
+                    <span class="nc-date">22 MAR 2026</span>
+                </div>
+                <h3 class="nc-title">PATCH 1.0.1 — LAUNCH HOTFIX</h3>
+                <p class="nc-desc">Critical post-launch stability fixes. Matchmaking queue improvements, crash fixes on low-end hardware, and audio synchronization corrections.</p>
+                <div class="nc-tags">
+                    <span class="nctag">STABILITY</span>
+                    <span class="nctag">MATCHMAKING</span>
+                    <span class="nctag">AUDIO</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-version">v1.0.1</span>
+                    <a href="#" class="nc-read">READ MORE ❯</a>
+                </div>
+            </article>
+
+            <!-- Patch 1.0.0 -->
+            <article class="news-card" data-cat="patch">
+                <div class="nc-top-line green-line"></div>
+                <div class="nc-meta">
+                    <span class="nc-cat patch">PATCH NOTES</span>
+                    <span class="nc-date">15 MAR 2026</span>
+                </div>
+                <h3 class="nc-title">PATCH 1.0.0 — OFFICIAL LAUNCH</h3>
+                <p class="nc-desc">AEGIS is officially live. Full launch notes including all 20 weapons, 5 operations, Season 1 Battle Pass, and complete A.R.H.S integration.</p>
+                <div class="nc-tags">
+                    <span class="nctag">LAUNCH</span>
+                    <span class="nctag">SEASON 1</span>
+                    <span class="nctag">ALL SYSTEMS</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-version">v1.0.0</span>
+                    <a href="#" class="nc-read">READ MORE ❯</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ========== DEV UPDATES ========== -->
+    <section class="news-section news-section-dark" id="dev-updates">
+        <div class="ns-header">
+            <div class="ns-label-row">
+                <span class="ns-line"></span>
+                <span class="ns-tag">DEV UPDATES</span>
+                <span class="ns-line"></span>
+            </div>
+        </div>
+
+        <div class="news-grid">
+
+            <!-- Dev Update 3 -->
+            <article class="news-card news-card-dev" data-cat="dev">
+                <div class="nc-top-line blue-line"></div>
+                <div class="nc-dev-avatar">RG</div>
+                <div class="nc-meta">
+                    <span class="nc-cat dev">DEV UPDATE</span>
+                    <span class="nc-date">17 APR 2026</span>
+                </div>
+                <h3 class="nc-title">BEHIND THE OPERATION: CRIMSON ZONE</h3>
+                <p class="nc-desc">Our lead level designer shares the creative process behind Operation Crimson Zone — the most ambitious urban map we've built yet. From concept to playtest.</p>
+                <div class="nc-tags">
+                    <span class="nctag">MAP DESIGN</span>
+                    <span class="nctag">CRIMSON ZONE</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-author">REY GAMES STUDIO</span>
+                    <a href="#" class="nc-read">READ MORE ❯</a>
+                </div>
+            </article>
+
+            <!-- Dev Update 2 -->
+            <article class="news-card news-card-dev" data-cat="dev">
+                <div class="nc-top-line blue-line"></div>
+                <div class="nc-dev-avatar">RG</div>
+                <div class="nc-meta">
+                    <span class="nc-cat dev">DEV UPDATE</span>
+                    <span class="nc-date">10 APR 2026</span>
+                </div>
+                <h3 class="nc-title">A.R.H.S ENGINE — HOW IT WORKS</h3>
+                <p class="nc-desc">A deep dive into the Automated Replay & Highlights System. How AI selects key moments, generates cinematic cuts, and uploads to all platforms within 5 minutes.</p>
+                <div class="nc-tags">
+                    <span class="nctag">A.R.H.S</span>
+                    <span class="nctag">AI TECH</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-author">REY GAMES STUDIO</span>
+                    <a href="#" class="nc-read">READ MORE ❯</a>
+                </div>
+            </article>
+
+            <!-- Dev Update 1 -->
+            <article class="news-card news-card-dev" data-cat="dev">
+                <div class="nc-top-line blue-line"></div>
+                <div class="nc-dev-avatar">RG</div>
+                <div class="nc-meta">
+                    <span class="nc-cat dev">DEV UPDATE</span>
+                    <span class="nc-date">01 APR 2026</span>
+                </div>
+                <h3 class="nc-title">SEASON 2 — EARLY DEVELOPMENT PREVIEW</h3>
+                <p class="nc-desc">A first look at what's coming in Season 2. New operation teaser, weapon additions, and faction lore expansions. The war is far from over.</p>
+                <div class="nc-tags">
+                    <span class="nctag">SEASON 2</span>
+                    <span class="nctag">ROADMAP</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-author">REY GAMES STUDIO</span>
+                    <a href="#" class="nc-read">READ MORE ❯</a>
+                </div>
+            </article>
+
+            <!-- Dev Update 0 -->
+            <article class="news-card news-card-dev" data-cat="dev">
+                <div class="nc-top-line blue-line"></div>
+                <div class="nc-dev-avatar">RG</div>
+                <div class="nc-meta">
+                    <span class="nc-cat dev">DEV UPDATE</span>
+                    <span class="nc-date">12 MAR 2026</span>
+                </div>
+                <h3 class="nc-title">LAUNCH WEEK — MESSAGE FROM THE TEAM</h3>
+                <p class="nc-desc">A personal message from the REY GAMES team on the eve of launch. Our vision, our gratitude, and what comes next for AEGIS and the community.</p>
+                <div class="nc-tags">
+                    <span class="nctag">LAUNCH</span>
+                    <span class="nctag">REY GAMES</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-author">REY GAMES STUDIO</span>
+                    <a href="#" class="nc-read">READ MORE ❯</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ========== COMMUNITY ========== -->
+    <section class="news-section" id="community">
+        <div class="ns-header">
+            <div class="ns-label-row">
+                <span class="ns-line"></span>
+                <span class="ns-tag">COMMUNITY</span>
+                <span class="ns-line"></span>
+            </div>
+        </div>
+
+        <div class="community-grid">
+
+            <!-- Events -->
+            <div class="comm-events">
+                <div class="ce-header">
+                    <span class="ce-title">UPCOMING EVENTS</span>
+                    <span class="ce-badge live">LIVE NOW</span>
+                </div>
+
+                <div class="ce-item active">
+                    <div class="cei-left">
+                        <div class="cei-dot active-dot"></div>
+                        <div class="cei-vline"></div>
+                    </div>
+                    <div class="cei-content">
+                        <div class="cei-tag event">COMMUNITY EVENT</div>
+                        <div class="cei-name">FROSTLINE WEEKEND — 2X XP</div>
+                        <div class="cei-date">19–21 APR 2026</div>
+                        <div class="cei-desc">Double XP across all modes on Operation Frostline. Plus exclusive Snow Badge for top players.</div>
+                    </div>
+                </div>
+
+                <div class="ce-item">
+                    <div class="cei-left">
+                        <div class="cei-dot"></div>
+                        <div class="cei-vline"></div>
+                    </div>
+                    <div class="cei-content">
+                        <div class="cei-tag">TOURNAMENT</div>
+                        <div class="cei-name">CLASH SQUAD OPEN CUP — S1</div>
+                        <div class="cei-date">25 APR 2026</div>
+                        <div class="cei-desc">Open 4v4 tournament. Register your squad before April 23rd. Prize pool: exclusive cosmetics + rank points.</div>
+                    </div>
+                </div>
+
+                <div class="ce-item">
+                    <div class="cei-left">
+                        <div class="cei-dot"></div>
+                    </div>
+                    <div class="cei-content">
+                        <div class="cei-tag">COMMUNITY</div>
+                        <div class="cei-name">CLIP OF THE MONTH — APRIL</div>
+                        <div class="cei-date">30 APR 2026</div>
+                        <div class="cei-desc">Submit your best A.R.H.S-generated highlight. Winner featured on all official AEGIS channels.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social links -->
+            <div class="comm-social">
+                <div class="cs-header">JOIN THE COMMUNITY</div>
+                <div class="cs-cards">
+
+                    <a href="#" class="cs-card cs-discord">
+                        <div class="csc-icon">💬</div>
+                        <div class="csc-info">
+                            <div class="csc-name">DISCORD</div>
+                            <div class="csc-sub">Official AEGIS Server</div>
+                            <div class="csc-members">JOIN NOW ❯</div>
+                        </div>
+                        <div class="csc-arrow">❯</div>
+                    </a>
+
+                    <a href="#" class="cs-card cs-twitter">
+                        <div class="csc-icon">𝕏</div>
+                        <div class="csc-info">
+                            <div class="csc-name">TWITTER / X</div>
+                            <div class="csc-sub">@AEGISgame</div>
+                            <div class="csc-members">FOLLOW ❯</div>
+                        </div>
+                        <div class="csc-arrow">❯</div>
+                    </a>
+
+                    <a href="#" class="cs-card cs-youtube">
+                        <div class="csc-icon">▶</div>
+                        <div class="csc-info">
+                            <div class="csc-name">YOUTUBE</div>
+                            <div class="csc-sub">Trailers & Dev Logs</div>
+                            <div class="csc-members">SUBSCRIBE ❯</div>
+                        </div>
+                        <div class="csc-arrow">❯</div>
+                    </a>
+
+                    <a href="#" class="cs-card cs-tiktok">
+                        <div class="csc-icon">◈</div>
+                        <div class="csc-info">
+                            <div class="csc-name">TIKTOK</div>
+                            <div class="csc-sub">A.R.H.S Highlights</div>
+                            <div class="csc-members">FOLLOW ❯</div>
+                        </div>
+                        <div class="csc-arrow">❯</div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Community event cards -->
+        <div class="news-grid" style="margin-top: 4px;">
+            <article class="news-card" data-cat="event">
+                <div class="nc-top-line orange-line"></div>
+                <div class="nc-meta">
+                    <span class="nc-cat event">EVENT</span>
+                    <span class="nc-date">19 APR 2026</span>
+                </div>
+                <h3 class="nc-title">FROSTLINE WEEKEND — 2X XP EVENT</h3>
+                <p class="nc-desc">Double XP all weekend on Operation Frostline. Top 100 players earn an exclusive Snow Operator Badge that cannot be purchased.</p>
+                <div class="nc-tags">
+                    <span class="nctag">XP BOOST</span>
+                    <span class="nctag">FROSTLINE</span>
+                    <span class="nctag">REWARDS</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-live-badge">LIVE NOW</span>
+                    <a href="#" class="nc-read">VIEW EVENT ❯</a>
+                </div>
+            </article>
+
+            <article class="news-card" data-cat="event">
+                <div class="nc-top-line orange-line"></div>
+                <div class="nc-meta">
+                    <span class="nc-cat event">EVENT</span>
+                    <span class="nc-date">25 APR 2026</span>
+                </div>
+                <h3 class="nc-title">CLASH SQUAD OPEN CUP — SEASON 1</h3>
+                <p class="nc-desc">Register your 4-person squad for the first official open cup. Community tournament with exclusive cosmetic prizes for top 3 squads.</p>
+                <div class="nc-tags">
+                    <span class="nctag">TOURNAMENT</span>
+                    <span class="nctag">4v4</span>
+                    <span class="nctag">PRIZES</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-upcoming-badge">UPCOMING</span>
+                    <a href="#" class="nc-read">REGISTER ❯</a>
+                </div>
+            </article>
+
+            <article class="news-card" data-cat="community">
+                <div class="nc-top-line purple-line"></div>
+                <div class="nc-meta">
+                    <span class="nc-cat community">COMMUNITY</span>
+                    <span class="nc-date">30 APR 2026</span>
+                </div>
+                <h3 class="nc-title">CLIP OF THE MONTH — APRIL SUBMISSION</h3>
+                <p class="nc-desc">Submit your best A.R.H.S-generated highlight reel for April. Winner gets featured across all AEGIS official channels and earns the Creator Badge.</p>
+                <div class="nc-tags">
+                    <span class="nctag">A.R.H.S</span>
+                    <span class="nctag">CREATOR</span>
+                    <span class="nctag">HIGHLIGHT</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-upcoming-badge">OPEN</span>
+                    <a href="#" class="nc-read">SUBMIT ❯</a>
+                </div>
+            </article>
+
+            <article class="news-card" data-cat="community">
+                <div class="nc-top-line purple-line"></div>
+                <div class="nc-meta">
+                    <span class="nc-cat community">COMMUNITY</span>
+                    <span class="nc-date">08 APR 2026</span>
+                </div>
+                <h3 class="nc-title">COMMUNITY SPOTLIGHT — TOP OPERATORS</h3>
+                <p class="nc-desc">Featuring the top 10 operators from Season 1 Week 3. Their highlight reels, stats, and stories from the frontlines of AEGIS.</p>
+                <div class="nc-tags">
+                    <span class="nctag">SPOTLIGHT</span>
+                    <span class="nctag">PLAYERS</span>
+                    <span class="nctag">SEASON 1</span>
+                </div>
+                <div class="nc-footer">
+                    <span class="nc-version">WEEK 3</span>
+                    <a href="#" class="nc-read">READ MORE ❯</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="news-newsletter">
+        <div class="nnl-inner">
+            <div class="nnl-left">
+                <div class="nnl-tag">INTEL FEED</div>
+                <h2 class="nnl-title">STAY <span class="news-green">INFORMED</span></h2>
+                <p class="nnl-desc">Get patch notes, dev updates, and event alerts delivered directly. No spam — only what matters.</p>
+            </div>
+            <div class="nnl-right">
+                <div class="nnl-form">
+                    <input type="email" class="nnl-input" placeholder="ENTER YOUR EMAIL ADDRESS">
+                    <button class="nnl-btn">SUBSCRIBE ❯</button>
+                </div>
+                <p class="nnl-note">By subscribing you agree to receive game updates from REY GAMES. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="aegis-footer-main">
+        <div class="footer-side-accent"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-brand-row">
+                        <div class="footer-brand-icon"><img src="assets/image/image.png" alt="AEG" class="footer-brand-icon"></div>
+                        <h2 class="footer-logo">AEGIS</h2>
+                    </div>
+                    <p class="footer-brand-desc">The most powerful tactical FPS ever built. Realistic combat, AI-driven highlights, and a self-growing content ecosystem.</p>
+                    <span class="footer-tagline">A.R.H.S — ALWAYS RECORDING</span>
+                </div>
+                <div class="footer-col">
+                    <h3>GAME</h3>
+                    <ul>
+                        <li><a href="about.html#world" style="margin-left:12px">World of AEGIS</a></li>
+                        <li><a href="about.html#operations" style="margin-left:12px">Operations & Maps</a></li>
+                        <li><a href="index.html#section-arsenal" style="margin-left:12px">The Arsenal</a></li>
+                        <li><a href="about.html#factions" style="margin-left:12px">Factions</a></li>
+                        <li><a href="index.html#section-battlepass" style="margin-left:12px">Battle Pass</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>COMMUNITY</h3>
+                    <ul>
+                        <li><a href="news.html#patch-notes" style="margin-left:12px">Patch Notes</a></li>
+                        <li><a href="news.html#dev-updates" style="margin-left:12px">Dev Updates</a></li>
+                        <li><a href="#" style="margin-left:12px">Discord Server</a></li>
+                        <li><a href="#" style="margin-left:12px">Twitter / X</a></li>
+                        <li><a href="#" style="margin-left:12px">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#" style="margin-left:12px">Player Guide</a></li>
+                        <li><a href="#" style="margin-left:12px">Player Stats</a></li>
+                        <li><a href="#" style="margin-left:12px">Report a Bug</a></li>
+                        <li><a href="#" style="margin-left:12px">Contact Us</a></li>
+                        <li><a href="#" style="margin-left:12px">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 REY GAMES — AEGIS. ALL RIGHTS RESERVED.</p>
+                <span class="footer-sys-status">A.R.H.S SYSTEM ONLINE</span>
+                <span class="footer-classified">CLASSIFIED INTEL // CLEARANCE REQUIRED</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="news.js"></script>
+</body>
+</html>

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, minimum-scale=0.1, maximum-scale=5.0">
+
+    <title>GUIDES | AEGIS — Player Guide & Tips</title>
+    <meta name="description" content="AEGIS Player Guides — Movement, shooting, weapons, ranked tips, map strategies, and everything you need to dominate the battlefield.">
+    <meta name="author" content="REY GAMES">
+    <meta name="theme-color" content="#5cff00">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AEGIS — Player Guides">
+    <meta property="og:description" content="Master every system. Dominate every operation. The complete AEGIS player guide.">
+    <meta property="og:image" content="assets/image/image.png">
+
+    <link rel="icon" type="image/png" href="assets/image/image.png">
+    <link rel="apple-touch-icon" href="assets/image/image.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="guides.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="main-navbar">
+        <div class="brand-section">
+            <img src="assets/image/image.png" alt="AEGIS Logo" class="brand-logo">
+            <span class="divider"></span>
+            <h1 class="brand-name">AEGIS</h1>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="#">ABOUT <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>GAME INFO</h3>
+                            <a href="about.html#world">World of AEGIS</a>
+                            <a href="about.html#operations">Operations & Maps</a>
+                            <a href="index.html#section-arsenal">The Arsenal</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>FACTIONS</h3>
+                            <a href="about.html#factions">VOX — Vanguard Ops</a>
+                            <a href="about.html#factions">BFS — Black Falcon</a>
+                            <a href="about.html#factions">ILF — Iron Legion</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <a href="news.html">NEWS AND<br>COMMUNITY <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>LATEST</h3>
+                            <a href="news.html#patch-notes">Patch Notes</a>
+                            <a href="news.html#dev-updates">Dev Updates</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>SOCIAL</h3>
+                            <a href="#">Discord</a>
+                            <a href="#">Twitter / X</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="season.html">SEASON</a></li>
+                <li><a href="battlepass.html">BATTLE PASS</a></li>
+                <li class="has-dropdown">
+                    <a href="portal.html">PORTAL <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>CUSTOM GAMES</h3>
+                            <a href="portal.html#server-browser">Server Browser</a>
+                            <a href="portal.html#create">Create Experience</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>HIGHLIGHTS</h3>
+                            <a href="portal.html#arhs">A.R.H.S Center</a>
+                            <a href="portal.html#clips">Clip Archive</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="guides.html" class="nav-active">GUIDES</a></li>
+                <li><a href="playerstats.html">PLAYER STATS</a></li>
+            </ul>
+        </nav>
+        <div class="action-section">
+            <button class="buy-btn" onclick="window.location.href='index.html'">
+                <span class="btn-text">FREE<br><span style="padding-left:16px">NOW</span></span>
+                <span class="btn-arrow">❯</span>
+            </button>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+        <nav class="drawer-nav">
+            <div class="drawer-header">
+                <span class="drawer-brand">AEGIS</span>
+                <button class="drawer-close" id="drawerClose">✕</button>
+            </div>
+            <ul class="drawer-links">
+                <li class="drawer-section-label">GUIDES</li>
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#movement">Movement</a></li>
+                <li><a href="#shooting">Shooting System</a></li>
+                <li><a href="#weapons">Weapons</a></li>
+                <li><a href="#ranked">Ranked Tips</a></li>
+                <li><a href="#maps">Map Strategies</a></li>
+                <li><a href="#arhs-guide">A.R.H.S Guide</a></li>
+                <li class="drawer-section-label">NAVIGATE</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stats.html">Player Stats</a></li>
+                <li><a href="portal.html">Portal</a></li>
+            </ul>
+            <a href="index.html" class="drawer-play-btn">PLAY FREE NOW ❯</a>
+        </nav>
+    </div>
+
+    <!-- ========== HERO ========== -->
+    <section class="guides-hero">
+        <div class="gh-bg"></div>
+        <div class="gh-overlay"></div>
+        <div class="gh-grid"></div>
+
+        <div class="gh-content">
+            <div class="gh-label-row">
+                <span class="gh-line"></span>
+                <span class="gh-label">OPERATOR TRAINING DATABASE</span>
+                <span class="gh-line"></span>
+            </div>
+            <h1 class="gh-title">PLAYER<br><span class="g-green">GUIDES</span></h1>
+            <p class="gh-desc">Master every mechanic. Dominate every operation. From your first match to ranked mastery — everything you need to become an elite AEGIS operator.</p>
+
+            <!-- Quick nav -->
+            <div class="gh-quick-nav">
+                <a href="#getting-started" class="gqn-item">
+                    <span class="gqn-num">01</span>
+                    <span class="gqn-label">GETTING STARTED</span>
+                </a>
+                <a href="#movement" class="gqn-item">
+                    <span class="gqn-num">02</span>
+                    <span class="gqn-label">MOVEMENT</span>
+                </a>
+                <a href="#shooting" class="gqn-item">
+                    <span class="gqn-num">03</span>
+                    <span class="gqn-label">SHOOTING</span>
+                </a>
+                <a href="#weapons" class="gqn-item">
+                    <span class="gqn-num">04</span>
+                    <span class="gqn-label">WEAPONS</span>
+                </a>
+                <a href="#ranked" class="gqn-item">
+                    <span class="gqn-num">05</span>
+                    <span class="gqn-label">RANKED TIPS</span>
+                </a>
+                <a href="#maps" class="gqn-item">
+                    <span class="gqn-num">06</span>
+                    <span class="gqn-label">MAP GUIDE</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- HUD -->
+        <div class="gh-hud">
+            <div class="ghh tl"></div>
+            <div class="ghh tr"></div>
+            <div class="ghh bl"></div>
+            <div class="ghh br"></div>
+            <div class="ghh-tl">TRAINING DATABASE // CLEARANCE: OPERATOR</div>
+            <div class="ghh-br">REY GAMES — AEGIS v1.0.3</div>
+        </div>
+
+        <div class="gh-scroll" onclick="document.getElementById('getting-started').scrollIntoView({behavior:'smooth'})">
+            <span class="gh-scroll-text">SCROLL</span>
+            <div class="gh-scroll-line"><div class="gh-scroll-fill"></div></div>
+            <div class="gh-scroll-chevs">
+                <span class="gh-chev"></span>
+                <span class="gh-chev"></span>
+                <span class="gh-chev"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GETTING STARTED ========== -->
+    <section class="guide-section" id="getting-started">
+        <div class="gs-label-row">
+            <span class="gs-line"></span>
+            <span class="gs-tag">01 — GETTING STARTED</span>
+            <span class="gs-line"></span>
+        </div>
+
+        <div class="gs-header">
+            <h2 class="gs-title">NEW OPERATOR <span class="g-green">BRIEFING</span></h2>
+            <p class="gs-desc">Your first 30 minutes in AEGIS. Follow this path to get battle-ready as fast as possible.</p>
+        </div>
+
+        <div class="lifecycle-steps">
+            <div class="lc-step">
+                <div class="lcs-num">01</div>
+                <div class="lcs-icon">🎮</div>
+                <h3 class="lcs-title">LAUNCH & SETTINGS</h3>
+                <p class="lcs-desc">First, adjust your sensitivity, graphics settings, and audio. Optimal sensitivity: 800 DPI mouse at 5–8 in-game. Set audio to Headphones mode for directional footstep awareness.</p>
+                <div class="lcs-tip">
+                    <span class="lct-icon">💡</span>
+                    <span>Pro tip: Lower your graphics slightly for higher FPS — competitive advantage over visual quality.</span>
+                </div>
+            </div>
+            <div class="lc-arrow">→</div>
+            <div class="lc-step">
+                <div class="lcs-num">02</div>
+                <div class="lcs-icon">🎯</div>
+                <h3 class="lcs-title">TRAINING GROUND</h3>
+                <p class="lcs-desc">Spend 15–20 minutes in Training Ground before your first real match. Practice recoil patterns, movement, and grenade throws against easy bots until movement feels natural.</p>
+                <div class="lcs-tip">
+                    <span class="lct-icon">💡</span>
+                    <span>Use AX-7 Phantom in training — it's the most forgiving AR for learning recoil control.</span>
+                </div>
+            </div>
+            <div class="lc-arrow">→</div>
+            <div class="lc-step">
+                <div class="lcs-num">03</div>
+                <div class="lcs-icon">🤝</div>
+                <h3 class="lcs-title">MIXED MODE FIRST</h3>
+                <p class="lcs-desc">Play Mixed Mode (Players + AI) before jumping into Ranked. This lets you learn map layouts, weapon feel, and game flow against a mix of real and AI opponents at your pace.</p>
+                <div class="lcs-tip">
+                    <span class="lct-icon">💡</span>
+                    <span>Mixed Mode doesn't affect your ranked rating — ideal for practice without pressure.</span>
+                </div>
+            </div>
+            <div class="lc-arrow">→</div>
+            <div class="lc-step">
+                <div class="lcs-num">04</div>
+                <div class="lcs-icon">🏆</div>
+                <h3 class="lcs-title">ENTER RANKED</h3>
+                <p class="lcs-desc">Once comfortable with movement and aiming, enter Ranked Mode. Focus on positioning and survival first. Kills will come naturally as your game sense develops.</p>
+                <div class="lcs-tip">
+                    <span class="lct-icon">💡</span>
+                    <span>Your first 10 ranked matches set your initial MMR — take them seriously.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Difficulty path -->
+        <div class="difficulty-bar">
+            <div class="db-item beginner">
+                <div class="db-label">BEGINNER</div>
+                <div class="db-modes">Training · Mixed</div>
+            </div>
+            <div class="db-arrow">→</div>
+            <div class="db-item intermediate">
+                <div class="db-label">INTERMEDIATE</div>
+                <div class="db-modes">Casual · Clash Squad</div>
+            </div>
+            <div class="db-arrow">→</div>
+            <div class="db-item advanced">
+                <div class="db-label">ADVANCED</div>
+                <div class="db-modes">Ranked · Custom Scrims</div>
+            </div>
+            <div class="db-arrow">→</div>
+            <div class="db-item elite">
+                <div class="db-label">ELITE</div>
+                <div class="db-modes">Ranked Top · Tournaments</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MOVEMENT ========== -->
+    <section class="guide-section guide-dark" id="movement">
+        <div class="gs-label-row">
+            <span class="gs-line"></span>
+            <span class="gs-tag">02 — MOVEMENT SYSTEM</span>
+            <span class="gs-line"></span>
+        </div>
+
+        <div class="gs-header">
+            <h2 class="gs-title">MOVE LIKE AN <span class="g-green">OPERATOR</span></h2>
+            <p class="gs-desc">AEGIS movement is built for competitive play — fast enough to win, realistic enough to feel earned.</p>
+        </div>
+
+        <div class="movement-grid">
+
+            <div class="mv-card">
+                <div class="mv-icon">🚶</div>
+                <h3 class="mv-title">WALK / RUN</h3>
+                <p class="mv-desc">Default movement. Walk is silent — use it to avoid revealing your position. Run is fast but audible to nearby enemies. Switch constantly based on game state.</p>
+                <div class="mv-tip good-tip">Silent walking is a major competitive edge in close-quarters maps.</div>
+            </div>
+
+            <div class="mv-card">
+                <div class="mv-icon">💨</div>
+                <h3 class="mv-title">SPRINT</h3>
+                <p class="mv-desc">Maximum speed. In Ranked Mode, sprinting drains stamina — use strategically. Sprinting lowers your weapon and reduces accuracy. Never sprint into combat directly.</p>
+                <div class="mv-tip warn-tip">Stamina drain in Ranked Mode — manage your sprint distance.</div>
+            </div>
+
+            <div class="mv-card">
+                <div class="mv-icon">🦆</div>
+                <h3 class="mv-title">CROUCH</h3>
+                <p class="mv-desc">Reduces your hitbox and dramatically improves accuracy. Footsteps become silent while crouching. Essential for holding angles and winning close-range gunfights.</p>
+                <div class="mv-tip good-tip">Crouch + ADS = maximum accuracy. Use for holding power positions.</div>
+            </div>
+
+            <div class="mv-card">
+                <div class="mv-icon">🪖</div>
+                <h3 class="mv-title">PRONE</h3>
+                <p class="mv-desc">Lowest profile, best accuracy bonus. Extremely difficult to hit. Essential for long-range engagements and defensive play. Very slow mobility — use only when stationary.</p>
+                <div class="mv-tip warn-tip">Prone makes you nearly invisible but completely commits your position.</div>
+            </div>
+
+            <div class="mv-card">
+                <div class="mv-icon">🧗</div>
+                <h3 class="mv-title">VAULT / MANTLE</h3>
+                <p class="mv-desc">Automatically vaults over small obstacles and mantles up to ledges. Critical for map traversal and reaching power positions. Practice vault paths on each map.</p>
+                <div class="mv-tip good-tip">Learn vault shortcuts on Frostline bunkers and Ember Rain rooftops.</div>
+            </div>
+
+            <div class="mv-card">
+                <div class="mv-icon">🏃</div>
+                <h3 class="mv-title">JUMP</h3>
+                <p class="mv-desc">Standard jump. Bunny-hopping is penalized — jumping reduces accuracy significantly. Use jumps for obstacles only, not as an evasion tactic in gunfights.</p>
+                <div class="mv-tip warn-tip">Never jump during a gunfight — accuracy drops to near zero mid-air.</div>
+            </div>
+
+        </div>
+
+        <!-- Movement quick tips -->
+        <div class="movement-tips-bar">
+            <div class="mtb-title">MOVEMENT QUICK TIPS</div>
+            <div class="mtb-list">
+                <div class="mtb-item">
+                    <span class="mtb-dot"></span>
+                    <span>Strafe left-right while shooting to make yourself harder to hit</span>
+                </div>
+                <div class="mtb-item">
+                    <span class="mtb-dot"></span>
+                    <span>Crouch at the end of a sprint to peek corners without stopping momentum</span>
+                </div>
+                <div class="mtb-item">
+                    <span class="mtb-dot"></span>
+                    <span>Sound is a weapon — crouch-walk when pushing a flanking route</span>
+                </div>
+                <div class="mtb-item">
+                    <span class="mtb-dot"></span>
+                    <span>Lean around corners to check angles without exposing your full body</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SHOOTING ========== -->
+    <section class="guide-section" id="shooting">
+        <div class="gs-label-row">
+            <span class="gs-line"></span>
+            <span class="gs-tag">03 — SHOOTING SYSTEM</span>
+            <span class="gs-line"></span>
+        </div>
+
+        <div class="gs-header">
+            <h2 class="gs-title">MASTER THE <span class="g-green">GUNPLAY</span></h2>
+            <p class="gs-desc">Understanding the shooting system is the difference between a casual player and an elite operator.</p>
+        </div>
+
+        <div class="shooting-grid">
+
+            <!-- Recoil system -->
+            <div class="sh-card sh-large">
+                <div class="sh-card-label">RECOIL SYSTEM</div>
+                <h3 class="sh-card-title">DYNAMIC RECOIL PATTERNS</h3>
+                <p class="sh-card-desc">Every weapon has a unique recoil pattern — a combination of vertical climb and horizontal drift. Master the pattern by holding opposite mouse movement while firing.</p>
+                <div class="recoil-diagram">
+                    <div class="rd-label">SPRAY PATTERN EXAMPLE — AX-7 PHANTOM</div>
+                    <div class="rd-visual">
+                        <div class="rd-dot" style="left:50%;top:90%;"></div>
+                        <div class="rd-dot" style="left:49%;top:82%;"></div>
+                        <div class="rd-dot" style="left:51%;top:74%;"></div>
+                        <div class="rd-dot" style="left:48%;top:66%;"></div>
+                        <div class="rd-dot" style="left:52%;top:58%;"></div>
+                        <div class="rd-dot" style="left:45%;top:50%;"></div>
+                        <div class="rd-dot" style="left:55%;top:44%;"></div>
+                        <div class="rd-dot" style="left:42%;top:38%;"></div>
+                        <div class="rd-dot" style="left:58%;top:32%;"></div>
+                        <div class="rd-dot" style="left:40%;top:26%;"></div>
+                        <div class="rd-crosshair">+</div>
+                    </div>
+                    <div class="rd-tip">Pull mouse DOWN + opposite direction of drift to control spray</div>
+                </div>
+                <div class="sh-tips">
+                    <div class="sh-tip good-tip">First 3 bullets are accurate — tap-fire at long range</div>
+                    <div class="sh-tip good-tip">ADS reduces recoil by ~30% across all weapons</div>
+                    <div class="sh-tip warn-tip">Full auto beyond 40m = wasted ammo on most ARs</div>
+                </div>
+            </div>
+
+            <!-- Hit zones -->
+            <div class="sh-card">
+                <div class="sh-card-label">DAMAGE SYSTEM</div>
+                <h3 class="sh-card-title">HIT ZONES & MULTIPLIERS</h3>
+                <div class="hitzone-list">
+                    <div class="hz-item">
+                        <div class="hz-zone head-zone">HEAD</div>
+                        <div class="hz-bar-wrap">
+                            <div class="hz-bar" style="width:100%;background:#ff2222"></div>
+                        </div>
+                        <div class="hz-mult">×2.0</div>
+                        <div class="hz-note">INSTANT KILL vs unarmored</div>
+                    </div>
+                    <div class="hz-item">
+                        <div class="hz-zone chest-zone">CHEST</div>
+                        <div class="hz-bar-wrap">
+                            <div class="hz-bar" style="width:65%;background:#ff8c00"></div>
+                        </div>
+                        <div class="hz-mult">×1.0</div>
+                        <div class="hz-note">BASE DAMAGE</div>
+                    </div>
+                    <div class="hz-item">
+                        <div class="hz-zone stomach-zone">STOMACH</div>
+                        <div class="hz-bar-wrap">
+                            <div class="hz-bar" style="width:58%;background:#ff8c00"></div>
+                        </div>
+                        <div class="hz-mult">×0.9</div>
+                        <div class="hz-note">-10% from base</div>
+                    </div>
+                    <div class="hz-item">
+                        <div class="hz-zone legs-zone">LEGS</div>
+                        <div class="hz-bar-wrap">
+                            <div class="hz-bar" style="width:50%;background:#4da6ff"></div>
+                        </div>
+                        <div class="hz-mult">×0.8</div>
+                        <div class="hz-note">-20% from base</div>
+                    </div>
+                </div>
+                <div class="sh-tip good-tip" style="margin-top:16px">Always aim for the head. 2 headshots with any AR = elimination.</div>
+            </div>
+
+            <!-- Bullet physics -->
+            <div class="sh-card">
+                <div class="sh-card-label">BULLET PHYSICS</div>
+                <h3 class="sh-card-title">HITSCAN VS PROJECTILE</h3>
+                <div class="bp-split">
+                    <div class="bps-item hitscan">
+                        <div class="bps-type">HITSCAN</div>
+                        <div class="bps-weapons">SMGs · Pistols · Shotguns</div>
+                        <p class="bps-desc">Instant hit registration. No bullet travel time. Best for close-range fights where reaction time is everything.</p>
+                        <div class="bps-tag good">INSTANT HIT</div>
+                    </div>
+                    <div class="bps-item projectile">
+                        <div class="bps-type">PROJECTILE</div>
+                        <div class="bps-weapons">Snipers · DMRs · Launchers</div>
+                        <p class="bps-desc">Real bullet travel time. Must lead targets at range. Mastering lead shots is the hallmark of elite sniper play.</p>
+                        <div class="bps-tag warn">LEAD YOUR TARGET</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Penetration -->
+            <div class="sh-card">
+                <div class="sh-card-label">PENETRATION SYSTEM</div>
+                <h3 class="sh-card-title">MATERIAL PENETRATION</h3>
+                <div class="pen-list">
+                    <div class="pen-item pen-yes">
+                        <span class="pen-icon">✓</span>
+                        <span class="pen-mat">WOOD</span>
+                        <span class="pen-note">Full penetration — all weapons</span>
+                    </div>
+                    <div class="pen-item pen-yes">
+                        <span class="pen-icon">✓</span>
+                        <span class="pen-mat">GLASS</span>
+                        <span class="pen-note">Full penetration — reduced damage</span>
+                    </div>
+                    <div class="pen-item pen-partial">
+                        <span class="pen-icon">~</span>
+                        <span class="pen-mat">THIN METAL</span>
+                        <span class="pen-note">Partial — high damage weapons only</span>
+                    </div>
+                    <div class="pen-item pen-no">
+                        <span class="pen-icon">✗</span>
+                        <span class="pen-mat">CONCRETE</span>
+                        <span class="pen-note">No penetration</span>
+                    </div>
+                    <div class="pen-item pen-no">
+                        <span class="pen-icon">✗</span>
+                        <span class="pen-mat">HEAVY STEEL</span>
+                        <span class="pen-note">No penetration</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== WEAPONS ========== -->
+    <section class="guide-section guide-dark" id="weapons">
+        <div class="gs-label-row">
+            <span class="gs-line"></span>
+            <span class="gs-tag">04 — WEAPON GUIDE</span>
+            <span class="gs-line"></span>
+        </div>
+
+        <div class="gs-header">
+            <h2 class="gs-title">KNOW YOUR <span class="g-green">ARSENAL</span></h2>
+            <p class="gs-desc">Each weapon class serves a purpose. Choose the right tool for the right engagement.</p>
+        </div>
+
+        <div class="weapons-guide-grid">
+
+            <div class="wg-card">
+                <div class="wg-class-tag ar-tag">ASSAULT RIFLE</div>
+                <div class="wg-icon">🔫</div>
+                <h3 class="wg-title">ASSAULT RIFLES</h3>
+                <p class="wg-desc">The backbone of AEGIS combat. Effective at all ranges when used correctly. Best for players who want consistent, reliable damage output.</p>
+                <div class="wg-pros-cons">
+                    <div class="wg-pros">
+                        <div class="wgpc-label">STRENGTHS</div>
+                        <div class="wgpc-item good">Versatile range</div>
+                        <div class="wgpc-item good">Large magazine</div>
+                        <div class="wgpc-item good">Consistent TTK</div>
+                    </div>
+                    <div class="wg-cons">
+                        <div class="wgpc-label">WEAKNESSES</div>
+                        <div class="wgpc-item bad">Recoil at range</div>
+                        <div class="wgpc-item bad">Slower ADS vs SMG</div>
+                    </div>
+                </div>
+                <div class="wg-best-for">BEST FOR: Mid-range combat, holding positions</div>
+                <div class="wg-recommended">⭐ RECOMMENDED: AX-7 PHANTOM, M4-VANGUARD</div>
+            </div>
+
+            <div class="wg-card">
+                <div class="wg-class-tag smg-tag">SMG</div>
+                <div class="wg-icon">💥</div>
+                <h3 class="wg-title">SUBMACHINE GUNS</h3>
+                <p class="wg-desc">Fastest ADS and highest fire rate. Designed for aggressive close-quarters combat. Dominant inside buildings and tight corridors. Struggles at medium+ range.</p>
+                <div class="wg-pros-cons">
+                    <div class="wg-pros">
+                        <div class="wgpc-label">STRENGTHS</div>
+                        <div class="wgpc-item good">Fastest ADS</div>
+                        <div class="wgpc-item good">CQB dominance</div>
+                        <div class="wgpc-item good">High mobility</div>
+                    </div>
+                    <div class="wg-cons">
+                        <div class="wgpc-label">WEAKNESSES</div>
+                        <div class="wgpc-item bad">Weak at range</div>
+                        <div class="wgpc-item bad">Low damage/bullet</div>
+                    </div>
+                </div>
+                <div class="wg-best-for">BEST FOR: Aggressive rushes, urban maps, CQB</div>
+                <div class="wg-recommended">⭐ RECOMMENDED: VX-9 SPECTER</div>
+            </div>
+
+            <div class="wg-card">
+                <div class="wg-class-tag sniper-tag">SNIPER</div>
+                <div class="wg-icon">🎯</div>
+                <h3 class="wg-title">SNIPER RIFLES</h3>
+                <p class="wg-desc">Highest damage per shot in the game. One-shot headshots on unarmored targets. Requires patience, positioning, and leading moving targets. Projectile physics apply.</p>
+                <div class="wg-pros-cons">
+                    <div class="wg-pros">
+                        <div class="wgpc-label">STRENGTHS</div>
+                        <div class="wgpc-item good">One-shot potential</div>
+                        <div class="wgpc-item good">Extreme range</div>
+                        <div class="wgpc-item good">Map control</div>
+                    </div>
+                    <div class="wg-cons">
+                        <div class="wgpc-label">WEAKNESSES</div>
+                        <div class="wgpc-item bad">Useless CQB</div>
+                        <div class="wgpc-item bad">Slow fire rate</div>
+                    </div>
+                </div>
+                <div class="wg-best-for">BEST FOR: Open maps, holding long sightlines</div>
+                <div class="wg-recommended">⭐ RECOMMENDED: SR-GHOST</div>
+            </div>
+
+            <div class="wg-card">
+                <div class="wg-class-tag shotgun-tag">SHOTGUN</div>
+                <div class="wg-icon">💣</div>
+                <h3 class="wg-title">SHOTGUNS</h3>
+                <p class="wg-desc">Highest close-range burst damage. Devastating within 10 meters, completely ineffective beyond 25. Combine with movement — rush, shoot, retreat. One-shot body at point blank.</p>
+                <div class="wg-pros-cons">
+                    <div class="wg-pros">
+                        <div class="wgpc-label">STRENGTHS</div>
+                        <div class="wgpc-item good">Instant CQB kill</div>
+                        <div class="wgpc-item good">No recoil control</div>
+                    </div>
+                    <div class="wg-cons">
+                        <div class="wgpc-label">WEAKNESSES</div>
+                        <div class="wgpc-item bad">Extreme range limit</div>
+                        <div class="wgpc-item bad">Slow reload</div>
+                    </div>
+                </div>
+                <div class="wg-best-for">BEST FOR: Indoor maps, ambush positions</div>
+                <div class="wg-recommended">⭐ RECOMMENDED: SG-BREACHER</div>
+            </div>
+
+        </div>
+
+        <!-- Weapon tips quick bar -->
+        <div class="weapon-tips-bar">
+            <div class="wtb-item">
+                <span class="wtb-num">01</span>
+                <span>Tactical reload (partial mag) is faster than full reload — use it when safe</span>
+            </div>
+            <div class="wtb-item">
+                <span class="wtb-num">02</span>
+                <span>Animation cancel: switch weapon after reload starts to speed up the process</span>
+            </div>
+            <div class="wtb-item">
+                <span class="wtb-num">03</span>
+                <span>Weapon lowers when sprinting — always sprint-stop before engaging</span>
+            </div>
+            <div class="wtb-item">
+                <span class="wtb-num">04</span>
+                <span>Swap to pistol instead of reloading in a gunfight — faster and can save your life</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RANKED TIPS ========== -->
+    <section class="guide-section" id="ranked">
+        <div class="gs-label-row">
+            <span class="gs-line"></span>
+            <span class="gs-tag">05 — RANKED MODE TIPS</span>
+            <span class="gs-line"></span>
+        </div>
+
+        <div class="gs-header">
+            <h2 class="gs-title">CLIMB THE <span class="g-green">RANKS</span></h2>
+            <p class="gs-desc">Ranked Mode in AEGIS rewards smart play over aggression. These principles separate good players from great ones.</p>
+        </div>
+
+        <div class="ranked-tips-grid">
+
+            <div class="rt-card rank-gold">
+                <div class="rtc-num">01</div>
+                <h3 class="rtc-title">POSITIONING OVER KILLS</h3>
+                <p class="rtc-desc">Players who survive longer accumulate more points than those who rush for kills and die early. Always ask: "Is this position safe?" before engaging.</p>
+            </div>
+
+            <div class="rt-card rank-gold">
+                <div class="rtc-num">02</div>
+                <h3 class="rtc-title">USE THE MINIMAP</h3>
+                <p class="rtc-desc">Check your minimap every 3–5 seconds. Gunshots and enemy positions appear briefly. Never be surprised by a flank you could have anticipated.</p>
+            </div>
+
+            <div class="rt-card rank-gold">
+                <div class="rtc-num">03</div>
+                <h3 class="rtc-title">SOUND IS INTELLIGENCE</h3>
+                <p class="rtc-desc">Footsteps, reloads, grenade pins — every sound tells you something. Use headphones. Silence your own movement when gathering intel on enemy positions.</p>
+            </div>
+
+            <div class="rt-card rank-gold">
+                <div class="rtc-num">04</div>
+                <h3 class="rtc-title">MANAGE STAMINA IN RANKED</h3>
+                <p class="rtc-desc">Ranked Mode has a stamina system. Don't waste it sprinting to bad positions. Conserve stamina for when you actually need to reposition fast under fire.</p>
+            </div>
+
+            <div class="rt-card rank-gold">
+                <div class="rtc-num">05</div>
+                <h3 class="rtc-title">PLAY YOUR FIRST 10 CAREFULLY</h3>
+                <p class="rtc-desc">Your first 10 ranked matches set your initial MMR bracket for the season. Treat them like a tournament — these matches have the highest individual weight.</p>
+            </div>
+
+            <div class="rt-card rank-gold">
+                <div class="rtc-num">06</div>
+                <h3 class="rtc-title">ONE WEAPON MASTERY</h3>
+                <p class="rtc-desc">Master one primary weapon before branching out. Knowing one recoil pattern deeply outperforms being average with several. Pick your weapon, own it.</p>
+            </div>
+
+            <div class="rt-card rank-blue">
+                <div class="rtc-num">07</div>
+                <h3 class="rtc-title">EQUIP PROPERLY</h3>
+                <p class="rtc-desc">Always carry one lethal (frag grenade ideal) and one tactical (smoke for cover or flash for pushes). Grenades win more gunfights than many players realize.</p>
+            </div>
+
+            <div class="rt-card rank-blue">
+                <div class="rtc-num">08</div>
+                <h3 class="rtc-title">CROUCH AT THE RIGHT TIME</h3>
+                <p class="rtc-desc">Crouch when holding an angle, never when moving to a position. A crouching player is easy to track once the crouch timing is known — mix it up.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== MAP GUIDE ========== -->
+    <section class="guide-section guide-dark" id="maps">
+        <div class="gs-label-row">
+            <span class="gs-line"></span>
+            <span class="gs-tag">06 — MAP STRATEGIES</span>
+            <span class="gs-line"></span>
+        </div>
+
+        <div class="gs-header">
+            <h2 class="gs-title">KNOW YOUR <span class="g-green">TERRAIN</span></h2>
+            <p class="gs-desc">Each operation has its own identity, flow, and dominant positions. Learn the terrain before the enemy does.</p>
+        </div>
+
+        <div class="maps-guide-grid">
+
+            <div class="mg-card" style="--mg-color:#4da6ff">
+                <div class="mg-color-bar"></div>
+                <div class="mg-header">
+                    <div class="mg-op-code">OP-FL-01</div>
+                    <div class="mg-name">FROSTLINE</div>
+                    <div class="mg-biome">SNOW BATTLEFIELD</div>
+                </div>
+                <div class="mg-style">
+                    <span class="mg-style-tag">LONG-RANGE</span>
+                    <span class="mg-style-tag">SNIPERS</span>
+                    <span class="mg-style-tag">OPEN TERRAIN</span>
+                </div>
+                <p class="mg-tip"><strong>KEY POSITION:</strong> The frozen lake center. Control this and you control the map's key sightlines. Use snow trenches to push safely.</p>
+                <p class="mg-tip"><strong>WEAPON CHOICE:</strong> Snipers and DMRs dominate open areas. Bring an AR with medium scope as backup for bunker engagements.</p>
+                <p class="mg-tip"><strong>COUNTER:</strong> Use smoke grenades on the lake crossing to push through sniper sightlines safely.</p>
+            </div>
+
+            <div class="mg-card" style="--mg-color:#ff8c00">
+                <div class="mg-color-bar"></div>
+                <div class="mg-header">
+                    <div class="mg-op-code">OP-BD-02</div>
+                    <div class="mg-name">BLACK DUNE</div>
+                    <div class="mg-biome">DESERT OIL REFINERY</div>
+                </div>
+                <div class="mg-style">
+                    <span class="mg-style-tag">MULTI-LAYER</span>
+                    <span class="mg-style-tag">VERTICAL COMBAT</span>
+                    <span class="mg-style-tag">SANDSTORM EVENTS</span>
+                </div>
+                <p class="mg-tip"><strong>KEY POSITION:</strong> The oil rig upper platform. Vertical advantage wins here. Control the high ground and all lower routes funnel into your crossfire.</p>
+                <p class="mg-tip"><strong>SANDSTORM TIP:</strong> When sandstorms hit, close engagement distances. Switch to SMG or shotgun and use sound for tracking.</p>
+                <p class="mg-tip"><strong>UNDERGROUND:</strong> Tunnels under the refinery offer safe rotation. Learn the tunnel network to appear where enemies don't expect.</p>
+            </div>
+
+            <div class="mg-card" style="--mg-color:#5cff00">
+                <div class="mg-color-bar"></div>
+                <div class="mg-header">
+                    <div class="mg-op-code">OP-IW-03</div>
+                    <div class="mg-name">IRON WOLF</div>
+                    <div class="mg-biome">MOUNTAIN PASS</div>
+                </div>
+                <div class="mg-style">
+                    <span class="mg-style-tag">SNIPER MAP</span>
+                    <span class="mg-style-tag">NARROW PATHS</span>
+                    <span class="mg-style-tag">FOG CONDITION</span>
+                </div>
+                <p class="mg-tip"><strong>KEY POSITION:</strong> The radio tower summit. Highest point on the map. Whoever holds it can see and reach anywhere — contest it aggressively.</p>
+                <p class="mg-tip"><strong>FOG MECHANIC:</strong> Fog reduces visibility to ~40m in low areas. Mountain paths stay clear. Use caves for safe low-visibility rotation.</p>
+                <p class="mg-tip"><strong>COUNTER-SNIPE:</strong> Bring smoke grenades to push sniper positions. One smoke on the radio tower forces them to move.</p>
+            </div>
+
+            <div class="mg-card" style="--mg-color:#ff2222">
+                <div class="mg-color-bar"></div>
+                <div class="mg-header">
+                    <div class="mg-op-code">OP-ER-04</div>
+                    <div class="mg-name">EMBER RAIN</div>
+                    <div class="mg-biome">BURNING CITY</div>
+                </div>
+                <div class="mg-style">
+                    <span class="mg-style-tag">CQB DOMINANT</span>
+                    <span class="mg-style-tag">VERTICALITY</span>
+                    <span class="mg-style-tag">DYNAMIC SMOKE</span>
+                </div>
+                <p class="mg-tip"><strong>KEY POSITION:</strong> Collapsed skyscraper rooftop. Risky to reach but rewards with a full-city overview and multiple angle options.</p>
+                <p class="mg-tip"><strong>SMOKE MECHANIC:</strong> Dynamic smoke reduces visibility in specific zones. Don't fight through smoke — rotate around it.</p>
+                <p class="mg-tip"><strong>SUBWAY TUNNELS:</strong> The fastest rotation route on the map. Learn the 3 tunnel exits to appear behind enemy lines.</p>
+            </div>
+
+        </div>
+
+        <!-- General map tips -->
+        <div class="map-universal-tips">
+            <div class="mut-title">UNIVERSAL MAP PRINCIPLES</div>
+            <div class="mut-grid">
+                <div class="mut-item">
+                    <span class="mut-num">01</span>
+                    <span>Always know at least 2 rotation routes from any position before committing to it</span>
+                </div>
+                <div class="mut-item">
+                    <span class="mut-num">02</span>
+                    <span>Power positions come with risk — if you can see everyone, everyone can see you</span>
+                </div>
+                <div class="mut-item">
+                    <span class="mut-num">03</span>
+                    <span>Watch the minimap for enemy sound markers — predict flanks before they happen</span>
+                </div>
+                <div class="mut-item">
+                    <span class="mut-num">04</span>
+                    <span>Environmental audio tells a story — learn what normal sounds like so abnormal stands out</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== A.R.H.S GUIDE ========== -->
+    <section class="guide-section" id="arhs-guide">
+        <div class="gs-label-row">
+            <span class="gs-line"></span>
+            <span class="gs-tag">07 — A.R.H.S SYSTEM GUIDE</span>
+            <span class="gs-line"></span>
+        </div>
+
+        <div class="gs-header">
+            <h2 class="gs-title">BECOME A <span class="g-green">CONTENT CREATOR</span></h2>
+            <p class="gs-desc">The A.R.H.S system works automatically — but understanding it helps you play in a way that produces better content.</p>
+        </div>
+
+        <div class="arhs-guide-grid">
+            <div class="ag-card">
+                <div class="ag-icon">📹</div>
+                <h3 class="ag-title">IT'S ALWAYS RECORDING</h3>
+                <p class="ag-desc">A.R.H.S records every match automatically in Bodycam POV. You don't need to do anything — just play. Every kill, every clutch, every highlight is captured from your perspective.</p>
+            </div>
+            <div class="ag-card">
+                <div class="ag-icon">🎬</div>
+                <h3 class="ag-title">WHAT TRIGGERS A HIGHLIGHT</h3>
+                <p class="ag-desc">Multi-kills (3+), clutch plays (1vX wins), long-range sniper shots, and kill streaks automatically trigger highlight generation. Play aggressively and the system rewards you.</p>
+            </div>
+            <div class="ag-card">
+                <div class="ag-icon">⏱️</div>
+                <h3 class="ag-title">5 MINUTES TO PUBLISH</h3>
+                <p class="ag-desc">Your highlight reel is ready within 5 minutes of the match ending. Check your A.R.H.S Center in the Portal to view, download, or share your clips to all platforms.</p>
+            </div>
+            <div class="ag-card">
+                <div class="ag-icon">🚀</div>
+                <h3 class="ag-title">MAXIMIZE YOUR CLIPS</h3>
+                <p class="ag-desc">Play aggressively to generate more highlights. Multi-kill runs, close 1vX clutches, and sniper montages are prioritized by the AI editor for the most cinematic output.</p>
+            </div>
+        </div>
+
+        <div class="arhs-cta-bar">
+            <div class="acb-text">
+                <div class="acb-title">VIEW YOUR HIGHLIGHTS</div>
+                <div class="acb-sub">All your A.R.H.S clips are stored in the Portal — ready to share.</div>
+            </div>
+            <a href="portal.html#arhs" class="acb-btn">GO TO A.R.H.S CENTER ❯</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="aegis-footer-main">
+        <div class="footer-side-accent"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-brand-row">
+                        <div class="footer-brand-icon"><img src="assets/image/image.png" alt="AEG" class="footer-brand-icon"></div>
+                        <h2 class="footer-logo">AEGIS</h2>
+                    </div>
+                    <p class="footer-brand-desc">The most powerful tactical FPS ever built. Realistic combat, AI-driven highlights, and a self-growing content ecosystem.</p>
+                    <span class="footer-tagline">A.R.H.S — ALWAYS RECORDING</span>
+                </div>
+                <div class="footer-col">
+                    <h3>GAME</h3>
+                    <ul>
+                        <li><a href="about.html#world" style="margin-left:12px">World of AEGIS</a></li>
+                        <li><a href="about.html#operations" style="margin-left:12px">Operations & Maps</a></li>
+                        <li><a href="index.html#section-arsenal" style="margin-left:12px">The Arsenal</a></li>
+                        <li><a href="about.html#factions" style="margin-left:12px">Factions</a></li>
+                        <li><a href="battlepass.html" style="margin-left:12px">Battle Pass</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>GUIDES</h3>
+                    <ul>
+                        <li><a href="#getting-started" style="margin-left:12px">Getting Started</a></li>
+                        <li><a href="#movement" style="margin-left:12px">Movement System</a></li>
+                        <li><a href="#shooting" style="margin-left:12px">Shooting System</a></li>
+                        <li><a href="#ranked" style="margin-left:12px">Ranked Tips</a></li>
+                        <li><a href="#maps" style="margin-left:12px">Map Strategies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="stats.html" style="margin-left:12px">Player Stats</a></li>
+                        <li><a href="portal.html#server-browser" style="margin-left:12px">Server Browser</a></li>
+                        <li><a href="#" style="margin-left:12px">Report a Bug</a></li>
+                        <li><a href="#" style="margin-left:12px">Contact Us</a></li>
+                        <li><a href="#" style="margin-left:12px">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 REY GAMES — AEGIS. ALL RIGHTS RESERVED.</p>
+                <span class="footer-sys-status">A.R.H.S SYSTEM ONLINE</span>
+                <span class="footer-classified">CLASSIFIED INTEL // CLEARANCE REQUIRED</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="guides.js"></script>
+</body>
+</html>

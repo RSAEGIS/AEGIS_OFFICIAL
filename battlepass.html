@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, minimum-scale=0.1, maximum-scale=5.0">
+
+    <title>BATTLE PASS | AEGIS — Season 1</title>
+    <meta name="description" content="AEGIS Battle Pass Season 1 — 100 levels of progression. Free and Premium tracks with exclusive operator skins, weapon wraps, and animated cosmetics.">
+    <meta name="author" content="REY GAMES">
+    <meta name="theme-color" content="#5cff00">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AEGIS — Battle Pass Season 1">
+    <meta property="og:description" content="100 levels. Two tracks. Endless rewards. The AEGIS Battle Pass is live.">
+    <meta property="og:image" content="assets/image/image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AEGIS — Battle Pass Season 1">
+    <meta name="twitter:image" content="assets/image/image.png">
+
+    <link rel="icon" type="image/png" href="assets/image/image.png">
+    <link rel="apple-touch-icon" href="assets/image/image.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="battlepass.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="main-navbar">
+        <div class="brand-section">
+            <img src="assets/image/image.png" alt="AEGIS Logo" class="brand-logo">
+            <span class="divider"></span>
+            <h1 class="brand-name">AEGIS</h1>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="about.html">ABOUT <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>GAME INFO</h3>
+                            <a href="#section-operations">World of AEGIS</a>
+                            <a href="#">Operations & Maps</a>
+                            <a href="#section-arsenal">The Arsenal</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>FACTIONS</h3>
+                            <a href="#section-factions">VOX — Vanguard Ops</a>
+                            <a href="#section-factions">BFS — Black Falcon</a>
+                            <a href="#section-factions">ILF — Iron Legion</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="news.html">NEWS AND<br>COMMUNITY <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>LATEST</h3>
+                            <a href="#">Patch Notes</a>
+                            <a href="#">Dev Updates</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>SOCIAL</h3>
+                            <a href="#">Discord</a>
+                            <a href="#">Twitter / X</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="season.html">SEASON</a></li>
+                <li><a href="battlepass.html">BATTLE PASS</a></li>
+
+                <li class="has-dropdown">
+                    <a href="portal.html">PORTAL <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>CUSTOM GAMES</h3>
+                            <a href="#">Server Browser</a>
+                            <a href="#">Create Experience</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>HIGHLIGHTS</h3>
+                            <a href="#section-arhs">A.R.H.S Center</a>
+                            <a href="#">Clip Archive</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="guides.html">GUIDES</a></li>
+                <li><a href="playerstats.html">PLAYER STATS</a></li>
+            </ul>
+        </nav>
+        <div class="action-section">
+            <button class="buy-btn" onclick="window.location.href='index.html'">
+                <span class="btn-text">FREE<br><span style="padding-left:16px">NOW</span></span>
+                <span class="btn-arrow">❯</span>
+            </button>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+        <nav class="drawer-nav">
+            <div class="drawer-header">
+                <span class="drawer-brand">AEGIS</span>
+                <button class="drawer-close" id="drawerClose">✕</button>
+            </div>
+            <ul class="drawer-links">
+                <li class="drawer-section-label">BATTLE PASS</li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#tracks">Free vs Premium</a></li>
+                <li><a href="#rewards">All Rewards</a></li>
+                <li><a href="#howto">How to Earn XP</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li class="drawer-section-label">NAVIGATE</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="season.html">Season 1</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+            <a href="#" class="drawer-play-btn">GET PREMIUM ❯</a>
+        </nav>
+    </div>
+
+    <!-- ========== HERO ========== -->
+    <section class="bp-hero">
+        <div class="bph-bg"></div>
+        <div class="bph-overlay"></div>
+        <div class="bph-grid"></div>
+
+        <div class="bph-content">
+            <div class="bph-season-tag">
+                <span class="bph-dot"></span>
+                <span>SEASON 1 — OPERATION FROSTLINE</span>
+                <span class="bph-dot"></span>
+            </div>
+            <h1 class="bph-title">BATTLE<br><span class="bph-green">PASS</span></h1>
+            <p class="bph-desc">100 levels of seasonal progression. Earn rewards through every match, challenge, and event. Two tracks — free for all, premium for operators.</p>
+
+            <div class="bph-stats">
+                <div class="bph-stat">
+                    <span class="bph-stat-num">100</span>
+                    <span class="bph-stat-label">LEVELS</span>
+                </div>
+                <div class="bph-stat-sep"></div>
+                <div class="bph-stat">
+                    <span class="bph-stat-num">50+</span>
+                    <span class="bph-stat-label">WEAPON SKINS</span>
+                </div>
+                <div class="bph-stat-sep"></div>
+                <div class="bph-stat">
+                    <span class="bph-stat-num">20+</span>
+                    <span class="bph-stat-label">OPERATOR OUTFITS</span>
+                </div>
+                <div class="bph-stat-sep"></div>
+                <div class="bph-stat">
+                    <span class="bph-stat-num">40+</span>
+                    <span class="bph-stat-label">BADGES</span>
+                </div>
+            </div>
+
+            <div class="bph-cta">
+                <a href="#tracks" class="bph-btn-free">PLAY FREE ❯</a>
+                <a href="#tracks" class="bph-btn-premium">GET PREMIUM — 950 COINS ❯</a>
+            </div>
+
+            <div class="bph-timer-row">
+                <span class="bph-timer-label">SEASON ENDS IN:</span>
+                <span class="bph-timer-val"><span id="bpDays">--</span>D <span id="bpHours">--</span>H <span id="bpMins">--</span>M</span>
+            </div>
+        </div>
+
+        <!-- HUD -->
+        <div class="bph-hud">
+            <div class="bphh tl"></div>
+            <div class="bphh tr"></div>
+            <div class="bphh bl"></div>
+            <div class="bphh br"></div>
+            <div class="bphh-label-tl">BATTLE PASS S1 // FROSTLINE</div>
+            <div class="bphh-label-br">FREE + PREMIUM TRACKS</div>
+        </div>
+
+        <div class="bph-scroll" onclick="document.getElementById('overview').scrollIntoView({behavior:'smooth'})">
+            <span class="bph-scroll-text">SCROLL</span>
+            <div class="bph-scroll-line"><div class="bph-scroll-fill"></div></div>
+            <div class="bph-scroll-chevs">
+                <span class="bph-chev"></span>
+                <span class="bph-chev"></span>
+                <span class="bph-chev"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== OVERVIEW ========== -->
+    <section class="bp-section" id="overview">
+        <div class="bps-label-row">
+            <span class="bps-line"></span>
+            <span class="bps-tag">01 — WHAT IS THE BATTLE PASS</span>
+            <span class="bps-line"></span>
+        </div>
+
+        <div class="bpov-grid">
+            <div class="bpov-text">
+                <h2 class="bpov-title">EARN YOUR<br><span class="bp-green">LEGACY</span></h2>
+                <p class="bpov-desc">The Battle Pass is AEGIS's seasonal progression system. Every match you play, every challenge you complete, every event you participate in — all of it earns XP that pushes you through 100 levels of rewards.</p>
+                <p class="bpov-desc">Season 1 is themed around Operation Frostline — ice camos, snow gear, blue glow effects, and the exclusive Arctic VOX Operator Skin await those who reach the top.</p>
+                <div class="bpov-rules">
+                    <div class="bpov-rule">
+                        <div class="bpov-rule-icon">✓</div>
+                        <div>
+                            <div class="bpov-rule-title">NO EXPIRY ON UNLOCKED REWARDS</div>
+                            <div class="bpov-rule-desc">Everything you earn stays in your inventory permanently.</div>
+                        </div>
+                    </div>
+                    <div class="bpov-rule">
+                        <div class="bpov-rule-icon">✓</div>
+                        <div>
+                            <div class="bpov-rule-title">FREE TRACK IS GENUINELY REWARDING</div>
+                            <div class="bpov-rule-desc">18 real items available to all players at no cost.</div>
+                        </div>
+                    </div>
+                    <div class="bpov-rule">
+                        <div class="bpov-rule-icon">✓</div>
+                        <div>
+                            <div class="bpov-rule-title">NO PAY-TO-WIN</div>
+                            <div class="bpov-rule-desc">All Battle Pass items are cosmetic only. Zero gameplay advantage.</div>
+                        </div>
+                    </div>
+                    <div class="bpov-rule">
+                        <div class="bpov-rule-icon">✓</div>
+                        <div>
+                            <div class="bpov-rule-title">XP CARRIES OVER</div>
+                            <div class="bpov-rule-desc">Earn XP from any mode — Ranked, Casual, Training, Custom.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bpov-visual">
+                <div class="bpov-card">
+                    <div class="bpov-card-top-line"></div>
+                    <div class="bpov-card-label">SEASON 1 PASS</div>
+                    <div class="bpov-card-big">S1</div>
+                    <div class="bpov-card-theme">❄ OPERATION FROSTLINE</div>
+                    <div class="bpov-card-levels">LV 1 — 100</div>
+                    <div class="bpov-card-divider"></div>
+                    <div class="bpov-card-tracks">
+                        <div class="bpov-track free-track">
+                            <div class="bpov-track-name">FREE</div>
+                            <div class="bpov-track-count">18 REWARDS</div>
+                        </div>
+                        <div class="bpov-track premium-track">
+                            <div class="bpov-track-name">PREMIUM</div>
+                            <div class="bpov-track-count">100+ REWARDS</div>
+                        </div>
+                    </div>
+                    <div class="bpov-card-price">
+                        <span class="bpov-free-label">FREE TRACK</span>
+                        <span class="bpov-premium-price">PREMIUM: 950 COINS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TRACKS COMPARISON ========== -->
+    <section class="bp-section bp-dark" id="tracks">
+        <div class="bps-label-row">
+            <span class="bps-line"></span>
+            <span class="bps-tag">02 — FREE VS PREMIUM</span>
+            <span class="bps-line"></span>
+        </div>
+
+        <div class="tracks-header">
+            <h2 class="tracks-title">CHOOSE YOUR <span class="bp-green">TRACK</span></h2>
+            <p class="tracks-desc">Both tracks progress together. Unlock Free rewards just by playing — upgrade anytime for Premium.</p>
+        </div>
+
+        <div class="tracks-compare">
+            <div class="tc-free">
+                <div class="tc-header">
+                    <div class="tc-badge free-b">FREE TRACK</div>
+                    <div class="tc-price-free">FREE FOR ALL</div>
+                </div>
+                <div class="tc-feature-list">
+                    <div class="tc-feat">
+                        <span class="tcf-check">✓</span>
+                        <span>Available to every player</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check">✓</span>
+                        <span>18 unlockable items</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check">✓</span>
+                        <span>Weapon wraps & camos</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check">✓</span>
+                        <span>Coins & XP boosts</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check">✓</span>
+                        <span>Badges & calling cards</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check">✓</span>
+                        <span>Avatar frames</span>
+                    </div>
+                    <div class="tc-feat tcf-no">
+                        <span class="tcf-x">✗</span>
+                        <span>Operator skins</span>
+                    </div>
+                    <div class="tc-feat tcf-no">
+                        <span class="tcf-x">✗</span>
+                        <span>Animated cosmetics</span>
+                    </div>
+                    <div class="tc-feat tcf-no">
+                        <span class="tcf-x">✗</span>
+                        <span>Legendary weapon skins</span>
+                    </div>
+                    <div class="tc-feat tcf-no">
+                        <span class="tcf-x">✗</span>
+                        <span>Exclusive melee weapons</span>
+                    </div>
+                </div>
+                <div class="tc-cta free-cta">ALREADY ACTIVE</div>
+            </div>
+
+            <div class="tc-vs">VS</div>
+
+            <div class="tc-premium">
+                <div class="tc-glow"></div>
+                <div class="tc-header">
+                    <div class="tc-badge premium-b">PREMIUM TRACK</div>
+                    <div class="tc-price-premium">950 <span>COINS</span></div>
+                </div>
+                <div class="tc-feature-list">
+                    <div class="tc-feat">
+                        <span class="tcf-check green">✓</span>
+                        <span>Everything in Free Track</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check green">✓</span>
+                        <span>100+ total reward items</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check green">✓</span>
+                        <span>Arctic VOX Operator Skin</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check green">✓</span>
+                        <span>Blue FX Legendary Weapon Skin</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check green">✓</span>
+                        <span>Frozen Knife (Animated Melee)</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check green">✓</span>
+                        <span>Winter Badge (Animated)</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check green">✓</span>
+                        <span>Snow Gear Character Set</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check green">✓</span>
+                        <span>Frostline Vehicle Wrap</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check green">✓</span>
+                        <span>Exclusive Calling Card (Animated)</span>
+                    </div>
+                    <div class="tc-feat">
+                        <span class="tcf-check green">✓</span>
+                        <span>5,000 Bonus Coins included</span>
+                    </div>
+                </div>
+                <a href="#" class="tc-cta premium-cta">GET PREMIUM — 950 COINS ❯</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== REWARDS SHOWCASE ========== -->
+    <section class="bp-section" id="rewards">
+        <div class="bps-label-row">
+            <span class="bps-line"></span>
+            <span class="bps-tag">03 — FEATURED REWARDS</span>
+            <span class="bps-line"></span>
+        </div>
+
+        <div class="rewards-header">
+            <h2 class="rewards-title">WHAT YOU <span class="bp-green">UNLOCK</span></h2>
+            <p class="rewards-desc">A selection of standout rewards from across all 100 levels of Season 1.</p>
+        </div>
+
+        <!-- Category filter -->
+        <div class="rewards-filter">
+            <button class="rf-btn active" data-rcat="all">ALL</button>
+            <button class="rf-btn" data-rcat="operator">OPERATORS</button>
+            <button class="rf-btn" data-rcat="weapon">WEAPON SKINS</button>
+            <button class="rf-btn" data-rcat="badge">BADGES</button>
+            <button class="rf-btn" data-rcat="misc">MISC</button>
+        </div>
+
+        <div class="rewards-grid" id="rewardsGrid">
+
+            <!-- Operators -->
+            <div class="rw-card premium-rw" data-rcat="operator">
+                <div class="rw-tier premium-tier">PREMIUM</div>
+                <div class="rw-level">LV 50</div>
+                <div class="rw-visual op-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(77,166,255,0.15),transparent)"></div>
+                    <div class="rw-icon">🪖</div>
+                </div>
+                <div class="rw-name">ARCTIC VOX OPERATOR</div>
+                <div class="rw-type">LEGENDARY OPERATOR SKIN</div>
+                <div class="rw-faction" style="color:#5cff00">VOX</div>
+            </div>
+
+            <div class="rw-card premium-rw" data-rcat="operator">
+                <div class="rw-tier premium-tier">PREMIUM</div>
+                <div class="rw-level">LV 75</div>
+                <div class="rw-visual op-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(77,166,255,0.1),transparent)"></div>
+                    <div class="rw-icon">🥷</div>
+                </div>
+                <div class="rw-name">GHOST RECON VARIANT</div>
+                <div class="rw-type">EPIC OPERATOR SKIN</div>
+                <div class="rw-faction" style="color:#4477ff">PRN</div>
+            </div>
+
+            <div class="rw-card premium-rw" data-rcat="operator">
+                <div class="rw-tier premium-tier">PREMIUM</div>
+                <div class="rw-level">LV 100</div>
+                <div class="rw-visual op-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(92,255,0,0.12),transparent)"></div>
+                    <div class="rw-icon">⚔️</div>
+                </div>
+                <div class="rw-name">FROST COMMANDER</div>
+                <div class="rw-type">LEGENDARY OPERATOR SKIN</div>
+                <div class="rw-faction" style="color:#5cff00">ALL FACTIONS</div>
+            </div>
+
+            <!-- Weapon skins -->
+            <div class="rw-card free-rw" data-rcat="weapon">
+                <div class="rw-tier free-tier">FREE</div>
+                <div class="rw-level">LV 10</div>
+                <div class="rw-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(77,166,255,0.08),transparent)"></div>
+                    <div class="rw-icon">🔵</div>
+                </div>
+                <div class="rw-name">ICE CAMO WRAP</div>
+                <div class="rw-type">WEAPON WRAP — ALL WEAPONS</div>
+                <div class="rw-faction" style="color:#4da6ff">FREE TRACK</div>
+            </div>
+
+            <div class="rw-card premium-rw" data-rcat="weapon">
+                <div class="rw-tier premium-tier">PREMIUM</div>
+                <div class="rw-level">LV 30</div>
+                <div class="rw-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(92,255,0,0.1),transparent)"></div>
+                    <div class="rw-icon">✨</div>
+                </div>
+                <div class="rw-name">BLUE FX — AX-7 PHANTOM</div>
+                <div class="rw-type">LEGENDARY WEAPON SKIN</div>
+                <div class="rw-faction" style="color:#5cff00">AX-7 PHANTOM</div>
+            </div>
+
+            <div class="rw-card premium-rw" data-rcat="weapon">
+                <div class="rw-tier premium-tier">PREMIUM</div>
+                <div class="rw-level">LV 60</div>
+                <div class="rw-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(200,200,255,0.08),transparent)"></div>
+                    <div class="rw-icon">❄️</div>
+                </div>
+                <div class="rw-name">FROZEN KNIFE</div>
+                <div class="rw-type">ANIMATED MELEE WEAPON</div>
+                <div class="rw-faction" style="color:#4da6ff">MELEE SLOT</div>
+            </div>
+
+            <div class="rw-card premium-rw" data-rcat="weapon">
+                <div class="rw-tier premium-tier">PREMIUM</div>
+                <div class="rw-level">LV 85</div>
+                <div class="rw-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(77,166,255,0.12),transparent)"></div>
+                    <div class="rw-icon">🔷</div>
+                </div>
+                <div class="rw-name">GLACIER SNIPER WRAP</div>
+                <div class="rw-type">EPIC WEAPON WRAP</div>
+                <div class="rw-faction" style="color:#4da6ff">SR-GHOST</div>
+            </div>
+
+            <!-- Badges -->
+            <div class="rw-card free-rw" data-rcat="badge">
+                <div class="rw-tier free-tier">FREE</div>
+                <div class="rw-level">LV 25</div>
+                <div class="rw-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(255,255,255,0.04),transparent)"></div>
+                    <div class="rw-icon">🏔️</div>
+                </div>
+                <div class="rw-name">SNOW BADGE</div>
+                <div class="rw-type">PROFILE BADGE</div>
+                <div class="rw-faction" style="color:#aaa">FREE TRACK</div>
+            </div>
+
+            <div class="rw-card premium-rw" data-rcat="badge">
+                <div class="rw-tier premium-tier">PREMIUM</div>
+                <div class="rw-level">LV 100</div>
+                <div class="rw-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(92,255,0,0.1),rgba(77,166,255,0.08),transparent)"></div>
+                    <div class="rw-icon">🌟</div>
+                </div>
+                <div class="rw-name">WINTER BADGE</div>
+                <div class="rw-type">ANIMATED PROFILE BADGE</div>
+                <div class="rw-faction" style="color:#5cff00">ANIMATED</div>
+            </div>
+
+            <!-- Misc -->
+            <div class="rw-card free-rw" data-rcat="misc">
+                <div class="rw-tier free-tier">FREE</div>
+                <div class="rw-level">LV 5</div>
+                <div class="rw-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(92,255,0,0.06),transparent)"></div>
+                    <div class="rw-icon">🪙</div>
+                </div>
+                <div class="rw-name">2,000 COINS</div>
+                <div class="rw-type">IN-GAME CURRENCY</div>
+                <div class="rw-faction" style="color:#5cff00">CURRENCY</div>
+            </div>
+
+            <div class="rw-card free-rw" data-rcat="misc">
+                <div class="rw-tier free-tier">FREE</div>
+                <div class="rw-level">LV 15</div>
+                <div class="rw-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(77,166,255,0.06),transparent)"></div>
+                    <div class="rw-icon">🖼️</div>
+                </div>
+                <div class="rw-name">FROSTLINE AVATAR FRAME</div>
+                <div class="rw-type">PROFILE COSMETIC</div>
+                <div class="rw-faction" style="color:#4da6ff">FREE TRACK</div>
+            </div>
+
+            <div class="rw-card premium-rw" data-rcat="misc">
+                <div class="rw-tier premium-tier">PREMIUM</div>
+                <div class="rw-level">LV 40</div>
+                <div class="rw-visual">
+                    <div class="rw-op-bg" style="background:linear-gradient(135deg,rgba(92,255,0,0.08),transparent)"></div>
+                    <div class="rw-icon">🚗</div>
+                </div>
+                <div class="rw-name">FROSTLINE VEHICLE WRAP</div>
+                <div class="rw-type">VEHICLE COSMETIC</div>
+                <div class="rw-faction" style="color:#5cff00">ALL VEHICLES</div>
+            </div>
+
+        </div>
+
+        <div class="rewards-note">
+            Showing featured rewards only. Full 100-level reward list available in-game.
+        </div>
+    </section>
+
+    <!-- ========== LEVEL TRACK VISUAL ========== -->
+    <section class="bp-section bp-dark" id="leveltrack">
+        <div class="bps-label-row">
+            <span class="bps-line"></span>
+            <span class="bps-tag">04 — PROGRESSION TRACK</span>
+            <span class="bps-line"></span>
+        </div>
+
+        <div class="ltrack-header">
+            <h2 class="ltrack-title">100 LEVELS OF <span class="bp-green">PROGRESSION</span></h2>
+            <p class="ltrack-desc">Every 10 levels brings a major reward. Every 25 levels brings a milestone drop.</p>
+        </div>
+
+        <div class="ltrack-visual">
+            <div class="ltrack-bar-wrap">
+                <div class="lt-bar">
+                    <div class="lt-fill" id="ltFill"></div>
+                    <!-- Milestone markers -->
+                    <div class="lt-milestone" style="left:0%">
+                        <div class="ltm-dot free-lm"></div>
+                        <div class="ltm-label">LV 1<br><span>START</span></div>
+                    </div>
+                    <div class="lt-milestone" style="left:9.9%">
+                        <div class="ltm-dot free-lm"></div>
+                        <div class="ltm-label">LV 10<br><span class="free-c">ICE CAMO</span></div>
+                    </div>
+                    <div class="lt-milestone" style="left:24.5%">
+                        <div class="ltm-dot free-lm"></div>
+                        <div class="ltm-label">LV 25<br><span class="free-c">SNOW BADGE</span></div>
+                    </div>
+                    <div class="lt-milestone" style="left:29.5%">
+                        <div class="ltm-dot premium-lm"></div>
+                        <div class="ltm-label top-lm">LV 30<br><span class="prem-c">BLUE FX</span></div>
+                    </div>
+                    <div class="lt-milestone" style="left:49.5%">
+                        <div class="ltm-dot premium-lm"></div>
+                        <div class="ltm-label top-lm">LV 50<br><span class="prem-c">ARCTIC VOX</span></div>
+                    </div>
+                    <div class="lt-milestone" style="left:59.5%">
+                        <div class="ltm-dot premium-lm"></div>
+                        <div class="ltm-label">LV 60<br><span class="prem-c">FROZEN KNIFE</span></div>
+                    </div>
+                    <div class="lt-milestone" style="left:74.5%">
+                        <div class="ltm-dot premium-lm"></div>
+                        <div class="ltm-label top-lm">LV 75<br><span class="prem-c">GHOST RECON</span></div>
+                    </div>
+                    <div class="lt-milestone" style="left:84.5%">
+                        <div class="ltm-dot premium-lm"></div>
+                        <div class="ltm-label">LV 85<br><span class="prem-c">GLACIER SNP</span></div>
+                    </div>
+                    <div class="lt-milestone" style="left:99%">
+                        <div class="ltm-dot legendary-lm"></div>
+                        <div class="ltm-label top-lm">LV 100<br><span class="leg-c">FROST CMD</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ltrack-legend">
+                <div class="ltl-item"><div class="ltl-dot free-lm"></div><span>FREE TRACK MILESTONE</span></div>
+                <div class="ltl-item"><div class="ltl-dot premium-lm"></div><span>PREMIUM MILESTONE</span></div>
+                <div class="ltl-item"><div class="ltl-dot legendary-lm"></div><span>LEGENDARY REWARD</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW TO EARN XP ========== -->
+    <section class="bp-section" id="howto">
+        <div class="bps-label-row">
+            <span class="bps-line"></span>
+            <span class="bps-tag">05 — HOW TO EARN XP</span>
+            <span class="bps-line"></span>
+        </div>
+
+        <div class="xp-header">
+            <h2 class="xp-title">EVERY ACTION <span class="bp-green">COUNTS</span></h2>
+            <p class="xp-desc">XP flows from every corner of the game. The more you play, the faster you progress.</p>
+        </div>
+
+        <div class="xp-grid">
+            <div class="xp-card">
+                <div class="xp-card-icon">🏆</div>
+                <div class="xp-card-label">WIN A RANKED MATCH</div>
+                <div class="xp-card-val">+300 XP</div>
+                <div class="xp-card-bar"><div class="xp-bar-fill" style="width:100%"></div></div>
+            </div>
+            <div class="xp-card">
+                <div class="xp-card-icon">🎯</div>
+                <div class="xp-card-label">WIN CASUAL MATCH</div>
+                <div class="xp-card-val">+200 XP</div>
+                <div class="xp-card-bar"><div class="xp-bar-fill" style="width:67%"></div></div>
+            </div>
+            <div class="xp-card">
+                <div class="xp-card-icon">💀</div>
+                <div class="xp-card-label">PER KILL</div>
+                <div class="xp-card-val">+15 XP</div>
+                <div class="xp-card-bar"><div class="xp-bar-fill" style="width:20%"></div></div>
+            </div>
+            <div class="xp-card">
+                <div class="xp-card-icon">⚡</div>
+                <div class="xp-card-label">COMPLETE DAILY MISSION</div>
+                <div class="xp-card-val">+500 XP</div>
+                <div class="xp-card-bar"><div class="xp-bar-fill" style="width:83%"></div></div>
+            </div>
+            <div class="xp-card">
+                <div class="xp-card-icon">📅</div>
+                <div class="xp-card-label">COMPLETE WEEKLY MISSION</div>
+                <div class="xp-card-val">+1,000 XP</div>
+                <div class="xp-card-bar"><div class="xp-bar-fill" style="width:100%"></div></div>
+            </div>
+            <div class="xp-card">
+                <div class="xp-card-icon">🎬</div>
+                <div class="xp-card-label">SHARE AN A.R.H.S CLIP</div>
+                <div class="xp-card-val">+800 XP</div>
+                <div class="xp-card-bar"><div class="xp-bar-fill" style="width:80%"></div></div>
+            </div>
+            <div class="xp-card">
+                <div class="xp-card-icon">🏅</div>
+                <div class="xp-card-label">TOP 3 IN RANKED</div>
+                <div class="xp-card-val">+150 XP</div>
+                <div class="xp-card-bar"><div class="xp-bar-fill" style="width:30%"></div></div>
+            </div>
+            <div class="xp-card">
+                <div class="xp-card-icon">🧠</div>
+                <div class="xp-card-label">COMPLETE TRAINING GROUND</div>
+                <div class="xp-card-val">+300 XP</div>
+                <div class="xp-card-bar"><div class="xp-bar-fill" style="width:60%"></div></div>
+            </div>
+        </div>
+
+        <div class="xp-boost-bar">
+            <div class="xpb-icon">⚡</div>
+            <div class="xpb-text">
+                <div class="xpb-title">XP BOOST ACTIVE — FREE TRACK LV 15</div>
+                <div class="xpb-desc">Earn 1.5× XP on all activities for 3 days after unlocking level 15 on the free track.</div>
+            </div>
+            <div class="xpb-val">×1.5</div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bp-section bp-dark" id="faq">
+        <div class="bps-label-row">
+            <span class="bps-line"></span>
+            <span class="bps-tag">06 — FAQ</span>
+            <span class="bps-line"></span>
+        </div>
+
+        <div class="faq-header">
+            <h2 class="faq-title">COMMON <span class="bp-green">QUESTIONS</span></h2>
+        </div>
+
+        <div class="faq-list" id="faqList">
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>Does the Battle Pass expire?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>The Battle Pass runs for the full Season 1 duration (90 days, ending June 15, 2026). You must reach each level before the season ends to claim that reward. However, all rewards you've already unlocked stay in your inventory permanently — they never expire.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>Can I upgrade from Free to Premium later?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>Yes. You can upgrade to Premium at any time during Season 1. All Premium rewards up to your current level will be immediately unlocked and delivered to your inventory when you upgrade.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>Is there any pay-to-win advantage?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>Absolutely not. Every single item in the Battle Pass — both free and premium — is cosmetic only. No stat boosts, no gameplay advantages. AEGIS is built on competitive integrity first.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>How many Coins do I need for Premium?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>The Premium Battle Pass costs 950 Coins. Coins can be earned in-game through missions and events, or purchased directly. The Premium Pass also includes 5,000 bonus coins, effectively reducing the net cost significantly over the season.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>What modes give the most XP?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>Weekly Missions give the highest XP per activity (+1,000 XP each). Daily Missions are the best consistent source (+500 XP). Winning ranked matches and sharing A.R.H.S clips are also high-value. XP is earned across all modes — Ranked, Casual, Training, and Custom.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>Will Season 1 items return in future seasons?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>No. Season 1 Battle Pass items are exclusive to Season 1. Once the season ends, these items will not return to the store or any future Battle Pass. This makes your Season 1 rewards genuinely exclusive to operators who played during this season.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="bp-cta-section">
+        <div class="bpcta-inner">
+            <div class="bpcta-label">
+                <span class="bpcta-line"></span>
+                <span>DON'T MISS SEASON 1</span>
+                <span class="bpcta-line"></span>
+            </div>
+            <h2 class="bpcta-title">START EARNING<br><span class="bp-green">NOW</span></h2>
+            <p class="bpcta-desc">Season 1 ends June 15, 2026. Every day you wait is a level you won't reach.</p>
+            <div class="bpcta-btns">
+                <a href="index.html" class="cta-btn-primary">PLAY FREE NOW ❯</a>
+                <a href="#tracks" class="cta-btn-secondary">GET PREMIUM ❯</a>
+            </div>
+            <div class="bpcta-timer">
+                SEASON ENDS IN: <span id="bpCtaDays">--</span>D <span id="bpCtaHours">--</span>H <span id="bpCtaMins">--</span>M
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="aegis-footer-main">
+        <div class="footer-side-accent"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-brand-row">
+                        <div class="footer-brand-icon"><img src="assets/image/image.png" alt="AEG" class="footer-brand-icon"></div>
+                        <h2 class="footer-logo">AEGIS</h2>
+                    </div>
+                    <p class="footer-brand-desc">The most powerful tactical FPS ever built. Realistic combat, AI-driven highlights, and a self-growing content ecosystem.</p>
+                    <span class="footer-tagline">A.R.H.S — ALWAYS RECORDING</span>
+                </div>
+                <div class="footer-col">
+                    <h3>GAME</h3>
+                    <ul>
+                        <li><a href="about.html#world" style="margin-left:12px">World of AEGIS</a></li>
+                        <li><a href="about.html#operations" style="margin-left:12px">Operations & Maps</a></li>
+                        <li><a href="index.html#section-arsenal" style="margin-left:12px">The Arsenal</a></li>
+                        <li><a href="about.html#factions" style="margin-left:12px">Factions</a></li>
+                        <li><a href="battlepass.html" style="margin-left:12px">Battle Pass</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>COMMUNITY</h3>
+                    <ul>
+                        <li><a href="news.html#patch-notes" style="margin-left:12px">Patch Notes</a></li>
+                        <li><a href="news.html#dev-updates" style="margin-left:12px">Dev Updates</a></li>
+                        <li><a href="#" style="margin-left:12px">Discord Server</a></li>
+                        <li><a href="#" style="margin-left:12px">Twitter / X</a></li>
+                        <li><a href="#" style="margin-left:12px">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#" style="margin-left:12px">Player Guide</a></li>
+                        <li><a href="#" style="margin-left:12px">Player Stats</a></li>
+                        <li><a href="#" style="margin-left:12px">Report a Bug</a></li>
+                        <li><a href="#" style="margin-left:12px">Contact Us</a></li>
+                        <li><a href="#" style="margin-left:12px">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 REY GAMES — AEGIS. ALL RIGHTS RESERVED.</p>
+                <span class="footer-sys-status">A.R.H.S SYSTEM ONLINE</span>
+                <span class="footer-classified">CLASSIFIED INTEL // CLEARANCE REQUIRED</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="battlepass.js"></script>
+</body>
+</html>

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, minimum-scale=0.1, maximum-scale=5.0">
+
+    <title>SEASON 1 — OPERATION FROSTLINE | AEGIS</title>
+    <meta name="description" content="AEGIS Season 1: Operation Frostline — Battle Pass, weekly events, limited-time modes, and seasonal challenges. The war begins now.">
+    <meta name="author" content="REY GAMES">
+    <meta name="theme-color" content="#4da6ff">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AEGIS — Season 1: Operation Frostline">
+    <meta property="og:description" content="Season 1 is live. New operation, new weapons, new battle pass. The war begins now.">
+    <meta property="og:image" content="assets/image/image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AEGIS — Season 1: Operation Frostline">
+    <meta name="twitter:image" content="assets/image/image.png">
+
+    <link rel="icon" type="image/png" href="assets/image/image.png">
+    <link rel="apple-touch-icon" href="assets/image/image.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="season.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="main-navbar">
+        <div class="brand-section">
+            <img src="assets/image/image.png" alt="AEGIS Logo" class="brand-logo">
+            <span class="divider"></span>
+            <h1 class="brand-name">AEGIS</h1>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="about.html">ABOUT <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>GAME INFO</h3>
+                            <a href="#section-operations">World of AEGIS</a>
+                            <a href="#">Operations & Maps</a>
+                            <a href="#section-arsenal">The Arsenal</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>FACTIONS</h3>
+                            <a href="#section-factions">VOX — Vanguard Ops</a>
+                            <a href="#section-factions">BFS — Black Falcon</a>
+                            <a href="#section-factions">ILF — Iron Legion</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="news.html">NEWS AND<br>COMMUNITY <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>LATEST</h3>
+                            <a href="#">Patch Notes</a>
+                            <a href="#">Dev Updates</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>SOCIAL</h3>
+                            <a href="#">Discord</a>
+                            <a href="#">Twitter / X</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="season.html">SEASON</a></li>
+                <li><a href="battlepass.html">BATTLE PASS</a></li>
+
+                <li class="has-dropdown">
+                    <a href="portal.html">PORTAL <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>CUSTOM GAMES</h3>
+                            <a href="#">Server Browser</a>
+                            <a href="#">Create Experience</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>HIGHLIGHTS</h3>
+                            <a href="#section-arhs">A.R.H.S Center</a>
+                            <a href="#">Clip Archive</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="guides.html">GUIDES</a></li>
+                <li><a href="playerstats.html">PLAYER STATS</a></li>
+            </ul>
+        </nav>
+        <div class="action-section">
+            <button class="buy-btn" onclick="window.location.href='index.html'">
+                <span class="btn-text">FREE<br><span style="padding-left:16px">NOW</span></span>
+                <span class="btn-arrow">❯</span>
+            </button>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+        <nav class="drawer-nav">
+            <div class="drawer-header">
+                <span class="drawer-brand">AEGIS</span>
+                <button class="drawer-close" id="drawerClose">✕</button>
+            </div>
+            <ul class="drawer-links">
+                <li class="drawer-section-label">SEASON 1</li>
+                <li><a href="#overview">Season Overview</a></li>
+                <li><a href="#battlepass">Battle Pass</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#ltm">Limited-Time Modes</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li class="drawer-section-label">NAVIGATE</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+            <a href="index.html" class="drawer-play-btn">PLAY FREE NOW ❯</a>
+        </nav>
+    </div>
+
+    <!-- ========== SEASON HERO ========== -->
+    <section class="season-hero">
+        <div class="sh-bg"></div>
+        <div class="sh-overlay"></div>
+        <div class="sh-grid"></div>
+        <div class="sh-particles" id="shParticles"></div>
+
+        <div class="sh-content">
+            <div class="sh-badge-row">
+                <span class="sh-live-dot"></span>
+                <span class="sh-live-text">SEASON 1 — ACTIVE</span>
+            </div>
+            <div class="sh-op-code">OPERATION FROSTLINE</div>
+            <h1 class="sh-title">SEASON<br><span class="sh-title-num">01</span></h1>
+            <p class="sh-desc">The war moves north. Frozen battlefields, abandoned military facilities, and the northern lights above — Season 1 has begun.</p>
+
+            <div class="sh-timer-block">
+                <div class="sh-timer-label">SEASON ENDS IN</div>
+                <div class="sh-timer">
+                    <div class="sh-t-unit"><span id="sDays">00</span><label>DAYS</label></div>
+                    <div class="sh-t-sep">:</div>
+                    <div class="sh-t-unit"><span id="sHours">00</span><label>HRS</label></div>
+                    <div class="sh-t-sep">:</div>
+                    <div class="sh-t-unit"><span id="sMins">00</span><label>MIN</label></div>
+                    <div class="sh-t-sep">:</div>
+                    <div class="sh-t-unit"><span id="sSecs">00</span><label>SEC</label></div>
+                </div>
+            </div>
+
+            <div class="sh-cta-row">
+                <a href="#battlepass" class="sh-btn-primary">VIEW BATTLE PASS ❯</a>
+                <a href="#events" class="sh-btn-secondary">CURRENT EVENTS ↓</a>
+            </div>
+        </div>
+
+        <!-- HUD corners -->
+        <div class="sh-hud">
+            <div class="shh-corner tl"></div>
+            <div class="shh-corner tr"></div>
+            <div class="shh-corner bl"></div>
+            <div class="shh-corner br"></div>
+            <div class="shh-label-tl">S1 // FROSTLINE</div>
+            <div class="shh-label-br">LEVEL 1 — 100</div>
+        </div>
+
+        <!-- Season scroll indicator -->
+        <div class="sh-scroll" onclick="document.getElementById('overview').scrollIntoView({behavior:'smooth'})">
+            <span class="sh-scroll-text">SCROLL</span>
+            <div class="sh-scroll-line"><div class="sh-scroll-fill"></div></div>
+            <div class="sh-scroll-chevs">
+                <span class="sh-chev"></span>
+                <span class="sh-chev"></span>
+                <span class="sh-chev"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEASON OVERVIEW ========== -->
+    <section class="season-section" id="overview">
+        <div class="ssec-label-row">
+            <span class="ssec-line"></span>
+            <span class="ssec-tag">01 — SEASON OVERVIEW</span>
+            <span class="ssec-line"></span>
+        </div>
+
+        <div class="overview-grid">
+            <div class="ov-info">
+                <h2 class="ov-title">OPERATION<br><span class="s-blue">FROSTLINE</span></h2>
+                <p class="ov-desc">Season 1 takes the conflict to the frozen north. An abandoned military research facility buried beneath permafrost becomes the critical flashpoint. Six weeks of intense combat across snow-covered terrain, frozen lakes, and underground bunkers.</p>
+                <p class="ov-desc">The season introduces new weapons, a full cinematic story arc, and the first Season 1 Battle Pass — 100 levels of progression with free and premium reward tracks.</p>
+                <div class="ov-meta">
+                    <div class="ov-meta-item">
+                        <span class="ov-meta-label">STARTED</span>
+                        <span class="ov-meta-val">15 MAR 2026</span>
+                    </div>
+                    <div class="ov-meta-item">
+                        <span class="ov-meta-label">ENDS</span>
+                        <span class="ov-meta-val">15 JUN 2026</span>
+                    </div>
+                    <div class="ov-meta-item">
+                        <span class="ov-meta-label">DURATION</span>
+                        <span class="ov-meta-val">90 DAYS</span>
+                    </div>
+                    <div class="ov-meta-item">
+                        <span class="ov-meta-label">THEME</span>
+                        <span class="ov-meta-val" style="color:#4da6ff">ICE / SNOW</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ov-cards">
+                <div class="ov-card">
+                    <div class="ov-card-icon">❄</div>
+                    <div class="ov-card-num">1</div>
+                    <div class="ov-card-label">NEW OPERATION MAP</div>
+                    <div class="ov-card-sub">Operation Frostline</div>
+                </div>
+                <div class="ov-card">
+                    <div class="ov-card-icon">🔫</div>
+                    <div class="ov-card-num">3</div>
+                    <div class="ov-card-label">NEW WEAPONS</div>
+                    <div class="ov-card-sub">Ice-themed variants</div>
+                </div>
+                <div class="ov-card">
+                    <div class="ov-card-icon">🎖</div>
+                    <div class="ov-card-num">100</div>
+                    <div class="ov-card-label">BATTLE PASS LEVELS</div>
+                    <div class="ov-card-sub">Free + Premium tracks</div>
+                </div>
+                <div class="ov-card">
+                    <div class="ov-card-icon">⚡</div>
+                    <div class="ov-card-num">40</div>
+                    <div class="ov-card-label">SEASON CHALLENGES</div>
+                    <div class="ov-card-sub">XP, coins, skins</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BATTLE PASS ========== -->
+    <section class="season-section season-dark" id="battlepass">
+        <div class="ssec-label-row">
+            <span class="ssec-line"></span>
+            <span class="ssec-tag">02 — BATTLE PASS</span>
+            <span class="ssec-line"></span>
+        </div>
+
+        <div class="bp-section-header">
+            <h2 class="bp-sec-title">SEASON 1<br><span class="s-blue">BATTLE PASS</span></h2>
+            <p class="bp-sec-desc">100 levels. Two tracks. Endless rewards. Earn XP through matches, challenges, and events to progress.</p>
+        </div>
+
+        <!-- Track comparison -->
+        <div class="bp-tracks-grid">
+            <div class="bpt-card bpt-free">
+                <div class="bpt-header">
+                    <div class="bpt-badge free-badge">FREE TRACK</div>
+                    <div class="bpt-price">FREE</div>
+                </div>
+                <ul class="bpt-rewards">
+                    <li><span class="bptr-dot"></span>Ice Camo (Weapon Wrap)</li>
+                    <li><span class="bptr-dot"></span>2,000 Coins</li>
+                    <li><span class="bptr-dot"></span>Snow Badge</li>
+                    <li><span class="bptr-dot"></span>XP Boost ×1.5 (3 days)</li>
+                    <li><span class="bptr-dot"></span>Frostline Avatar Frame</li>
+                    <li><span class="bptr-dot"></span>5 Loot Crates</li>
+                    <li class="bpt-more">+ 12 MORE REWARDS</li>
+                </ul>
+                <div class="bpt-note">Available to ALL players</div>
+            </div>
+
+            <div class="bpt-card bpt-premium">
+                <div class="bpt-top-glow"></div>
+                <div class="bpt-header">
+                    <div class="bpt-badge premium-badge">PREMIUM TRACK</div>
+                    <div class="bpt-price">950 <span>COINS</span></div>
+                </div>
+                <ul class="bpt-rewards">
+                    <li><span class="bptr-dot premium-dot"></span>Arctic VOX Operator Skin</li>
+                    <li><span class="bptr-dot premium-dot"></span>Blue FX Weapon Skin</li>
+                    <li><span class="bptr-dot premium-dot"></span>Frozen Knife Melee</li>
+                    <li><span class="bptr-dot premium-dot"></span>Winter Badge (Animated)</li>
+                    <li><span class="bptr-dot premium-dot"></span>Snow Gear Character Set</li>
+                    <li><span class="bptr-dot premium-dot"></span>Exclusive Calling Card</li>
+                    <li><span class="bptr-dot premium-dot"></span>Frostline Vehicle Wrap</li>
+                    <li class="bpt-more premium-more">+ 30 MORE REWARDS</li>
+                </ul>
+                <div class="bpt-note premium-note">Legendary skins & animated cosmetics</div>
+                <a href="#" class="bpt-buy-btn">GET PREMIUM ❯</a>
+            </div>
+        </div>
+
+        <!-- Progress bar visual -->
+        <div class="bp-progress-visual">
+            <div class="bpv-header">
+                <span class="bpv-label">BATTLE PASS PROGRESSION</span>
+                <span class="bpv-levels">LEVEL 1 — 100</span>
+            </div>
+            <div class="bpv-bar-wrap">
+                <div class="bpv-bar">
+                    <div class="bpv-fill" id="bpFill"></div>
+                    <div class="bpv-marker" style="left:0%"><span>LV 1</span></div>
+                    <div class="bpv-marker" style="left:24%"><span>LV 25</span></div>
+                    <div class="bpv-marker" style="left:49%"><span>LV 50</span></div>
+                    <div class="bpv-marker" style="left:74%"><span>LV 75</span></div>
+                    <div class="bpv-marker" style="left:99%"><span>LV 100</span></div>
+                </div>
+            </div>
+            <div class="bpv-milestones">
+                <div class="bpv-ms"><div class="bpvms-dot"></div><span>Ice Camo</span></div>
+                <div class="bpv-ms premium"><div class="bpvms-dot premium-dot"></div><span>Arctic Operator</span></div>
+                <div class="bpv-ms"><div class="bpvms-dot"></div><span>Snow Badge</span></div>
+                <div class="bpv-ms premium"><div class="bpvms-dot premium-dot"></div><span>Blue FX Skin</span></div>
+                <div class="bpv-ms premium"><div class="bpvms-dot premium-dot"></div><span>Frozen Knife</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EVENTS ========== -->
+    <section class="season-section" id="events">
+        <div class="ssec-label-row">
+            <span class="ssec-line"></span>
+            <span class="ssec-tag">03 — SEASON EVENTS</span>
+            <span class="ssec-line"></span>
+        </div>
+
+        <div class="events-header">
+            <h2 class="events-title">ACTIVE &amp; UPCOMING<br><span class="s-blue">EVENTS</span></h2>
+            <p class="events-desc">Mini-events every 48–72 hours. Weekly missions reset every Monday. Always something to chase.</p>
+        </div>
+
+        <div class="events-grid">
+
+            <div class="ev-card ev-active">
+                <div class="ev-status live">● LIVE NOW</div>
+                <div class="ev-icon">❄️</div>
+                <h3 class="ev-title">FROSTLINE WEEKEND</h3>
+                <div class="ev-type">XP BOOST EVENT</div>
+                <p class="ev-desc">Double XP on all matches played on Operation Frostline. Top 100 players earn the exclusive Snow Operator Badge.</p>
+                <div class="ev-rewards">
+                    <span class="ev-reward">2× XP</span>
+                    <span class="ev-reward">Snow Badge</span>
+                    <span class="ev-reward">500 Coins</span>
+                </div>
+                <div class="ev-footer">
+                    <span class="ev-date">19–21 APR 2026</span>
+                    <a href="#" class="ev-btn">JOIN EVENT ❯</a>
+                </div>
+            </div>
+
+            <div class="ev-card">
+                <div class="ev-status upcoming">UPCOMING</div>
+                <div class="ev-icon">⚔️</div>
+                <h3 class="ev-title">CLASH SQUAD OPEN CUP</h3>
+                <div class="ev-type">TOURNAMENT</div>
+                <p class="ev-desc">Official 4v4 open tournament. Register your squad before April 23rd. Exclusive cosmetics for the top 3 finishers.</p>
+                <div class="ev-rewards">
+                    <span class="ev-reward">Exclusive Skin</span>
+                    <span class="ev-reward">Rank Points</span>
+                    <span class="ev-reward">Trophy Badge</span>
+                </div>
+                <div class="ev-footer">
+                    <span class="ev-date">25 APR 2026</span>
+                    <a href="#" class="ev-btn">REGISTER ❯</a>
+                </div>
+            </div>
+
+            <div class="ev-card">
+                <div class="ev-status upcoming">UPCOMING</div>
+                <div class="ev-icon">🌙</div>
+                <h3 class="ev-title">NIGHT OPS WEEK</h3>
+                <div class="ev-type">LIMITED-TIME MODE</div>
+                <p class="ev-desc">All operations switch to night mode with NVG equipment. New tactical dynamics and limited-time night camo unlocks for active players.</p>
+                <div class="ev-rewards">
+                    <span class="ev-reward">Night Camo</span>
+                    <span class="ev-reward">NVG Badge</span>
+                    <span class="ev-reward">1,000 Coins</span>
+                </div>
+                <div class="ev-footer">
+                    <span class="ev-date">28 APR 2026</span>
+                    <a href="#" class="ev-btn">DETAILS ❯</a>
+                </div>
+            </div>
+
+            <div class="ev-card">
+                <div class="ev-status community">COMMUNITY</div>
+                <div class="ev-icon">🎬</div>
+                <h3 class="ev-title">CLIP OF THE MONTH</h3>
+                <div class="ev-type">A.R.H.S CHALLENGE</div>
+                <p class="ev-desc">Submit your best A.R.H.S-generated highlight. The winner gets featured on all official AEGIS channels and earns the Creator Badge.</p>
+                <div class="ev-rewards">
+                    <span class="ev-reward">Creator Badge</span>
+                    <span class="ev-reward">Featured Clip</span>
+                    <span class="ev-reward">2,000 Coins</span>
+                </div>
+                <div class="ev-footer">
+                    <span class="ev-date">30 APR 2026</span>
+                    <a href="#" class="ev-btn">SUBMIT ❯</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Weekly missions -->
+        <div class="weekly-missions" id="ltm">
+            <div class="wm-header">
+                <div class="wm-title-row">
+                    <h3 class="wm-title">WEEKLY MISSIONS</h3>
+                    <div class="wm-reset">RESETS: MONDAY 00:00 UTC</div>
+                </div>
+                <div class="wm-progress-row">
+                    <span class="wm-prog-label">WEEKLY PROGRESS</span>
+                    <span class="wm-prog-val">3 / 7 COMPLETED</span>
+                </div>
+                <div class="wm-bar"><div class="wm-fill" style="width: 43%"></div></div>
+            </div>
+            <div class="wm-grid">
+                <div class="wm-mission done">
+                    <div class="wm-check">✓</div>
+                    <div class="wm-mission-info">
+                        <div class="wm-mission-name">WIN 3 RANKED MATCHES</div>
+                        <div class="wm-mission-reward">+500 XP · +100 Coins</div>
+                    </div>
+                    <div class="wm-mission-status">DONE</div>
+                </div>
+                <div class="wm-mission done">
+                    <div class="wm-check">✓</div>
+                    <div class="wm-mission-info">
+                        <div class="wm-mission-name">GET 20 KILLS ON FROSTLINE</div>
+                        <div class="wm-mission-reward">+750 XP · Ice Camo</div>
+                    </div>
+                    <div class="wm-mission-status">DONE</div>
+                </div>
+                <div class="wm-mission done">
+                    <div class="wm-check">✓</div>
+                    <div class="wm-mission-info">
+                        <div class="wm-mission-name">PLAY 5 CLASH SQUAD MATCHES</div>
+                        <div class="wm-mission-reward">+600 XP · +200 Coins</div>
+                    </div>
+                    <div class="wm-mission-status">DONE</div>
+                </div>
+                <div class="wm-mission">
+                    <div class="wm-check incomplete">○</div>
+                    <div class="wm-mission-info">
+                        <div class="wm-mission-name">ACHIEVE TOP 3 IN RANKED</div>
+                        <div class="wm-mission-reward">+1,000 XP · Rank Badge</div>
+                    </div>
+                    <div class="wm-mission-status incomplete-s">0/1</div>
+                </div>
+                <div class="wm-mission">
+                    <div class="wm-check incomplete">○</div>
+                    <div class="wm-mission-info">
+                        <div class="wm-mission-name">USE A.R.H.S — SHARE A CLIP</div>
+                        <div class="wm-mission-reward">+800 XP · Creator XP</div>
+                    </div>
+                    <div class="wm-mission-status incomplete-s">0/1</div>
+                </div>
+                <div class="wm-mission">
+                    <div class="wm-check incomplete">○</div>
+                    <div class="wm-mission-info">
+                        <div class="wm-mission-name">PLAY WITH A FULL SQUAD (4)</div>
+                        <div class="wm-mission-reward">+500 XP · Squad Badge</div>
+                    </div>
+                    <div class="wm-mission-status incomplete-s">0/3</div>
+                </div>
+                <div class="wm-mission">
+                    <div class="wm-check incomplete">○</div>
+                    <div class="wm-mission-info">
+                        <div class="wm-mission-name">COMPLETE TRAINING GROUND</div>
+                        <div class="wm-mission-reward">+300 XP · Trainee Tag</div>
+                    </div>
+                    <div class="wm-mission-status incomplete-s">0/1</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LIMITED-TIME MODES ========== -->
+    <section class="season-section season-dark">
+        <div class="ssec-label-row">
+            <span class="ssec-line"></span>
+            <span class="ssec-tag">04 — LIMITED-TIME MODES</span>
+            <span class="ssec-line"></span>
+        </div>
+
+        <div class="ltm-header">
+            <h2 class="ltm-title">LTM — <span class="s-blue">SPECIAL MODES</span></h2>
+            <p class="ltm-desc">Rotating limited-time modes keep the battlefield fresh. At least 2 per month.</p>
+        </div>
+
+        <div class="ltm-grid">
+            <div class="ltm-card ltm-active">
+                <div class="ltm-status">ACTIVE</div>
+                <div class="ltm-name">SNIPER ONLY</div>
+                <div class="ltm-desc-s">All players restricted to sniper rifles. No other weapons. Pure precision warfare.</div>
+                <div class="ltm-ends">ENDS: 22 APR</div>
+            </div>
+            <div class="ltm-card">
+                <div class="ltm-status upcoming-s">28 APR</div>
+                <div class="ltm-name">NIGHT OPS — NVG</div>
+                <div class="ltm-desc-s">All maps go dark. Night vision goggles only. Thermal scopes active. The shadows own you.</div>
+                <div class="ltm-ends">DURATION: 7 DAYS</div>
+            </div>
+            <div class="ltm-card">
+                <div class="ltm-status upcoming-s">05 MAY</div>
+                <div class="ltm-name">SHOTGUN RUSH</div>
+                <div class="ltm-desc-s">Close-quarters chaos. Shotguns and pistols only. Movement speed increased. Total mayhem.</div>
+                <div class="ltm-ends">DURATION: 5 DAYS</div>
+            </div>
+            <div class="ltm-card">
+                <div class="ltm-status upcoming-s">12 MAY</div>
+                <div class="ltm-name">8v8 CLASH ASSAULT</div>
+                <div class="ltm-desc-s">Expanded 8v8 format on widened maps. More chaos, more coordination required. Squad up.</div>
+                <div class="ltm-ends">DURATION: 4 DAYS</div>
+            </div>
+            <div class="ltm-card">
+                <div class="ltm-status upcoming-s">20 MAY</div>
+                <div class="ltm-name">HARDCORE MODE</div>
+                <div class="ltm-desc-s">No HUD. No minimap. No kill indicators. One shot can end you. Communicate or die.</div>
+                <div class="ltm-ends">DURATION: 6 DAYS</div>
+            </div>
+            <div class="ltm-card">
+                <div class="ltm-status upcoming-s">01 JUN</div>
+                <div class="ltm-name">MELEE MADNESS</div>
+                <div class="ltm-desc-s">Guns are decorations. Only knives and melee weapons. The most personal combat AEGIS offers.</div>
+                <div class="ltm-ends">DURATION: 3 DAYS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEASON ROADMAP ========== -->
+    <section class="season-section" id="roadmap">
+        <div class="ssec-label-row">
+            <span class="ssec-line"></span>
+            <span class="ssec-tag">05 — SEASON ROADMAP</span>
+            <span class="ssec-line"></span>
+        </div>
+
+        <div class="roadmap-header">
+            <h2 class="roadmap-title">WHAT'S <span class="s-blue">COMING</span></h2>
+            <p class="roadmap-desc">The full Season 1 content schedule — updated weekly.</p>
+        </div>
+
+        <div class="roadmap-timeline">
+            <div class="rt-item rt-done">
+                <div class="rt-marker"><div class="rt-dot done-dot"></div><div class="rt-line"></div></div>
+                <div class="rt-content">
+                    <div class="rt-date">15 MAR 2026</div>
+                    <div class="rt-title">SEASON 1 LAUNCH</div>
+                    <div class="rt-desc">Operation Frostline, Battle Pass, 3 new weapons, full anti-cheat v3.0 deployment.</div>
+                    <div class="rt-badge done-badge">DEPLOYED</div>
+                </div>
+            </div>
+            <div class="rt-item rt-done">
+                <div class="rt-marker"><div class="rt-dot done-dot"></div><div class="rt-line"></div></div>
+                <div class="rt-content">
+                    <div class="rt-date">22 MAR 2026</div>
+                    <div class="rt-title">PATCH 1.0.1 — HOTFIX</div>
+                    <div class="rt-desc">Stability fixes, matchmaking improvements, audio synchronization.</div>
+                    <div class="rt-badge done-badge">DEPLOYED</div>
+                </div>
+            </div>
+            <div class="rt-item rt-done">
+                <div class="rt-marker"><div class="rt-dot done-dot"></div><div class="rt-line"></div></div>
+                <div class="rt-content">
+                    <div class="rt-date">05 APR 2026</div>
+                    <div class="rt-title">PATCH 1.0.2 — MAP FIXES</div>
+                    <div class="rt-desc">Frostline collision fixes, A.R.H.S 2.0 detection improvements.</div>
+                    <div class="rt-badge done-badge">DEPLOYED</div>
+                </div>
+            </div>
+            <div class="rt-item rt-active">
+                <div class="rt-marker"><div class="rt-dot active-dot"></div><div class="rt-line"></div></div>
+                <div class="rt-content">
+                    <div class="rt-date">19 APR 2026</div>
+                    <div class="rt-title">FROSTLINE WEEKEND + PATCH 1.0.3</div>
+                    <div class="rt-desc">2× XP event, weapon balance update, HyperSecure v3.0 rollout.</div>
+                    <div class="rt-badge active-badge">IN PROGRESS</div>
+                </div>
+            </div>
+            <div class="rt-item">
+                <div class="rt-marker"><div class="rt-dot upcoming-dot"></div><div class="rt-line"></div></div>
+                <div class="rt-content">
+                    <div class="rt-date">28 APR 2026</div>
+                    <div class="rt-title">NIGHT OPS LTM + CLAN WAR SEASON 2</div>
+                    <div class="rt-desc">Night vision mode, clan war leaderboard reset, new clan rewards.</div>
+                    <div class="rt-badge upcoming-badge">UPCOMING</div>
+                </div>
+            </div>
+            <div class="rt-item">
+                <div class="rt-marker"><div class="rt-dot upcoming-dot"></div><div class="rt-line"></div></div>
+                <div class="rt-content">
+                    <div class="rt-date">15 MAY 2026</div>
+                    <div class="rt-title">MID-SEASON DROP</div>
+                    <div class="rt-desc">New weapon variant, Season 1 lore cinematic episode 2, bonus XP week.</div>
+                    <div class="rt-badge upcoming-badge">UPCOMING</div>
+                </div>
+            </div>
+            <div class="rt-item">
+                <div class="rt-marker"><div class="rt-dot locked-dot"></div></div>
+                <div class="rt-content">
+                    <div class="rt-date">15 JUN 2026</div>
+                    <div class="rt-title">SEASON 1 END — SEASON 2 BEGINS</div>
+                    <div class="rt-desc">Season 2 announcement, new operation teaser, Season 1 legacy rewards distributed.</div>
+                    <div class="rt-badge locked-badge">🔒 LOCKED</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Season 2 teaser -->
+        <div class="s2-teaser">
+            <div class="s2t-inner">
+                <div class="s2t-badge">NEXT SEASON</div>
+                <h3 class="s2t-title">SEASON 2 — <span>COMING SOON</span></h3>
+                <p class="s2t-desc">The conflict moves to new territory. A new operation, new faction story arc, and new weapons await. Details classified.</p>
+                <div class="s2t-lock">🔒 CLASSIFIED — UNLOCK DATE: 15 JUN 2026</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="aegis-footer-main">
+        <div class="footer-side-accent"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-brand-row">
+                        <div class="footer-brand-icon"><img src="assets/image/image.png" alt="AEG" class="footer-brand-icon"></div>
+                        <h2 class="footer-logo">AEGIS</h2>
+                    </div>
+                    <p class="footer-brand-desc">The most powerful tactical FPS ever built. Realistic combat, AI-driven highlights, and a self-growing content ecosystem.</p>
+                    <span class="footer-tagline">A.R.H.S — ALWAYS RECORDING</span>
+                </div>
+                <div class="footer-col">
+                    <h3>GAME</h3>
+                    <ul>
+                        <li><a href="about.html#world" style="margin-left:12px">World of AEGIS</a></li>
+                        <li><a href="about.html#operations" style="margin-left:12px">Operations & Maps</a></li>
+                        <li><a href="index.html#section-arsenal" style="margin-left:12px">The Arsenal</a></li>
+                        <li><a href="about.html#factions" style="margin-left:12px">Factions</a></li>
+                        <li><a href="index.html#section-battlepass" style="margin-left:12px">Battle Pass</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>COMMUNITY</h3>
+                    <ul>
+                        <li><a href="news.html#patch-notes" style="margin-left:12px">Patch Notes</a></li>
+                        <li><a href="news.html#dev-updates" style="margin-left:12px">Dev Updates</a></li>
+                        <li><a href="#" style="margin-left:12px">Discord Server</a></li>
+                        <li><a href="#" style="margin-left:12px">Twitter / X</a></li>
+                        <li><a href="#" style="margin-left:12px">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#" style="margin-left:12px">Player Guide</a></li>
+                        <li><a href="#" style="margin-left:12px">Player Stats</a></li>
+                        <li><a href="#" style="margin-left:12px">Report a Bug</a></li>
+                        <li><a href="#" style="margin-left:12px">Contact Us</a></li>
+                        <li><a href="#" style="margin-left:12px">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 REY GAMES — AEGIS. ALL RIGHTS RESERVED.</p>
+                <span class="footer-sys-status">A.R.H.S SYSTEM ONLINE</span>
+                <span class="footer-classified">CLASSIFIED INTEL // CLEARANCE REQUIRED</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="season.js"></script>
+</body>
+</html>

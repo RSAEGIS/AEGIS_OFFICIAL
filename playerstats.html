@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, minimum-scale=0.1, maximum-scale=5.0">
+
+    <title>PLAYER STATS | AEGIS</title>
+    <meta name="description" content="AEGIS Player Stats — Track your K/D, win rate, ranked progression, and compete on the global leaderboard.">
+    <meta name="author" content="REY GAMES">
+    <meta name="theme-color" content="#5cff00">
+    <meta property="og:title" content="AEGIS — Player Stats & Leaderboard">
+    <meta property="og:image" content="assets/image/image.png">
+
+    <link rel="icon" type="image/png" href="assets/image/image.png">
+    <link rel="apple-touch-icon" href="assets/image/image.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stats.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="main-navbar">
+        <div class="brand-section">
+            <img src="assets/image/image.png" alt="AEGIS Logo" class="brand-logo">
+            <span class="divider"></span>
+            <h1 class="brand-name">AEGIS</h1>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="#">ABOUT <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>GAME INFO</h3>
+                            <a href="about.html#world">World of AEGIS</a>
+                            <a href="about.html#operations">Operations & Maps</a>
+                            <a href="index.html#section-arsenal">The Arsenal</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>FACTIONS</h3>
+                            <a href="about.html#factions">VOX — Vanguard Ops</a>
+                            <a href="about.html#factions">BFS — Black Falcon</a>
+                            <a href="about.html#factions">ILF — Iron Legion</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <a href="news.html">NEWS AND<br>COMMUNITY <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>LATEST</h3>
+                            <a href="news.html#patch-notes">Patch Notes</a>
+                            <a href="news.html#dev-updates">Dev Updates</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>SOCIAL</h3>
+                            <a href="#">Discord</a>
+                            <a href="#">Twitter / X</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="season.html">SEASON</a></li>
+                <li><a href="battlepass.html">BATTLE PASS</a></li>
+                <li class="has-dropdown">
+                    <a href="portal.html">PORTAL <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>CUSTOM GAMES</h3>
+                            <a href="portal.html#server-browser">Server Browser</a>
+                            <a href="portal.html#create">Create Experience</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>HIGHLIGHTS</h3>
+                            <a href="portal.html#arhs">A.R.H.S Center</a>
+                            <a href="portal.html#clips">Clip Archive</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="guides.html">GUIDES</a></li>
+                <li><a href="playerstats.html" class="nav-active">PLAYER STATS</a></li>
+            </ul>
+        </nav>
+        <div class="action-section">
+            <button class="buy-btn" onclick="window.location.href='index.html'">
+                <span class="btn-text">FREE<br><span style="padding-left:16px">NOW</span></span>
+                <span class="btn-arrow">❯</span>
+            </button>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+        <nav class="drawer-nav">
+            <div class="drawer-header">
+                <span class="drawer-brand">AEGIS</span>
+                <button class="drawer-close" id="drawerClose">✕</button>
+            </div>
+            <ul class="drawer-links">
+                <li class="drawer-section-label">STATS</li>
+                <li><a href="#search">Search Player</a></li>
+                <li><a href="#profile">Player Profile</a></li>
+                <li><a href="#ranked">Ranked System</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li class="drawer-section-label">NAVIGATE</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="portal.html">Portal</a></li>
+            </ul>
+            <a href="index.html" class="drawer-play-btn">PLAY FREE NOW ❯</a>
+        </nav>
+    </div>
+
+    <!-- ========== HERO ========== -->
+    <section class="stats-hero">
+        <div class="sth-bg"></div>
+        <div class="sth-overlay"></div>
+        <div class="sth-grid"></div>
+
+        <div class="sth-content">
+            <div class="sth-label-row">
+                <span class="sth-line"></span>
+                <span class="sth-label">OPERATOR INTELLIGENCE — SEASON 1</span>
+                <span class="sth-line"></span>
+            </div>
+            <h1 class="sth-title">PLAYER<br><span class="st-green">STATS</span></h1>
+            <p class="sth-desc">Track your performance, rank progression, and compete on the global leaderboard. Every match is recorded. Every stat is counted.</p>
+
+            <!-- Search bar -->
+            <div class="sth-search" id="search">
+                <input type="text" class="sth-search-input" id="playerSearchInput" placeholder="SEARCH OPERATOR NAME...">
+                <button class="sth-search-btn" id="playerSearchBtn">SEARCH ❯</button>
+            </div>
+
+            <div class="sth-hint">Or <a href="#profile" class="sth-demo-link">view demo profile ↓</a></div>
+        </div>
+
+        <!-- HUD -->
+        <div class="sth-hud">
+            <div class="sthhc tl"></div>
+            <div class="sthhc tr"></div>
+            <div class="sthhc bl"></div>
+            <div class="sthhc br"></div>
+            <div class="sthh-tl">INTEL SYSTEM // S1 DATA</div>
+            <div class="sthh-br">HYPERSECURE VERIFIED</div>
+        </div>
+
+        <div class="sth-scroll" onclick="document.getElementById('profile').scrollIntoView({behavior:'smooth'})">
+            <span class="sth-scroll-text">SCROLL</span>
+            <div class="sth-scroll-line"><div class="sth-scroll-fill"></div></div>
+            <div class="sth-scroll-chevs">
+                <span class="sth-chev"></span>
+                <span class="sth-chev"></span>
+                <span class="sth-chev"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PLAYER PROFILE ========== -->
+    <section class="stats-section" id="profile">
+        <div class="stps-label-row">
+            <span class="stps-line"></span>
+            <span class="stps-tag">01 — OPERATOR PROFILE</span>
+            <span class="stps-line"></span>
+        </div>
+
+        <!-- Profile card -->
+        <div class="profile-card">
+            <div class="pc-left">
+                <div class="pc-avatar">
+                    <div class="pc-avatar-bg"></div>
+                    <div class="pc-avatar-letters">AX</div>
+                    <div class="pc-avatar-rank-badge">🥇</div>
+                </div>
+                <div class="pc-identity">
+                    <div class="pc-name">OPERATOR_X7</div>
+                    <div class="pc-faction" style="color:#5cff00">VOX — VANGUARD OPS</div>
+                    <div class="pc-level">
+                        <span class="pc-level-label">LEVEL</span>
+                        <span class="pc-level-num">47</span>
+                    </div>
+                    <div class="pc-xp-bar-wrap">
+                        <div class="pc-xp-bar">
+                            <div class="pc-xp-fill" id="pcXpFill" style="width:68%"></div>
+                        </div>
+                        <div class="pc-xp-label">68,200 / 100,000 XP TO LV 48</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pc-rank-block">
+                <div class="pcr-label">CURRENT RANK</div>
+                <div class="pcr-tier gold-tier">GOLD</div>
+                <div class="pcr-division">DIVISION II</div>
+                <div class="pcr-rp">
+                    <span class="pcr-rp-val">3,420</span>
+                    <span class="pcr-rp-label">RANKED POINTS</span>
+                </div>
+                <div class="pcr-next">
+                    <span>NEXT: PLATINUM I</span>
+                    <div class="pcr-progress-bar">
+                        <div class="pcr-progress-fill gold-fill" style="width:72%"></div>
+                    </div>
+                    <span class="pcr-pct">72%</span>
+                </div>
+            </div>
+
+            <div class="pc-quick-stats">
+                <div class="pc-qstat">
+                    <span class="pcqs-val">2.41</span>
+                    <span class="pcqs-label">K/D RATIO</span>
+                </div>
+                <div class="pc-qstat">
+                    <span class="pcqs-val">58%</span>
+                    <span class="pcqs-label">WIN RATE</span>
+                </div>
+                <div class="pc-qstat">
+                    <span class="pcqs-val">312</span>
+                    <span class="pcqs-label">MATCHES</span>
+                </div>
+                <div class="pc-qstat">
+                    <span class="pcqs-val">4,847</span>
+                    <span class="pcqs-label">TOTAL KILLS</span>
+                </div>
+                <div class="pc-qstat">
+                    <span class="pcqs-val">847</span>
+                    <span class="pcqs-label">HEADSHOTS</span>
+                </div>
+                <div class="pc-qstat">
+                    <span class="pcqs-val">17.5%</span>
+                    <span class="pcqs-label">HS RATE</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed stats grid -->
+        <div class="detailed-stats">
+
+            <div class="ds-col">
+                <div class="ds-title">COMBAT STATS</div>
+                <div class="ds-row">
+                    <span class="ds-label">KILLS</span>
+                    <span class="ds-val">4,847</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">DEATHS</span>
+                    <span class="ds-val">2,009</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">ASSISTS</span>
+                    <span class="ds-val">1,203</span>
+                </div>
+                <div class="ds-row highlight-row">
+                    <span class="ds-label">K/D RATIO</span>
+                    <span class="ds-val green-val">2.41</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">HEADSHOTS</span>
+                    <span class="ds-val">847</span>
+                </div>
+                <div class="ds-row highlight-row">
+                    <span class="ds-label">HS RATE</span>
+                    <span class="ds-val green-val">17.5%</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">DAMAGE DEALT</span>
+                    <span class="ds-val">487,230</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">AVG DAMAGE/MATCH</span>
+                    <span class="ds-val">1,562</span>
+                </div>
+            </div>
+
+            <div class="ds-col">
+                <div class="ds-title">MATCH STATS</div>
+                <div class="ds-row">
+                    <span class="ds-label">MATCHES PLAYED</span>
+                    <span class="ds-val">312</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">WINS</span>
+                    <span class="ds-val">181</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">LOSSES</span>
+                    <span class="ds-val">131</span>
+                </div>
+                <div class="ds-row highlight-row">
+                    <span class="ds-label">WIN RATE</span>
+                    <span class="ds-val green-val">58%</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">TOP 10 FINISHES</span>
+                    <span class="ds-val">247</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">AVG PLACEMENT</span>
+                    <span class="ds-val">7.2</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">LONGEST STREAK</span>
+                    <span class="ds-val">11 KILLS</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">TOTAL PLAYTIME</span>
+                    <span class="ds-val">184 HRS</span>
+                </div>
+            </div>
+
+            <div class="ds-col">
+                <div class="ds-title">RANKED STATS</div>
+                <div class="ds-row">
+                    <span class="ds-label">CURRENT RANK</span>
+                    <span class="ds-val gold-val">GOLD II</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">RANKED POINTS</span>
+                    <span class="ds-val">3,420 RP</span>
+                </div>
+                <div class="ds-row highlight-row">
+                    <span class="ds-label">PEAK RANK</span>
+                    <span class="ds-val gold-val">PLATINUM I</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">RANKED WINS</span>
+                    <span class="ds-val">98</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">RANKED K/D</span>
+                    <span class="ds-val green-val">2.84</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">PLACEMENT AVG</span>
+                    <span class="ds-val">5.8</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">SEASON 1 RP</span>
+                    <span class="ds-val">+1,220</span>
+                </div>
+                <div class="ds-row">
+                    <span class="ds-label">RANK CHANGE</span>
+                    <span class="ds-val" style="color:#5cff00">▲ +2 DIVISIONS</span>
+                </div>
+            </div>
+
+            <div class="ds-col">
+                <div class="ds-title">WEAPON STATS</div>
+                <div class="ds-weapon-row">
+                    <div class="dwr-left">
+                        <div class="dwr-name">AX-7 PHANTOM</div>
+                        <div class="dwr-type">ASSAULT RIFLE</div>
+                    </div>
+                    <div class="dwr-right">
+                        <div class="dwr-kills">1,847 KLS</div>
+                        <div class="dwr-bar"><div class="dwr-fill" style="width:100%"></div></div>
+                    </div>
+                </div>
+                <div class="ds-weapon-row">
+                    <div class="dwr-left">
+                        <div class="dwr-name">SR-GHOST</div>
+                        <div class="dwr-type">SNIPER RIFLE</div>
+                    </div>
+                    <div class="dwr-right">
+                        <div class="dwr-kills">924 KLS</div>
+                        <div class="dwr-bar"><div class="dwr-fill" style="width:50%"></div></div>
+                    </div>
+                </div>
+                <div class="ds-weapon-row">
+                    <div class="dwr-left">
+                        <div class="dwr-name">VX-9 SPECTER</div>
+                        <div class="dwr-type">SMG</div>
+                    </div>
+                    <div class="dwr-right">
+                        <div class="dwr-kills">712 KLS</div>
+                        <div class="dwr-bar"><div class="dwr-fill" style="width:38%"></div></div>
+                    </div>
+                </div>
+                <div class="ds-weapon-row">
+                    <div class="dwr-left">
+                        <div class="dwr-name">P9-STRIKER</div>
+                        <div class="dwr-type">PISTOL</div>
+                    </div>
+                    <div class="dwr-right">
+                        <div class="dwr-kills">348 KLS</div>
+                        <div class="dwr-bar"><div class="dwr-fill" style="width:19%"></div></div>
+                    </div>
+                </div>
+                <div class="ds-weapon-fav">
+                    <span class="ds-fav-label">FAVOURITE WEAPON</span>
+                    <span class="ds-fav-val">AX-7 PHANTOM</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== RANKED SYSTEM ========== -->
+    <section class="stats-section stats-dark" id="ranked">
+        <div class="stps-label-row">
+            <span class="stps-line"></span>
+            <span class="stps-tag">02 — RANKED SYSTEM</span>
+            <span class="stps-line"></span>
+        </div>
+
+        <div class="ranked-header">
+            <h2 class="ranked-title">THE <span class="st-green">RANK</span> LADDER</h2>
+            <p class="ranked-desc">Six tiers, five divisions each. Earn Ranked Points through kills, damage, placement, and wins. Climb the ladder every season.</p>
+        </div>
+
+        <div class="rank-tiers">
+            <div class="rank-tier bronze-tier-card">
+                <div class="rt-icon">🥉</div>
+                <div class="rt-name">BRONZE</div>
+                <div class="rt-divs">I – V</div>
+                <div class="rt-rp">0 – 999 RP</div>
+                <div class="rt-desc">Starting tier. Learn the fundamentals. No RP loss on losses.</div>
+            </div>
+            <div class="rank-tier-arrow">→</div>
+            <div class="rank-tier silver-tier-card">
+                <div class="rt-icon">🥈</div>
+                <div class="rt-name">SILVER</div>
+                <div class="rt-divs">I – V</div>
+                <div class="rt-rp">1,000 – 1,999 RP</div>
+                <div class="rt-desc">Consistent players. Beginners RP loss protection removed.</div>
+            </div>
+            <div class="rank-tier-arrow">→</div>
+            <div class="rank-tier gold-tier-card active-tier">
+                <div class="rt-active-badge">YOU ARE HERE</div>
+                <div class="rt-icon">🥇</div>
+                <div class="rt-name">GOLD</div>
+                <div class="rt-divs">I – V</div>
+                <div class="rt-rp">2,000 – 3,499 RP</div>
+                <div class="rt-desc">Skilled players. Top 35% of the playerbase. Competitive base tier.</div>
+            </div>
+            <div class="rank-tier-arrow">→</div>
+            <div class="rank-tier plat-tier-card">
+                <div class="rt-icon">💎</div>
+                <div class="rt-name">PLATINUM</div>
+                <div class="rt-divs">I – V</div>
+                <div class="rt-rp">3,500 – 5,499 RP</div>
+                <div class="rt-desc">Elite operators. Top 15%. Exclusive Platinum cosmetic rewards.</div>
+            </div>
+            <div class="rank-tier-arrow">→</div>
+            <div class="rank-tier diamond-tier-card">
+                <div class="rt-icon">🔷</div>
+                <div class="rt-name">DIAMOND</div>
+                <div class="rt-divs">I – V</div>
+                <div class="rt-rp">5,500 – 7,999 RP</div>
+                <div class="rt-desc">Top 5%. Near-pro level. Diamond badge displayed permanently.</div>
+            </div>
+            <div class="rank-tier-arrow">→</div>
+            <div class="rank-tier master-tier-card">
+                <div class="rt-icon">⭐</div>
+                <div class="rt-name">MASTER</div>
+                <div class="rt-divs">APEX</div>
+                <div class="rt-rp">8,000+ RP</div>
+                <div class="rt-desc">Top 1%. Best of the best. Exclusive Master operator skin.</div>
+            </div>
+        </div>
+
+        <!-- RP breakdown -->
+        <div class="rp-breakdown">
+            <div class="rpb-title">HOW RANKED POINTS ARE EARNED</div>
+            <div class="rpb-grid">
+                <div class="rpb-item">
+                    <span class="rpb-icon">🏆</span>
+                    <span class="rpb-action">WIN MATCH</span>
+                    <span class="rpb-val plus">+150 RP</span>
+                </div>
+                <div class="rpb-item">
+                    <span class="rpb-icon">💀</span>
+                    <span class="rpb-action">PER KILL</span>
+                    <span class="rpb-val plus">+10 RP</span>
+                </div>
+                <div class="rpb-item">
+                    <span class="rpb-icon">📍</span>
+                    <span class="rpb-action">TOP 10 FINISH</span>
+                    <span class="rpb-val plus">+50 RP</span>
+                </div>
+                <div class="rpb-item">
+                    <span class="rpb-icon">🤝</span>
+                    <span class="rpb-action">ASSIST</span>
+                    <span class="rpb-val plus">+5 RP</span>
+                </div>
+                <div class="rpb-item">
+                    <span class="rpb-icon">⏱️</span>
+                    <span class="rpb-action">SURVIVAL TIME</span>
+                    <span class="rpb-val plus">+1 RP/MIN</span>
+                </div>
+                <div class="rpb-item">
+                    <span class="rpb-icon">❌</span>
+                    <span class="rpb-action">LOSS</span>
+                    <span class="rpb-val minus">-25 RP</span>
+                </div>
+                <div class="rpb-item">
+                    <span class="rpb-icon">🔥</span>
+                    <span class="rpb-action">KILL STREAK 5+</span>
+                    <span class="rpb-val plus">+30 RP BONUS</span>
+                </div>
+                <div class="rpb-item">
+                    <span class="rpb-icon">🎯</span>
+                    <span class="rpb-action">MVP OF MATCH</span>
+                    <span class="rpb-val plus">+40 RP BONUS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LEADERBOARD ========== -->
+    <section class="stats-section" id="leaderboard">
+        <div class="stps-label-row">
+            <span class="stps-line"></span>
+            <span class="stps-tag">03 — GLOBAL LEADERBOARD</span>
+            <span class="stps-line"></span>
+        </div>
+
+        <div class="lb-header">
+            <h2 class="lb-title">TOP <span class="st-green">OPERATORS</span></h2>
+            <p class="lb-desc">Season 1 global rankings. Updated in real-time.</p>
+        </div>
+
+        <!-- Leaderboard filter -->
+        <div class="lb-filters">
+            <div class="lbf-left">
+                <button class="lbf-btn active" data-lb="global">GLOBAL</button>
+                <button class="lbf-btn" data-lb="region">BY REGION</button>
+                <button class="lbf-btn" data-lb="kd">K/D RATIO</button>
+                <button class="lbf-btn" data-lb="wins">MOST WINS</button>
+                <button class="lbf-btn" data-lb="kills">MOST KILLS</button>
+            </div>
+            <div class="lbf-right">
+                <span class="lbf-season-tag">SEASON 1 — LIVE</span>
+            </div>
+        </div>
+
+        <!-- Top 3 podium -->
+        <div class="lb-podium">
+            <div class="lb-podium-item p2">
+                <div class="lbp-rank">2</div>
+                <div class="lbp-avatar" style="background:rgba(192,192,192,0.1);border-color:rgba(192,192,192,0.3)">
+                    <span>VR</span>
+                </div>
+                <div class="lbp-name">VIPER_RECON</div>
+                <div class="lbp-faction" style="color:#ff2222">BFS</div>
+                <div class="lbp-rp">7,840 RP</div>
+                <div class="lbp-tier" style="color:#c0c0c0">DIAMOND I</div>
+            </div>
+
+            <div class="lb-podium-item p1">
+                <div class="lbp-crown">👑</div>
+                <div class="lbp-rank gold-rank">1</div>
+                <div class="lbp-avatar gold-avatar">
+                    <span>AL</span>
+                </div>
+                <div class="lbp-name">AEGIS_LEGEND</div>
+                <div class="lbp-faction" style="color:#5cff00">VOX</div>
+                <div class="lbp-rp gold-rp">9,210 RP</div>
+                <div class="lbp-tier" style="color:#ffd700">MASTER</div>
+            </div>
+
+            <div class="lb-podium-item p3">
+                <div class="lbp-rank">3</div>
+                <div class="lbp-avatar" style="background:rgba(205,127,50,0.1);border-color:rgba(205,127,50,0.3)">
+                    <span>GH</span>
+                </div>
+                <div class="lbp-name">GHOST_HUNTER</div>
+                <div class="lbp-faction" style="color:#4477ff">PRN</div>
+                <div class="lbp-rp">7,120 RP</div>
+                <div class="lbp-tier" style="color:#cd7f32">DIAMOND II</div>
+            </div>
+        </div>
+
+        <!-- Full leaderboard table -->
+        <div class="lb-table">
+            <div class="lb-table-header">
+                <span>#</span>
+                <span>OPERATOR</span>
+                <span>FACTION</span>
+                <span>RANK</span>
+                <span>RP</span>
+                <span>K/D</span>
+                <span>WIN RATE</span>
+                <span>MATCHES</span>
+            </div>
+
+            <div class="lb-row lb-you">
+                <span class="lb-pos">1</span>
+                <span class="lb-player"><div class="lb-av" style="background:rgba(255,215,0,0.1)">AL</div><span>AEGIS_LEGEND</span></span>
+                <span class="lb-fac" style="color:#5cff00">VOX</span>
+                <span class="lb-rank-badge master-badge">MASTER</span>
+                <span class="lb-rp-val">9,210</span>
+                <span class="lb-kd good-kd">4.82</span>
+                <span class="lb-wr">74%</span>
+                <span class="lb-matches">541</span>
+            </div>
+
+            <div class="lb-row">
+                <span class="lb-pos">2</span>
+                <span class="lb-player"><div class="lb-av" style="background:rgba(192,192,192,0.08)">VR</div><span>VIPER_RECON</span></span>
+                <span class="lb-fac" style="color:#ff2222">BFS</span>
+                <span class="lb-rank-badge diamond-badge">DIAMOND I</span>
+                <span class="lb-rp-val">7,840</span>
+                <span class="lb-kd good-kd">3.94</span>
+                <span class="lb-wr">68%</span>
+                <span class="lb-matches">487</span>
+            </div>
+
+            <div class="lb-row">
+                <span class="lb-pos">3</span>
+                <span class="lb-player"><div class="lb-av" style="background:rgba(205,127,50,0.08)">GH</div><span>GHOST_HUNTER</span></span>
+                <span class="lb-fac" style="color:#4477ff">PRN</span>
+                <span class="lb-rank-badge diamond-badge">DIAMOND II</span>
+                <span class="lb-rp-val">7,120</span>
+                <span class="lb-kd good-kd">3.67</span>
+                <span class="lb-wr">65%</span>
+                <span class="lb-matches">412</span>
+            </div>
+
+            <div class="lb-row">
+                <span class="lb-pos">4</span>
+                <span class="lb-player"><div class="lb-av" style="background:rgba(92,255,0,0.06)">IW</div><span>IRON_WOLF_44</span></span>
+                <span class="lb-fac" style="color:#ff8c00">ILF</span>
+                <span class="lb-rank-badge diamond-badge">DIAMOND III</span>
+                <span class="lb-rp-val">6,880</span>
+                <span class="lb-kd">3.21</span>
+                <span class="lb-wr">62%</span>
+                <span class="lb-matches">398</span>
+            </div>
+
+            <div class="lb-row">
+                <span class="lb-pos">5</span>
+                <span class="lb-player"><div class="lb-av">SO</div><span>SHADOW_OPS</span></span>
+                <span class="lb-fac" style="color:#ff2222">BFS</span>
+                <span class="lb-rank-badge diamond-badge">DIAMOND IV</span>
+                <span class="lb-rp-val">6,440</span>
+                <span class="lb-kd">2.98</span>
+                <span class="lb-wr">59%</span>
+                <span class="lb-matches">356</span>
+            </div>
+
+            <div class="lb-row">
+                <span class="lb-pos">6</span>
+                <span class="lb-player"><div class="lb-av">CA</div><span>CRIMSON_ACE</span></span>
+                <span class="lb-fac" style="color:#ff2222">BFS</span>
+                <span class="lb-rank-badge plat-badge">PLATINUM I</span>
+                <span class="lb-rp-val">5,980</span>
+                <span class="lb-kd">2.77</span>
+                <span class="lb-wr">57%</span>
+                <span class="lb-matches">334</span>
+            </div>
+
+            <div class="lb-row">
+                <span class="lb-pos">7</span>
+                <span class="lb-player"><div class="lb-av">FB</div><span>FROSTBITE_77</span></span>
+                <span class="lb-fac" style="color:#5cff00">VOX</span>
+                <span class="lb-rank-badge plat-badge">PLATINUM II</span>
+                <span class="lb-rp-val">5,620</span>
+                <span class="lb-kd">2.54</span>
+                <span class="lb-wr">55%</span>
+                <span class="lb-matches">298</span>
+            </div>
+
+            <!-- YOU row -->
+            <div class="lb-row lb-you-row">
+                <span class="lb-pos you-pos">182</span>
+                <span class="lb-player"><div class="lb-av you-av">X7</div><span>OPERATOR_X7 <span class="lb-you-badge">YOU</span></span></span>
+                <span class="lb-fac" style="color:#5cff00">VOX</span>
+                <span class="lb-rank-badge gold-badge">GOLD II</span>
+                <span class="lb-rp-val you-rp">3,420</span>
+                <span class="lb-kd good-kd">2.41</span>
+                <span class="lb-wr">58%</span>
+                <span class="lb-matches">312</span>
+            </div>
+
+        </div>
+
+        <div class="lb-footer">
+            <button class="lb-load-btn">LOAD MORE OPERATORS ↓</button>
+            <span class="lb-total">147,832 REGISTERED OPERATORS THIS SEASON</span>
+        </div>
+    </section>
+
+    <!-- ========== GLOBAL STATS ========== -->
+    <section class="stats-section stats-dark">
+        <div class="stps-label-row">
+            <span class="stps-line"></span>
+            <span class="stps-tag">04 — GLOBAL STATS — SEASON 1</span>
+            <span class="stps-line"></span>
+        </div>
+
+        <div class="global-stats-grid">
+            <div class="gs-card">
+                <div class="gsc-num" data-target="147832">0</div>
+                <div class="gsc-label">REGISTERED OPERATORS</div>
+            </div>
+            <div class="gs-card">
+                <div class="gsc-num" data-target="4821044">0</div>
+                <div class="gsc-label">TOTAL MATCHES PLAYED</div>
+            </div>
+            <div class="gs-card">
+                <div class="gsc-num" data-target="127000000" data-suffix="M">0</div>
+                <div class="gsc-label">TOTAL KILLS RECORDED</div>
+            </div>
+            <div class="gs-card">
+                <div class="gsc-num" data-target="24381">0</div>
+                <div class="gsc-label">A.R.H.S CLIPS TODAY</div>
+            </div>
+            <div class="gs-card">
+                <div class="gsc-num" data-target="312" data-suffix="HRS">0</div>
+                <div class="gsc-label">AVG PLAYTIME/OPERATOR</div>
+            </div>
+            <div class="gs-card gsc-featured">
+                <div class="gsc-num" data-target="58">0</div>
+                <div class="gsc-label">% OF OPERATORS USING A.R.H.S</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="aegis-footer-main">
+        <div class="footer-side-accent"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-brand-row">
+                        <div class="footer-brand-icon"><img src="assets/image/image.png" alt="AEG" class="footer-brand-icon"></div>
+                        <h2 class="footer-logo">AEGIS</h2>
+                    </div>
+                    <p class="footer-brand-desc">The most powerful tactical FPS ever built. Realistic combat, AI-driven highlights, and a self-growing content ecosystem.</p>
+                    <span class="footer-tagline">A.R.H.S — ALWAYS RECORDING</span>
+                </div>
+                <div class="footer-col">
+                    <h3>GAME</h3>
+                    <ul>
+                        <li><a href="about.html#world" style="margin-left:12px">World of AEGIS</a></li>
+                        <li><a href="about.html#operations" style="margin-left:12px">Operations & Maps</a></li>
+                        <li><a href="index.html#section-arsenal" style="margin-left:12px">The Arsenal</a></li>
+                        <li><a href="battlepass.html" style="margin-left:12px">Battle Pass</a></li>
+                        <li><a href="season.html" style="margin-left:12px">Season 1</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>STATS</h3>
+                    <ul>
+                        <li><a href="#search" style="margin-left:12px">Search Player</a></li>
+                        <li><a href="#profile" style="margin-left:12px">My Profile</a></li>
+                        <li><a href="#ranked" style="margin-left:12px">Ranked System</a></li>
+                        <li><a href="#leaderboard" style="margin-left:12px">Leaderboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="guides.html" style="margin-left:12px">Player Guides</a></li>
+                        <li><a href="portal.html" style="margin-left:12px">Portal</a></li>
+                        <li><a href="#" style="margin-left:12px">Report a Bug</a></li>
+                        <li><a href="#" style="margin-left:12px">Contact Us</a></li>
+                        <li><a href="#" style="margin-left:12px">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 REY GAMES — AEGIS. ALL RIGHTS RESERVED.</p>
+                <span class="footer-sys-status">A.R.H.S SYSTEM ONLINE</span>
+                <span class="footer-classified">CLASSIFIED INTEL // CLEARANCE REQUIRED</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="stats.js"></script>
+</body>
+</html>

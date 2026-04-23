@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, minimum-scale=0.1, maximum-scale=5.0">
+
+    <title>PORTAL | AEGIS — Server Browser & A.R.H.S Center</title>
+    <meta name="description" content="AEGIS Portal — Browse servers, create custom experiences, view your A.R.H.S highlights, and access the full clip archive.">
+    <meta name="author" content="REY GAMES">
+    <meta name="theme-color" content="#5cff00">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AEGIS Portal — Server Browser & A.R.H.S">
+    <meta property="og:description" content="Find your server, create your experience, watch your highlights.">
+    <meta property="og:image" content="assets/image/image.png">
+
+    <link rel="icon" type="image/png" href="assets/image/image.png">
+    <link rel="apple-touch-icon" href="assets/image/image.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="main-navbar">
+        <div class="brand-section">
+            <img src="assets/image/image.png" alt="AEGIS Logo" class="brand-logo">
+            <span class="divider"></span>
+            <h1 class="brand-name">AEGIS</h1>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="about.html">ABOUT <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>GAME INFO</h3>
+                            <a href="#section-operations">World of AEGIS</a>
+                            <a href="#">Operations & Maps</a>
+                            <a href="#section-arsenal">The Arsenal</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>FACTIONS</h3>
+                            <a href="#section-factions">VOX — Vanguard Ops</a>
+                            <a href="#section-factions">BFS — Black Falcon</a>
+                            <a href="#section-factions">ILF — Iron Legion</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="news.html">NEWS AND<br>COMMUNITY <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>LATEST</h3>
+                            <a href="#">Patch Notes</a>
+                            <a href="#">Dev Updates</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>SOCIAL</h3>
+                            <a href="#">Discord</a>
+                            <a href="#">Twitter / X</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="season.html">SEASON</a></li>
+                <li><a href="battlepass.html">BATTLE PASS</a></li>
+
+                <li class="has-dropdown">
+                    <a href="portal.html">PORTAL <span class="dropdown-icon">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                            <h3>CUSTOM GAMES</h3>
+                            <a href="#">Server Browser</a>
+                            <a href="#">Create Experience</a>
+                        </div>
+                        <div class="menu-column">
+                            <h3>HIGHLIGHTS</h3>
+                            <a href="#section-arhs">A.R.H.S Center</a>
+                            <a href="#">Clip Archive</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="guides.html">GUIDES</a></li>
+                <li><a href="playerstats.html">PLAYER STATS</a></li>
+            </ul>
+        </nav>
+        <div class="action-section">
+            <button class="buy-btn" onclick="window.location.href='index.html'">
+                <span class="btn-text">FREE<br><span style="padding-left:16px">NOW</span></span>
+                <span class="btn-arrow">❯</span>
+            </button>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+        <nav class="drawer-nav">
+            <div class="drawer-header">
+                <span class="drawer-brand">AEGIS</span>
+                <button class="drawer-close" id="drawerClose">✕</button>
+            </div>
+            <ul class="drawer-links">
+                <li class="drawer-section-label">PORTAL</li>
+                <li><a href="#server-browser">Server Browser</a></li>
+                <li><a href="#create">Create Experience</a></li>
+                <li><a href="#arhs">A.R.H.S Center</a></li>
+                <li><a href="#clips">Clip Archive</a></li>
+                <li class="drawer-section-label">NAVIGATE</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="season.html">Season</a></li>
+            </ul>
+            <a href="index.html" class="drawer-play-btn">PLAY FREE NOW ❯</a>
+        </nav>
+    </div>
+
+    <!-- ========== HERO ========== -->
+    <section class="portal-hero">
+        <div class="ph-bg"></div>
+        <div class="ph-overlay"></div>
+        <div class="ph-grid"></div>
+        <div class="ph-scanline"></div>
+
+        <div class="ph-content">
+            <div class="ph-label-row">
+                <span class="ph-line"></span>
+                <span class="ph-label">AEGIS PORTAL — OPERATOR ACCESS</span>
+                <span class="ph-line"></span>
+            </div>
+            <h1 class="ph-title">PORTAL</h1>
+            <p class="ph-desc">Your gateway to custom servers, highlight generation, and the full clip archive. Everything AEGIS creates — in one place.</p>
+
+            <div class="ph-nav-cards">
+                <a href="#server-browser" class="ph-nav-card">
+                    <div class="phnc-icon">🖥️</div>
+                    <div class="phnc-title">SERVER BROWSER</div>
+                    <div class="phnc-sub">Find & join servers</div>
+                </a>
+                <a href="#create" class="ph-nav-card">
+                    <div class="phnc-icon">⚙️</div>
+                    <div class="phnc-title">CREATE EXPERIENCE</div>
+                    <div class="phnc-sub">Build your own lobby</div>
+                </a>
+                <a href="#arhs" class="ph-nav-card ph-nav-featured">
+                    <div class="phnc-live-dot"></div>
+                    <div class="phnc-icon">🎬</div>
+                    <div class="phnc-title">A.R.H.S CENTER</div>
+                    <div class="phnc-sub">Your AI highlights</div>
+                </a>
+                <a href="#clips" class="ph-nav-card">
+                    <div class="phnc-icon">📁</div>
+                    <div class="phnc-title">CLIP ARCHIVE</div>
+                    <div class="phnc-sub">Browse all clips</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- HUD corners -->
+        <div class="ph-hud">
+            <div class="phh tl"></div>
+            <div class="phh tr"></div>
+            <div class="phh bl"></div>
+            <div class="phh br"></div>
+            <div class="phh-tl-label">PORTAL // OPERATOR CLEARANCE</div>
+            <div class="phh-br-label">A.R.H.S ONLINE</div>
+        </div>
+
+        <!-- Scroll -->
+        <div class="ph-scroll" onclick="document.getElementById('server-browser').scrollIntoView({behavior:'smooth'})">
+            <span class="ph-scroll-text">SCROLL</span>
+            <div class="ph-scroll-line"><div class="ph-scroll-fill"></div></div>
+            <div class="ph-scroll-chevs">
+                <span class="ph-chev"></span>
+                <span class="ph-chev"></span>
+                <span class="ph-chev"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVER BROWSER ========== -->
+    <section class="portal-section" id="server-browser">
+        <div class="ps-label-row">
+            <span class="ps-line"></span>
+            <span class="ps-tag">01 — SERVER BROWSER</span>
+            <span class="ps-line"></span>
+        </div>
+
+        <div class="sb-header">
+            <h2 class="sb-title">FIND YOUR <span class="p-green">BATTLEFIELD</span></h2>
+            <p class="sb-desc">Browse live servers across all regions and game modes. Filter by ping, mode, map, and player count.</p>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="sb-filters">
+            <div class="sbf-group">
+                <span class="sbf-label">MODE</span>
+                <div class="sbf-btns">
+                    <button class="sbf-btn active" data-f="mode" data-v="all">ALL</button>
+                    <button class="sbf-btn" data-f="mode" data-v="ranked">RANKED</button>
+                    <button class="sbf-btn" data-f="mode" data-v="casual">CASUAL</button>
+                    <button class="sbf-btn" data-f="mode" data-v="custom">CUSTOM</button>
+                    <button class="sbf-btn" data-f="mode" data-v="ltm">LTM</button>
+                </div>
+            </div>
+            <div class="sbf-group">
+                <span class="sbf-label">REGION</span>
+                <div class="sbf-btns">
+                    <button class="sbf-btn active" data-f="region" data-v="all">ALL</button>
+                    <button class="sbf-btn" data-f="region" data-v="eu">EU</button>
+                    <button class="sbf-btn" data-f="region" data-v="na">NA</button>
+                    <button class="sbf-btn" data-f="region" data-v="mena">MENA</button>
+                    <button class="sbf-btn" data-f="region" data-v="asia">ASIA</button>
+                </div>
+            </div>
+            <div class="sbf-right">
+                <span class="sbf-count" id="serverCount">24 SERVERS ONLINE</span>
+            </div>
+        </div>
+
+        <!-- Server list -->
+        <div class="sb-list" id="serverList">
+
+            <div class="sb-list-header">
+                <span>SERVER NAME</span>
+                <span>MAP</span>
+                <span>MODE</span>
+                <span>PLAYERS</span>
+                <span>PING</span>
+                <span>REGION</span>
+                <span></span>
+            </div>
+
+            <div class="sb-row" data-mode="ranked" data-region="eu">
+                <div class="sbr-name">
+                    <div class="sbr-status online"></div>
+                    <div>
+                        <div class="sbr-server-name">EU-RANKED-FROSTLINE-01</div>
+                        <div class="sbr-tags"><span class="sbr-tag">OFFICIAL</span></div>
+                    </div>
+                </div>
+                <div class="sbr-map">FROSTLINE</div>
+                <div class="sbr-mode ranked-mode">RANKED</div>
+                <div class="sbr-players"><span class="sbr-pl-fill" style="width:88%"></span>44/50</div>
+                <div class="sbr-ping good">18ms</div>
+                <div class="sbr-region">EU-WEST</div>
+                <div><button class="sbr-join">JOIN</button></div>
+            </div>
+
+            <div class="sb-row" data-mode="ranked" data-region="mena">
+                <div class="sbr-name">
+                    <div class="sbr-status online"></div>
+                    <div>
+                        <div class="sbr-server-name">MENA-RANKED-BLACKDUNE-01</div>
+                        <div class="sbr-tags"><span class="sbr-tag">OFFICIAL</span></div>
+                    </div>
+                </div>
+                <div class="sbr-map">BLACK DUNE</div>
+                <div class="sbr-mode ranked-mode">RANKED</div>
+                <div class="sbr-players"><span class="sbr-pl-fill" style="width:60%"></span>30/50</div>
+                <div class="sbr-ping good">24ms</div>
+                <div class="sbr-region">MENA</div>
+                <div><button class="sbr-join">JOIN</button></div>
+            </div>
+
+            <div class="sb-row" data-mode="casual" data-region="eu">
+                <div class="sbr-name">
+                    <div class="sbr-status online"></div>
+                    <div>
+                        <div class="sbr-server-name">EU-CASUAL-IRONWOLF-03</div>
+                        <div class="sbr-tags"><span class="sbr-tag">OFFICIAL</span></div>
+                    </div>
+                </div>
+                <div class="sbr-map">IRON WOLF</div>
+                <div class="sbr-mode casual-mode">CASUAL</div>
+                <div class="sbr-players"><span class="sbr-pl-fill" style="width:72%"></span>36/50</div>
+                <div class="sbr-ping good">22ms</div>
+                <div class="sbr-region">EU-CENTRAL</div>
+                <div><button class="sbr-join">JOIN</button></div>
+            </div>
+
+            <div class="sb-row" data-mode="ltm" data-region="eu">
+                <div class="sbr-name">
+                    <div class="sbr-status online"></div>
+                    <div>
+                        <div class="sbr-server-name">LTM-SNIPER-ONLY-FROSTLINE</div>
+                        <div class="sbr-tags"><span class="sbr-tag event-tag">LTM</span><span class="sbr-tag">SNIPER ONLY</span></div>
+                    </div>
+                </div>
+                <div class="sbr-map">FROSTLINE</div>
+                <div class="sbr-mode ltm-mode">LTM</div>
+                <div class="sbr-players"><span class="sbr-pl-fill" style="width:100%"></span>50/50</div>
+                <div class="sbr-ping good">19ms</div>
+                <div class="sbr-region">EU-WEST</div>
+                <div><button class="sbr-join full-btn" disabled>FULL</button></div>
+            </div>
+
+            <div class="sb-row" data-mode="custom" data-region="mena">
+                <div class="sbr-name">
+                    <div class="sbr-status online"></div>
+                    <div>
+                        <div class="sbr-server-name">GHOST_SQUAD_SCRIMS</div>
+                        <div class="sbr-tags"><span class="sbr-tag custom-tag">CUSTOM</span><span class="sbr-tag">PRIVATE</span></div>
+                    </div>
+                </div>
+                <div class="sbr-map">EMBER RAIN</div>
+                <div class="sbr-mode custom-mode">CUSTOM</div>
+                <div class="sbr-players"><span class="sbr-pl-fill" style="width:50%"></span>4/8</div>
+                <div class="sbr-ping medium">38ms</div>
+                <div class="sbr-region">MENA</div>
+                <div><button class="sbr-join">JOIN</button></div>
+            </div>
+
+            <div class="sb-row" data-mode="ranked" data-region="na">
+                <div class="sbr-name">
+                    <div class="sbr-status online"></div>
+                    <div>
+                        <div class="sbr-server-name">NA-RANKED-SANDSTRIKE-02</div>
+                        <div class="sbr-tags"><span class="sbr-tag">OFFICIAL</span></div>
+                    </div>
+                </div>
+                <div class="sbr-map">SANDSTRIKE</div>
+                <div class="sbr-mode ranked-mode">RANKED</div>
+                <div class="sbr-players"><span class="sbr-pl-fill" style="width:78%"></span>39/50</div>
+                <div class="sbr-ping medium">68ms</div>
+                <div class="sbr-region">NA-EAST</div>
+                <div><button class="sbr-join">JOIN</button></div>
+            </div>
+
+            <div class="sb-row" data-mode="casual" data-region="asia">
+                <div class="sbr-name">
+                    <div class="sbr-status online"></div>
+                    <div>
+                        <div class="sbr-server-name">ASIA-CASUAL-CRIMSONZONE-01</div>
+                        <div class="sbr-tags"><span class="sbr-tag">OFFICIAL</span></div>
+                    </div>
+                </div>
+                <div class="sbr-map">CRIMSON ZONE</div>
+                <div class="sbr-mode casual-mode">CASUAL</div>
+                <div class="sbr-players"><span class="sbr-pl-fill" style="width:44%"></span>22/50</div>
+                <div class="sbr-ping high">112ms</div>
+                <div class="sbr-region">ASIA-SEA</div>
+                <div><button class="sbr-join">JOIN</button></div>
+            </div>
+
+            <div class="sb-row" data-mode="custom" data-region="eu">
+                <div class="sbr-name">
+                    <div class="sbr-status online"></div>
+                    <div>
+                        <div class="sbr-server-name">VANGUARD_TRAINING_EU</div>
+                        <div class="sbr-tags"><span class="sbr-tag custom-tag">CUSTOM</span><span class="sbr-tag">OPEN</span></div>
+                    </div>
+                </div>
+                <div class="sbr-map">IRON WOLF</div>
+                <div class="sbr-mode custom-mode">CUSTOM</div>
+                <div class="sbr-players"><span class="sbr-pl-fill" style="width:25%"></span>5/20</div>
+                <div class="sbr-ping good">15ms</div>
+                <div class="sbr-region">EU-NORTH</div>
+                <div><button class="sbr-join">JOIN</button></div>
+            </div>
+
+        </div>
+
+        <div class="sb-footer">
+            <button class="sb-refresh-btn" id="refreshBtn">⟳ REFRESH SERVERS</button>
+            <span class="sb-last-updated">LAST UPDATED: <span id="lastUpdated">JUST NOW</span></span>
+        </div>
+    </section>
+
+    <!-- ========== CREATE EXPERIENCE ========== -->
+    <section class="portal-section portal-dark" id="create">
+        <div class="ps-label-row">
+            <span class="ps-line"></span>
+            <span class="ps-tag">02 — CREATE EXPERIENCE</span>
+            <span class="ps-line"></span>
+        </div>
+
+        <div class="create-header">
+            <h2 class="create-title">YOUR RULES.<br><span class="p-green">YOUR GAME.</span></h2>
+            <p class="create-desc">Build a custom lobby with full control over every parameter. Perfect for scrims, tournaments, content creation, and training.</p>
+        </div>
+
+        <div class="create-grid">
+
+            <div class="create-form">
+                <div class="cf-section">
+                    <div class="cf-label">LOBBY SETTINGS</div>
+                    <div class="cf-row">
+                        <div class="cf-field">
+                            <label class="cfl-label">LOBBY NAME</label>
+                            <input type="text" class="cf-input" placeholder="MY_CUSTOM_LOBBY" maxlength="24">
+                        </div>
+                        <div class="cf-field">
+                            <label class="cfl-label">MAX PLAYERS</label>
+                            <select class="cf-select">
+                                <option>4</option>
+                                <option>8</option>
+                                <option>16</option>
+                                <option selected>20</option>
+                                <option>50</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cf-row">
+                        <div class="cf-field">
+                            <label class="cfl-label">GAME MODE</label>
+                            <select class="cf-select">
+                                <option>CLASH SQUAD 4v4</option>
+                                <option selected>CUSTOM DEATHMATCH</option>
+                                <option>TEAM DEATHMATCH</option>
+                                <option>FREE FOR ALL</option>
+                                <option>TRAINING</option>
+                            </select>
+                        </div>
+                        <div class="cf-field">
+                            <label class="cfl-label">MAP</label>
+                            <select class="cf-select">
+                                <option>FROSTLINE</option>
+                                <option selected>IRON WOLF</option>
+                                <option>BLACK DUNE</option>
+                                <option>EMBER RAIN</option>
+                                <option>SANDSTRIKE</option>
+                                <option>CRIMSON ZONE</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cf-section">
+                    <div class="cf-label">MATCH RULES</div>
+                    <div class="cf-row">
+                        <div class="cf-field">
+                            <label class="cfl-label">TIME LIMIT</label>
+                            <select class="cf-select">
+                                <option>5 MIN</option>
+                                <option>10 MIN</option>
+                                <option selected>15 MIN</option>
+                                <option>20 MIN</option>
+                                <option>30 MIN</option>
+                                <option>UNLIMITED</option>
+                            </select>
+                        </div>
+                        <div class="cf-field">
+                            <label class="cfl-label">RESPAWN</label>
+                            <select class="cf-select">
+                                <option selected>ENABLED</option>
+                                <option>DISABLED (ELIMINATION)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cf-row">
+                        <div class="cf-field">
+                            <label class="cfl-label">BOT COUNT</label>
+                            <select class="cf-select">
+                                <option selected>0 (PLAYERS ONLY)</option>
+                                <option>5 BOTS</option>
+                                <option>10 BOTS</option>
+                                <option>FILL TO MAX</option>
+                            </select>
+                        </div>
+                        <div class="cf-field">
+                            <label class="cfl-label">BOT DIFFICULTY</label>
+                            <select class="cf-select">
+                                <option>EASY</option>
+                                <option selected>MEDIUM</option>
+                                <option>HARD</option>
+                                <option>ELITE</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cf-section">
+                    <div class="cf-label">ADVANCED OPTIONS</div>
+                    <div class="cf-toggles">
+                        <div class="cf-toggle">
+                            <span class="cft-label">A.R.H.S RECORDING</span>
+                            <div class="cft-switch active" id="arhsToggle"><div class="cft-knob"></div></div>
+                        </div>
+                        <div class="cf-toggle">
+                            <span class="cft-label">FRIENDLY FIRE</span>
+                            <div class="cft-switch" id="ffToggle"><div class="cft-knob"></div></div>
+                        </div>
+                        <div class="cf-toggle">
+                            <span class="cft-label">SPECTATOR MODE</span>
+                            <div class="cft-switch active" id="specToggle"><div class="cft-knob"></div></div>
+                        </div>
+                        <div class="cf-toggle">
+                            <span class="cft-label">PRIVATE LOBBY</span>
+                            <div class="cft-switch" id="privateToggle"><div class="cft-knob"></div></div>
+                        </div>
+                        <div class="cf-toggle">
+                            <span class="cft-label">CUSTOM LOADOUTS</span>
+                            <div class="cft-switch active" id="loadoutToggle"><div class="cft-knob"></div></div>
+                        </div>
+                        <div class="cf-toggle">
+                            <span class="cft-label">UNLIMITED AMMO</span>
+                            <div class="cft-switch" id="ammoToggle"><div class="cft-knob"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="cf-create-btn" id="createLobbyBtn">CREATE LOBBY ❯</button>
+            </div>
+
+            <div class="create-presets">
+                <div class="cp-label">QUICK PRESETS</div>
+                <div class="cp-list">
+                    <div class="cp-item" data-preset="scrim">
+                        <div class="cp-icon">⚔️</div>
+                        <div class="cp-info">
+                            <div class="cp-name">TEAM SCRIM</div>
+                            <div class="cp-desc">4v4, 15min, no bots, elimination, private</div>
+                        </div>
+                        <button class="cp-load">LOAD</button>
+                    </div>
+                    <div class="cp-item" data-preset="content">
+                        <div class="cp-icon">🎬</div>
+                        <div class="cp-info">
+                            <div class="cp-name">CONTENT CREATION</div>
+                            <div class="cp-desc">Solo vs bots, unlimited ammo, A.R.H.S on, spectator on</div>
+                        </div>
+                        <button class="cp-load">LOAD</button>
+                    </div>
+                    <div class="cp-item" data-preset="training">
+                        <div class="cp-icon">🎯</div>
+                        <div class="cp-info">
+                            <div class="cp-name">AIM TRAINING</div>
+                            <div class="cp-desc">Training Ground, easy bots, unlimited time, custom loadouts</div>
+                        </div>
+                        <button class="cp-load">LOAD</button>
+                    </div>
+                    <div class="cp-item" data-preset="tournament">
+                        <div class="cp-icon">🏆</div>
+                        <div class="cp-info">
+                            <div class="cp-name">TOURNAMENT READY</div>
+                            <div class="cp-desc">8v8, ranked rules, spectator, no FF, private</div>
+                        </div>
+                        <button class="cp-load">LOAD</button>
+                    </div>
+                    <div class="cp-item" data-preset="chaos">
+                        <div class="cp-icon">💥</div>
+                        <div class="cp-info">
+                            <div class="cp-name">CHAOS MODE</div>
+                            <div class="cp-desc">FFA, max players, elite bots, FF on, unlimited ammo</div>
+                        </div>
+                        <button class="cp-load">LOAD</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== A.R.H.S CENTER ========== -->
+    <section class="portal-section" id="arhs">
+        <div class="ps-label-row">
+            <span class="ps-line"></span>
+            <span class="ps-tag">03 — A.R.H.S CENTER</span>
+            <span class="ps-line"></span>
+        </div>
+
+        <div class="arhs-center-header">
+            <div class="arhs-live-row">
+                <span class="arhs-live-dot"></span>
+                <span class="arhs-live-text">A.R.H.S SYSTEM ONLINE — ALWAYS RECORDING</span>
+            </div>
+            <h2 class="arhs-c-title">AUTOMATED REPLAY &<br><span class="p-green">HIGHLIGHTS SYSTEM</span></h2>
+            <p class="arhs-c-desc">Every match you play is recorded in Bodycam-style POV. AI analyzes key moments, edits a cinematic highlight reel, and publishes it automatically — within 5 minutes of match end.</p>
+        </div>
+
+        <!-- Stats row -->
+        <div class="arhs-stats-bar">
+            <div class="arhs-stat">
+                <span class="arhs-stat-num" id="arhsClips">24,381</span>
+                <span class="arhs-stat-label">CLIPS GENERATED TODAY</span>
+            </div>
+            <div class="arhs-stat">
+                <span class="arhs-stat-num">1080p</span>
+                <span class="arhs-stat-label">BODYCAM POV QUALITY</span>
+            </div>
+            <div class="arhs-stat">
+                <span class="arhs-stat-num">&lt;5 MIN</span>
+                <span class="arhs-stat-label">AVERAGE GENERATION TIME</span>
+            </div>
+            <div class="arhs-stat">
+                <span class="arhs-stat-num">5</span>
+                <span class="arhs-stat-label">PLATFORMS AUTO-PUBLISHED</span>
+            </div>
+        </div>
+
+        <!-- How it works mini timeline -->
+        <div class="arhs-flow">
+            <div class="arhs-flow-step">
+                <div class="afs-num">01</div>
+                <div class="afs-icon">📹</div>
+                <div class="afs-title">RECORD</div>
+                <div class="afs-desc">Every player, every angle, every kill — recorded in real-time Bodycam POV at 1080p/60fps.</div>
+            </div>
+            <div class="arhs-flow-arrow">→</div>
+            <div class="arhs-flow-step">
+                <div class="afs-num">02</div>
+                <div class="afs-icon">🧠</div>
+                <div class="afs-title">ANALYZE</div>
+                <div class="afs-desc">AI identifies kills, clutches, streaks, and cinematic sequences automatically using pattern recognition.</div>
+            </div>
+            <div class="arhs-flow-arrow">→</div>
+            <div class="arhs-flow-step">
+                <div class="afs-num">03</div>
+                <div class="afs-icon">✂️</div>
+                <div class="afs-title">GENERATE</div>
+                <div class="afs-desc">Highlight reel edited with transitions, effects, and music. Short clips cut for TikTok/Reels.</div>
+            </div>
+            <div class="arhs-flow-arrow">→</div>
+            <div class="arhs-flow-step">
+                <div class="afs-num">04</div>
+                <div class="afs-icon">🚀</div>
+                <div class="afs-title">DISTRIBUTE</div>
+                <div class="afs-desc">Auto-uploaded to YouTube, TikTok, Instagram, X, and the AEGIS website within 5 minutes.</div>
+            </div>
+        </div>
+
+        <!-- Platform distribution -->
+        <div class="arhs-platforms">
+            <div class="ap-label">AUTO-PUBLISHED TO</div>
+            <div class="ap-list">
+                <div class="ap-item">
+                    <div class="ap-icon">▶</div>
+                    <div class="ap-name">YOUTUBE</div>
+                    <div class="ap-type">FULL HIGHLIGHT</div>
+                </div>
+                <div class="ap-item">
+                    <div class="ap-icon">◈</div>
+                    <div class="ap-name">TIKTOK</div>
+                    <div class="ap-type">SHORT CLIP</div>
+                </div>
+                <div class="ap-item">
+                    <div class="ap-icon">◉</div>
+                    <div class="ap-name">INSTAGRAM</div>
+                    <div class="ap-type">REEL</div>
+                </div>
+                <div class="ap-item">
+                    <div class="ap-icon">𝕏</div>
+                    <div class="ap-name">TWITTER / X</div>
+                    <div class="ap-type">SHORT CLIP</div>
+                </div>
+                <div class="ap-item ap-item-aegis">
+                    <div class="ap-icon">⬡</div>
+                    <div class="ap-name">AEGIS.COM</div>
+                    <div class="ap-type">FULL ARCHIVE</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- My highlights mock -->
+        <div class="arhs-my-highlights">
+            <div class="amh-header">
+                <div class="amh-title">YOUR LATEST HIGHLIGHTS</div>
+                <a href="#clips" class="amh-view-all">VIEW ALL CLIPS ❯</a>
+            </div>
+            <div class="amh-grid">
+                <div class="amh-card">
+                    <div class="amh-thumb">
+                        <div class="amh-thumb-bg" style="background:linear-gradient(135deg,rgba(77,166,255,0.2),#000)"></div>
+                        <div class="amh-play">▶</div>
+                        <div class="amh-duration">0:47</div>
+                        <div class="amh-rec">● REC</div>
+                    </div>
+                    <div class="amh-info">
+                        <div class="amh-match">RANKED — FROSTLINE</div>
+                        <div class="amh-title-c">5-KILL CLUTCH — SECTOR 3</div>
+                        <div class="amh-meta">
+                            <span class="amh-kills">5 KILLS</span>
+                            <span class="amh-time">2H AGO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="amh-card">
+                    <div class="amh-thumb">
+                        <div class="amh-thumb-bg" style="background:linear-gradient(135deg,rgba(255,140,0,0.2),#000)"></div>
+                        <div class="amh-play">▶</div>
+                        <div class="amh-duration">1:12</div>
+                        <div class="amh-rec">● REC</div>
+                    </div>
+                    <div class="amh-info">
+                        <div class="amh-match">CASUAL — BLACK DUNE</div>
+                        <div class="amh-title-c">SNIPER RAMPAGE — 8 KILLS</div>
+                        <div class="amh-meta">
+                            <span class="amh-kills">8 KILLS</span>
+                            <span class="amh-time">5H AGO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="amh-card">
+                    <div class="amh-thumb">
+                        <div class="amh-thumb-bg" style="background:linear-gradient(135deg,rgba(255,34,34,0.2),#000)"></div>
+                        <div class="amh-play">▶</div>
+                        <div class="amh-duration">0:32</div>
+                        <div class="amh-rec">● REC</div>
+                    </div>
+                    <div class="amh-info">
+                        <div class="amh-match">CLASH SQUAD — EMBER RAIN</div>
+                        <div class="amh-title-c">SQUAD WIPE — 4v1 CLUTCH</div>
+                        <div class="amh-meta">
+                            <span class="amh-kills">4 KILLS</span>
+                            <span class="amh-time">YESTERDAY</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="amh-card">
+                    <div class="amh-thumb">
+                        <div class="amh-thumb-bg" style="background:linear-gradient(135deg,rgba(92,255,0,0.1),#000)"></div>
+                        <div class="amh-play">▶</div>
+                        <div class="amh-duration">2:04</div>
+                        <div class="amh-rec">● REC</div>
+                    </div>
+                    <div class="amh-info">
+                        <div class="amh-match">RANKED — SANDSTRIKE</div>
+                        <div class="amh-title-c">MVP MATCH — FULL HIGHLIGHT</div>
+                        <div class="amh-meta">
+                            <span class="amh-kills">12 KILLS</span>
+                            <span class="amh-time">2 DAYS AGO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CLIP ARCHIVE ========== -->
+    <section class="portal-section portal-dark" id="clips">
+        <div class="ps-label-row">
+            <span class="ps-line"></span>
+            <span class="ps-tag">04 — CLIP ARCHIVE</span>
+            <span class="ps-line"></span>
+        </div>
+
+        <div class="clips-header">
+            <h2 class="clips-title">CLIP <span class="p-green">ARCHIVE</span></h2>
+            <p class="clips-desc">The global AEGIS clip database. Every highlight generated by A.R.H.S — searchable, filterable, shareable.</p>
+        </div>
+
+        <!-- Archive filters -->
+        <div class="clips-filter-bar">
+            <div class="clpf-left">
+                <button class="clpf-btn active" data-clip="all">ALL CLIPS</button>
+                <button class="clpf-btn" data-clip="top">TOP RATED</button>
+                <button class="clpf-btn" data-clip="kills">MOST KILLS</button>
+                <button class="clpf-btn" data-clip="clutch">CLUTCH PLAYS</button>
+                <button class="clpf-btn" data-clip="sniper">SNIPER SHOTS</button>
+            </div>
+            <div class="clpf-right">
+                <span class="clpf-total">147,832 CLIPS IN ARCHIVE</span>
+            </div>
+        </div>
+
+        <!-- Clips grid -->
+        <div class="clips-grid" id="clipsGrid">
+
+            <div class="clip-card" data-clip="top kills">
+                <div class="clip-thumb">
+                    <div class="clip-bg" style="background:linear-gradient(135deg,rgba(92,255,0,0.15),rgba(0,0,0,0.8))"></div>
+                    <div class="clip-play-btn">▶</div>
+                    <div class="clip-dur">1:24</div>
+                    <div class="clip-rec-badge">● REC</div>
+                    <div class="clip-top-badge">🏆 TOP RATED</div>
+                </div>
+                <div class="clip-info">
+                    <div class="clip-player">OPERATOR_X7</div>
+                    <div class="clip-title">7-KILL RAMPAGE — FROSTLINE</div>
+                    <div class="clip-meta">
+                        <span>7 KILLS</span>
+                        <span>RANKED</span>
+                        <span>2H AGO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clip-card" data-clip="clutch">
+                <div class="clip-thumb">
+                    <div class="clip-bg" style="background:linear-gradient(135deg,rgba(255,34,34,0.15),rgba(0,0,0,0.8))"></div>
+                    <div class="clip-play-btn">▶</div>
+                    <div class="clip-dur">0:38</div>
+                    <div class="clip-rec-badge">● REC</div>
+                    <div class="clip-top-badge clutch-badge">⚡ CLUTCH</div>
+                </div>
+                <div class="clip-info">
+                    <div class="clip-player">VIPER_RECON</div>
+                    <div class="clip-title">4v1 CLUTCH — EMBER RAIN</div>
+                    <div class="clip-meta">
+                        <span>4 KILLS</span>
+                        <span>CLASH SQUAD</span>
+                        <span>4H AGO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clip-card" data-clip="sniper top">
+                <div class="clip-thumb">
+                    <div class="clip-bg" style="background:linear-gradient(135deg,rgba(77,166,255,0.15),rgba(0,0,0,0.8))"></div>
+                    <div class="clip-play-btn">▶</div>
+                    <div class="clip-dur">0:22</div>
+                    <div class="clip-rec-badge">● REC</div>
+                    <div class="clip-top-badge sniper-badge">🎯 SNIPER</div>
+                </div>
+                <div class="clip-info">
+                    <div class="clip-player">GHOST_HUNTER</div>
+                    <div class="clip-title">360° NO-SCOPE — IRON WOLF</div>
+                    <div class="clip-meta">
+                        <span>1 KILL</span>
+                        <span>CASUAL</span>
+                        <span>6H AGO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clip-card" data-clip="kills top">
+                <div class="clip-thumb">
+                    <div class="clip-bg" style="background:linear-gradient(135deg,rgba(255,140,0,0.15),rgba(0,0,0,0.8))"></div>
+                    <div class="clip-play-btn">▶</div>
+                    <div class="clip-dur">2:11</div>
+                    <div class="clip-rec-badge">● REC</div>
+                    <div class="clip-top-badge kills-badge">💀 12 KILLS</div>
+                </div>
+                <div class="clip-info">
+                    <div class="clip-player">IRON_WOLF_44</div>
+                    <div class="clip-title">DOMINATION — BLACK DUNE MVP</div>
+                    <div class="clip-meta">
+                        <span>12 KILLS</span>
+                        <span>RANKED</span>
+                        <span>YESTERDAY</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clip-card" data-clip="clutch">
+                <div class="clip-thumb">
+                    <div class="clip-bg" style="background:linear-gradient(135deg,rgba(153,85,255,0.15),rgba(0,0,0,0.8))"></div>
+                    <div class="clip-play-btn">▶</div>
+                    <div class="clip-dur">0:55</div>
+                    <div class="clip-rec-badge">● REC</div>
+                    <div class="clip-top-badge clutch-badge">⚡ CLUTCH</div>
+                </div>
+                <div class="clip-info">
+                    <div class="clip-player">SHADOW_OPS</div>
+                    <div class="clip-title">LAST STAND — 3v1 WIN</div>
+                    <div class="clip-meta">
+                        <span>3 KILLS</span>
+                        <span>RANKED</span>
+                        <span>YESTERDAY</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clip-card" data-clip="sniper">
+                <div class="clip-thumb">
+                    <div class="clip-bg" style="background:linear-gradient(135deg,rgba(77,166,255,0.12),rgba(0,0,0,0.8))"></div>
+                    <div class="clip-play-btn">▶</div>
+                    <div class="clip-dur">0:18</div>
+                    <div class="clip-rec-badge">● REC</div>
+                    <div class="clip-top-badge sniper-badge">🎯 SNIPER</div>
+                </div>
+                <div class="clip-info">
+                    <div class="clip-player">FROSTBITE_77</div>
+                    <div class="clip-title">CROSS-MAP ELIMINATION — SANDSTRIKE</div>
+                    <div class="clip-meta">
+                        <span>1 KILL</span>
+                        <span>LTM</span>
+                        <span>2 DAYS AGO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clip-card" data-clip="kills">
+                <div class="clip-thumb">
+                    <div class="clip-bg" style="background:linear-gradient(135deg,rgba(204,0,0,0.15),rgba(0,0,0,0.8))"></div>
+                    <div class="clip-play-btn">▶</div>
+                    <div class="clip-dur">1:44</div>
+                    <div class="clip-rec-badge">● REC</div>
+                    <div class="clip-top-badge kills-badge">💀 10 KILLS</div>
+                </div>
+                <div class="clip-info">
+                    <div class="clip-player">CRIMSON_ACE</div>
+                    <div class="clip-title">10-KILL STREAK — CRIMSON ZONE</div>
+                    <div class="clip-meta">
+                        <span>10 KILLS</span>
+                        <span>CASUAL</span>
+                        <span>2 DAYS AGO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clip-card" data-clip="top">
+                <div class="clip-thumb">
+                    <div class="clip-bg" style="background:linear-gradient(135deg,rgba(92,255,0,0.1),rgba(0,0,0,0.8))"></div>
+                    <div class="clip-play-btn">▶</div>
+                    <div class="clip-dur">3:02</div>
+                    <div class="clip-rec-badge">● REC</div>
+                    <div class="clip-top-badge">🏆 WEEKLY TOP</div>
+                </div>
+                <div class="clip-info">
+                    <div class="clip-player">AEGIS_LEGEND</div>
+                    <div class="clip-title">WEEKLY BEST — FULL MONTAGE</div>
+                    <div class="clip-meta">
+                        <span>18 KILLS</span>
+                        <span>MIXED</span>
+                        <span>3 DAYS AGO</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="clips-load-more">
+            <button class="clp-load-btn">LOAD MORE CLIPS ↓</button>
+            <p class="clp-archive-note">147,832 clips in the full archive — growing every match.</p>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="aegis-footer-main">
+        <div class="footer-side-accent"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-brand-row">
+                        <div class="footer-brand-icon"><img src="assets/image/image.png" alt="AEG" class="footer-brand-icon"></div>
+                        <h2 class="footer-logo">AEGIS</h2>
+                    </div>
+                    <p class="footer-brand-desc">The most powerful tactical FPS ever built. Realistic combat, AI-driven highlights, and a self-growing content ecosystem.</p>
+                    <span class="footer-tagline">A.R.H.S — ALWAYS RECORDING</span>
+                </div>
+                <div class="footer-col">
+                    <h3>GAME</h3>
+                    <ul>
+                        <li><a href="about.html#world" style="margin-left:12px">World of AEGIS</a></li>
+                        <li><a href="about.html#operations" style="margin-left:12px">Operations & Maps</a></li>
+                        <li><a href="index.html#section-arsenal" style="margin-left:12px">The Arsenal</a></li>
+                        <li><a href="about.html#factions" style="margin-left:12px">Factions</a></li>
+                        <li><a href="battlepass.html" style="margin-left:12px">Battle Pass</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>PORTAL</h3>
+                    <ul>
+                        <li><a href="portal.html#server-browser" style="margin-left:12px">Server Browser</a></li>
+                        <li><a href="portal.html#create" style="margin-left:12px">Create Experience</a></li>
+                        <li><a href="portal.html#arhs" style="margin-left:12px">A.R.H.S Center</a></li>
+                        <li><a href="portal.html#clips" style="margin-left:12px">Clip Archive</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="guides.html" style="margin-left:12px">Player Guide</a></li>
+                        <li><a href="stats.html" style="margin-left:12px">Player Stats</a></li>
+                        <li><a href="#" style="margin-left:12px">Report a Bug</a></li>
+                        <li><a href="#" style="margin-left:12px">Contact Us</a></li>
+                        <li><a href="#" style="margin-left:12px">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 REY GAMES — AEGIS. ALL RIGHTS RESERVED.</p>
+                <span class="footer-sys-status">A.R.H.S SYSTEM ONLINE</span>
+                <span class="footer-classified">CLASSIFIED INTEL // CLEARANCE REQUIRED</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="0"></script>
+</body>
+</html>
